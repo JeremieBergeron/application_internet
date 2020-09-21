@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -12,10 +13,12 @@
  * @since     0.2.9
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\I18n\I18n;
 
 /**
  * Application Controller
@@ -25,8 +28,7 @@ use Cake\Event\Event;
  *
  * @link https://book.cakephp.org/3/en/controllers.html#the-app-controller
  */
-class AppController extends Controller
-{
+class AppController extends Controller {
 
     /**
      * Initialization hook method.
@@ -39,7 +41,7 @@ class AppController extends Controller
      */
     public function initialize() {
         parent::initialize();
-
+         I18n::setLocale($this->request->session()->read('Config.language'));
         $this->loadComponent('RequestHandler', [
             'enableBeforeRedirect' => false,
         ]);
@@ -65,14 +67,21 @@ class AppController extends Controller
 
         // Allow the display action so our pages controller
         // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['display', 'view', 'index']);
+        $this->Auth->allow(['display', 'view', 'index', 'changelang']);
+    }
+
+    public function changeLang($lang = 'en_US') {
+        I18n::setLocale($lang);
+        $this->request->session()->write('Config.language', $lang);
+        return $this->redirect($this->request->referer());
     }
 
     public function isAuthorized($user) {
-                
-        if($user['role_id'] ==1){
+
+        if ($user['role_id'] == 1) {
             return true;
         }
         return false;
     }
+
 }

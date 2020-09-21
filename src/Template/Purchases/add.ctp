@@ -19,7 +19,6 @@
     <fieldset>
         <legend><?= __('Add Purchase') ?></legend>
         <?php
-            echo $this->Form->control('date');
             echo $this->Form->control('quantity_purchased');
             echo $this->Form->control('detail');
             echo $this->Form->control('products._ids', ['options' => $products]);

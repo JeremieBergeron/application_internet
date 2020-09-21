@@ -27,6 +27,10 @@
             <td><?= $this->Number->format($product->id) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Price') ?></th>
+            <td><?= $this->Number->format($product->price) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Quantity Available') ?></th>
             <td><?= $this->Number->format($product->quantity_available) ?></td>
         </tr>

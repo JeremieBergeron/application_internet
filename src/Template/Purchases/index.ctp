@@ -19,8 +19,6 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('quantity_purchased') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
@@ -30,19 +28,18 @@
         </thead>
         <tbody>
             <?php foreach ($purchases as $purchase): ?>
-            <tr>
-                <td><?= $this->Number->format($purchase->id) ?></td>
-                <td><?= h($purchase->date) ?></td>
-                <td><?= $this->Number->format($purchase->quantity_purchased) ?></td>
-                <td><?= $purchase->has('user') ? $this->Html->link($purchase->user->id, ['controller' => 'Users', 'action' => 'view', $purchase->user->id]) : '' ?></td>
-                <td><?= h($purchase->created) ?></td>
-                <td><?= h($purchase->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $purchase->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $purchase->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $purchase->id], ['confirm' => __('Are you sure you want to delete # {0}?', $purchase->id)]) ?>
-                </td>
-            </tr>
+                <tr>
+                    <td><?= $this->Number->format($purchase->quantity_purchased) ?></td>
+                    <td> <?= $this->Html->link($purchase->user->username, ['controller' => 'users', 'action' => 'view', $purchase->user_id]) ?></td>
+
+                    <td><?= h($purchase->created) ?></td>
+                    <td><?= h($purchase->modified) ?></td>
+                    <td class="actions">
+                        <?= $this->Html->link(__('View'), ['action' => 'view', $purchase->id]) ?>
+                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $purchase->id]) ?>
+                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $purchase->id], ['confirm' => __('Are you sure you want to delete # {0}?', $purchase->id)]) ?>
+                    </td>
+                </tr>
             <?php endforeach; ?>
         </tbody>
     </table>

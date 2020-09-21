@@ -9,6 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Products Model
  *
+ * @property &\Cake\ORM\Association\HasMany $Photos
  * @property \App\Model\Table\PurchasesTable&\Cake\ORM\Association\BelongsToMany $Purchases
  *
  * @method \App\Model\Entity\Product get($primaryKey, $options = [])
@@ -40,6 +41,9 @@ class ProductsTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->hasMany('Photos', [
+            'foreignKey' => 'product_id',
+        ]);
         $this->belongsToMany('Purchases', [
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'purchase_id',
@@ -68,6 +72,11 @@ class ProductsTable extends Table
         $validator
             ->scalar('description')
             ->allowEmptyString('description');
+
+        $validator
+            ->numeric('price')
+            ->requirePresence('price', 'create')
+            ->notEmptyString('price');
 
         $validator
             ->integer('quantity_available')

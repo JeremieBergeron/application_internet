@@ -19,6 +19,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('price') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('quantity_available') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
@@ -30,6 +31,7 @@
             <tr>
                 <td><?= $this->Number->format($product->id) ?></td>
                 <td><?= h($product->name) ?></td>
+                <td><?= $this->Number->format($product->price) ?></td>
                 <td><?= $this->Number->format($product->quantity_available) ?></td>
                 <td><?= h($product->created) ?></td>
                 <td><?= h($product->modified) ?></td>

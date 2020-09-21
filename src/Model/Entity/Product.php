@@ -9,6 +9,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $name
  * @property string|null $description
+ * @property float $price
  * @property int $quantity_available
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
@@ -29,6 +30,7 @@ class Product extends Entity
     protected $_accessible = [
         'name' => true,
         'description' => true,
+        'price' => true,
         'quantity_available' => true,
         'created' => true,
         'modified' => true,

@@ -25,6 +25,7 @@
         <?php
             echo $this->Form->control('name');
             echo $this->Form->control('description');
+            echo $this->Form->control('price');
             echo $this->Form->control('quantity_available');
             echo $this->Form->control('purchases._ids', ['options' => $purchases]);
         ?>
