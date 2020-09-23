@@ -5,6 +5,8 @@
         <group>
             <file>file:/C:/Program%20Files/Ampps/www/TP1/src/Controller/AppController.php</file>
             <file>file:/C:/Program%20Files/Ampps/www/TP1/src/Template/Layout/default.ctp</file>
+            <file>file:/C:/Program%20Files/Ampps/www/TP1/src/Controller/PurchasesController.php</file>
+            <file>file:/C:/Program%20Files/Ampps/www/TP1/src/Template/Purchases/index.ctp</file>
         </group>
     </open-files>
 </project-private>
