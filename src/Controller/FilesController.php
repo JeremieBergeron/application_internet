@@ -51,9 +51,9 @@ class FilesController extends AppController
         $file = $this->Files->newEntity();
         if ($this->request->is('post')) {
             $filerequest = $this->request->getData();
-           debug($filerequest);
-           debug($this->request->getData()['name']);
-           die();
+           //debug($filerequest);
+           //debug($this->request->getData()['name']);
+           //die();
             if (!empty($filerequest['name']['name'])) {
                 $fileName = $filerequest['name']['name'];
                 $uploadPath = 'files/add/';

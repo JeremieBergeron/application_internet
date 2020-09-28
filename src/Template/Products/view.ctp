@@ -25,12 +25,8 @@
             <td><?= h($product->name) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($product->id) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Price') ?></th>
-            <td><?= $this->Number->format($product->price) ?></td>
+            <td><?= $this->Number->format($product->price) ?>$</td>
         </tr>
         <tr>
             <th scope="row"><?= __('Quantity Available') ?></th>
@@ -54,7 +50,6 @@
         <?php if (!empty($product->purchases)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Detail') ?></th>
                 <th scope="col"><?= __('User Id') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
@@ -94,40 +89,6 @@
             <?php endforeach; ?>
             </table>
 <?php endif; ?>
-        <h4><?= __('Related Photos') ?></h4>
-        <?php if (!empty($product->photos)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Product Id') ?></th>
-                <th scope="col"><?= __('Title') ?></th>
-                <th scope="col"><?= __('Owner') ?></th>
-                <th scope="col"><?= __('Date') ?></th>
-                <th scope="col"><?= __('Description') ?></th>
-                <th scope="col"><?= __('Filename') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($product->photos as $photos): ?>
-            <tr>
-                <td><?= h($photos->id) ?></td>
-                <td><?= h($photos->product_id) ?></td>
-                <td><?= h($photos->title) ?></td>
-                <td><?= h($photos->owner) ?></td>
-                <td><?= h($photos->date) ?></td>
-                <td><?= h($photos->description) ?></td>
-                <td><?= h($photos->filename) ?></td>
-                <td><?= h($photos->created) ?></td>
-                <td><?= h($photos->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Photos', 'action' => 'view', $photos->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Photos', 'action' => 'edit', $photos->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Photos', 'action' => 'delete', $photos->id], ['confirm' => __('Are you sure you want to delete # {0}?', $photos->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
+       
     </div>
 </div>

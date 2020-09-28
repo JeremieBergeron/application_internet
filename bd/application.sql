@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : lun. 28 sep. 2020 à 14:00
+-- Généré le : lun. 28 sep. 2020 à 15:33
 -- Version du serveur :  8.0.18
 -- Version de PHP : 7.3.11
 
@@ -36,6 +36,14 @@ CREATE TABLE `files` (
   `modified` datetime NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 = Active, 0 = Inactive'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `files`
+--
+
+INSERT INTO `files` (`id`, `name`, `path`, `created`, `modified`, `status`) VALUES
+(2, '3max (1).jpg', 'files/add/', '2020-09-28 15:07:31', '2020-09-28 15:07:31', 1),
+(3, '63072.jpg', 'files/add/', '2020-09-28 15:11:58', '2020-09-28 15:11:58', 1);
 
 -- --------------------------------------------------------
 
@@ -231,13 +239,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `files_products`
 --
 ALTER TABLE `files_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `products`

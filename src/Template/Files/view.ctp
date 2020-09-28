@@ -19,16 +19,17 @@
     <h3><?= h($file->name) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($file->name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Path') ?></th>
-            <td><?= h($file->path) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($file->id) ?></td>
+            <th>Image</th>
+            <td>
+                <?php
+                        echo $this->Html->image($file->path . $file->name, [
+                            "alt" => $file->name,
+                            "width" => "220px",
+                            "height" => "150px",
+                            'url' => ['action' => 'view', $file->id]
+                        ]);
+                        ?>
+            </td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>

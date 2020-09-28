@@ -24,7 +24,6 @@
                 <th scope="col"><?= $this->Paginator->sort('quantity_available') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('File') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -32,21 +31,10 @@
             <?php foreach ($products as $product): ?>
             <tr>
                 <td><?= h($product->name) ?></td>
-                <td><?= $this->Number->format($product->price) ?></td>
+                <td><?= $this->Number->format($product->price) ?>$</td>
                 <td><?= $this->Number->format($product->quantity_available) ?></td>
                 <td><?= h($product->created) ?></td>
                 <td><?= h($product->modified) ?></td>
-                <td><?php
-                        if (isset($article->files[0])) {
-                            echo $this->Html->image($article->files[0]->path . $article->files[0]->name, [
-                                "alt" => $article->files[0]->name,
-                                "width" => "220px",
-                                "height" => "150px",
-                                'url' => ['controller' => 'Files', 'action' => 'view', $article->files[0]->id]
-                            ]);
-                        }
-                        ?>
-                    </td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
