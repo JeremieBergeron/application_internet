@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 23 sep. 2020 à 23:38
+-- Généré le : lun. 28 sep. 2020 à 14:00
 -- Version du serveur :  8.0.18
 -- Version de PHP : 7.3.11
 
@@ -25,19 +25,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `photos`
+-- Structure de la table `files`
 --
 
-CREATE TABLE `photos` (
+CREATE TABLE `files` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `path` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 = Active, 0 = Inactive'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `files_products`
+--
+
+CREATE TABLE `files_products` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `owner` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `date` date NOT NULL,
-  `description` text COLLATE utf8mb4_general_ci NOT NULL,
-  `filename` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `created` date NOT NULL,
-  `modified` date NOT NULL
+  `file_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -48,8 +57,8 @@ CREATE TABLE `photos` (
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `description` text COLLATE utf8mb4_general_ci,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `price` float NOT NULL,
   `quantity_available` int(11) NOT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -61,7 +70,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `quantity_available`, `created`, `modified`) VALUES
-(1, 'Xbox 360', NULL, 400, 100, '2020-09-06 12:59:05', '2020-09-06 13:00:18');
+(1, 'Xbox 360', NULL, 400, 100, '2020-09-06 12:59:05', '2020-09-06 13:00:18'),
+(3, 'PS4', 'Console de jeu vidéo créé par Sony', 400, 100, '2020-09-25 17:48:10', '2020-09-25 17:48:10'),
+(4, 'Xbox One', '', 400, 100, '2020-09-26 18:43:27', '2020-09-26 18:43:27'),
+(5, 'PS3', '', 200, 100, '2020-09-26 18:45:41', '2020-09-26 18:45:41');
 
 -- --------------------------------------------------------
 
@@ -71,6 +83,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `quantity_availabl
 
 CREATE TABLE `products_purchases` (
   `id` int(11) NOT NULL,
+  `quantity_purchased` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `purchase_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -79,9 +92,11 @@ CREATE TABLE `products_purchases` (
 -- Déchargement des données de la table `products_purchases`
 --
 
-INSERT INTO `products_purchases` (`id`, `product_id`, `purchase_id`) VALUES
-(1, 1, 34),
-(2, 1, 35);
+INSERT INTO `products_purchases` (`id`, `quantity_purchased`, `product_id`, `purchase_id`) VALUES
+(1, 0, 1, 34),
+(2, 0, 1, 35),
+(3, 0, 1, 38),
+(4, 0, 3, 38);
 
 -- --------------------------------------------------------
 
@@ -91,8 +106,7 @@ INSERT INTO `products_purchases` (`id`, `product_id`, `purchase_id`) VALUES
 
 CREATE TABLE `purchases` (
   `id` int(11) NOT NULL,
-  `quantity_purchased` int(11) NOT NULL,
-  `detail` text COLLATE utf8mb4_general_ci,
+  `detail` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `user_id` int(11) NOT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -102,10 +116,11 @@ CREATE TABLE `purchases` (
 -- Déchargement des données de la table `purchases`
 --
 
-INSERT INTO `purchases` (`id`, `quantity_purchased`, `detail`, `user_id`, `created`, `modified`) VALUES
-(34, 23, 'test', 1, '2020-09-21 17:22:21', '2020-09-21 17:22:21'),
-(35, 20, 'test2', 2, '2020-09-21 17:24:04', '2020-09-21 17:24:04'),
-(37, 22, '', 2, '2020-09-21 18:14:59', '2020-09-21 18:14:59');
+INSERT INTO `purchases` (`id`, `detail`, `user_id`, `created`, `modified`) VALUES
+(34, 'test', 1, '2020-09-21 17:22:21', '2020-09-21 17:22:21'),
+(35, 'test2', 2, '2020-09-21 17:24:04', '2020-09-21 17:24:04'),
+(37, '', 2, '2020-09-21 18:14:59', '2020-09-21 18:14:59'),
+(38, '', 1, '2020-09-25 17:48:34', '2020-09-25 17:48:34');
 
 -- --------------------------------------------------------
 
@@ -115,8 +130,8 @@ INSERT INTO `purchases` (`id`, `quantity_purchased`, `detail`, `user_id`, `creat
 
 CREATE TABLE `roles` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `description` text COLLATE utf8mb4_general_ci
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -136,12 +151,12 @@ INSERT INTO `roles` (`id`, `name`, `description`) VALUES
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `username` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `adress` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `first_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `last_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `adress` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `first_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `last_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `role_id` int(11) NOT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -161,11 +176,18 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `adress`, `first_nam
 --
 
 --
--- Index pour la table `photos`
+-- Index pour la table `files`
 --
-ALTER TABLE `photos`
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `files_products`
+--
+ALTER TABLE `files_products`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `photos_ibfk_1` (`product_id`);
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `file_id` (`file_id`);
 
 --
 -- Index pour la table `products`
@@ -206,28 +228,34 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT pour la table `photos`
+-- AUTO_INCREMENT pour la table `files`
 --
-ALTER TABLE `photos`
+ALTER TABLE `files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `files_products`
+--
+ALTER TABLE `files_products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `products_purchases`
 --
 ALTER TABLE `products_purchases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `purchases`
 --
 ALTER TABLE `purchases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT pour la table `roles`
@@ -239,17 +267,18 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- Contraintes pour les tables déchargées
 --
 
 --
--- Contraintes pour la table `photos`
+-- Contraintes pour la table `files_products`
 --
-ALTER TABLE `photos`
-  ADD CONSTRAINT `photos_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+ALTER TABLE `files_products`
+  ADD CONSTRAINT `files_products_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `files_products_ibfk_2` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`);
 
 --
 -- Contraintes pour la table `products_purchases`

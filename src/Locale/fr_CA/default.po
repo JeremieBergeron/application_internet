@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2020-09-14 13:04+0000\n"
-"PO-Revision-Date: 2020-09-14 09:20-0400\n"
+"PO-Revision-Date: 2020-09-25 14:30-0400\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +34,7 @@ msgstr "Le produit n'a pas pu être supprimé. Veuillez réessayer."
 #: /Controller/PurchasesController.php:77
 #: /Controller/PurchasesController.php:103
 msgid "The purchase has been saved."
-msgstr "L'achat a été sauvé."
+msgstr "L'achat a été sauvegardé."
 
 #: /Controller/PurchasesController.php:81
 #: /Controller/PurchasesController.php:107
@@ -224,7 +224,7 @@ msgid ""
 "total"
 msgstr ""
 "Page {{page}} de {{pages}}, montrant le(s) enregistrement(s) {{current}} "
-"sur le total de {{compte}}."
+"sur le total de {{count}}."
 
 #: /Template/Products/view.ctp:11
 msgid "Delete Product"
@@ -267,7 +267,7 @@ msgstr "Description"
 
 #: /Template/Products/view.ctp:47 /Template/Users/view.ctp:65
 msgid "Related Purchases"
-msgstr "Achats connexes"
+msgstr "Achats fait par l'utilisateur"
 
 #: /Template/Products/view.ctp:52 /Template/Purchases/view.ctp:36
 #: /Template/Users/view.ctp:70
@@ -327,7 +327,7 @@ msgstr "Utilisateur"
 
 #: /Template/Purchases/view.ctp:53
 msgid "Related Products"
-msgstr "Produits connexes"
+msgstr "Produit acheté"
 
 #: /Template/Roles/add.ctp:10 /Template/Roles/edit.ctp:16
 #: /Template/Roles/view.ctp:12 /Template/Users/add.ctp:11

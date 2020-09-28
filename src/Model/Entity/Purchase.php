@@ -7,8 +7,6 @@ use Cake\ORM\Entity;
  * Purchase Entity
  *
  * @property int $id
- * @property \Cake\I18n\FrozenDate $date
- * @property int $quantity_purchased
  * @property string|null $detail
  * @property int $user_id
  * @property \Cake\I18n\FrozenTime $created
@@ -29,8 +27,6 @@ class Purchase extends Entity
      * @var array
      */
     protected $_accessible = [
-        'date' => true,
-        'quantity_purchased' => true,
         'detail' => true,
         'user_id' => true,
         'created' => true,

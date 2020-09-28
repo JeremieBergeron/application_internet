@@ -21,6 +21,7 @@ class ProductsControllerTest extends TestCase
      */
     public $fixtures = [
         'app.Products',
+        'app.Photos',
         'app.Purchases',
         'app.ProductsPurchases',
     ];

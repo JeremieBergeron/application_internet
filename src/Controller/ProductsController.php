@@ -12,6 +12,17 @@ use App\Controller\AppController;
  */
 class ProductsController extends AppController
 {
+    
+        public function isAuthorized($user) {
+
+        if ($user['role_id'] === 1 || $user['role_id'] === 2) {
+            return true;
+        }
+        // Check that the article belongs to the current user.
+       
+        return false;
+    }
+
     /**
      * Index method
      *
@@ -19,6 +30,10 @@ class ProductsController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Users','Files'],
+        ];
+        
         $products = $this->paginate($this->Products);
 
         $this->set(compact('products'));
@@ -34,7 +49,7 @@ class ProductsController extends AppController
     public function view($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['Purchases'],
+            'contain' => ['Purchases', 'Files'],
         ]);
 
         $this->set('product', $product);
@@ -57,8 +72,8 @@ class ProductsController extends AppController
             }
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
-        $purchases = $this->Products->Purchases->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'purchases'));
+        $files = $this->Products->Files->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'files'));
     }
 
     /**
@@ -71,7 +86,7 @@ class ProductsController extends AppController
     public function edit($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['Purchases'],
+            'contain' => ['Purchases', 'Files'],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
@@ -83,7 +98,8 @@ class ProductsController extends AppController
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
         $purchases = $this->Products->Purchases->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'purchases'));
+        $files = $this->Products->Files->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'purchases', 'files'));
     }
 
     /**

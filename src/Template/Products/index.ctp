@@ -8,6 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Product'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Photo'), ['controller' => 'Photos', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Purchases'), ['controller' => 'Purchases', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Purchase'), ['controller' => 'Purchases', 'action' => 'add']) ?></li>
     </ul>
@@ -17,24 +19,34 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('price') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('quantity_available') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('File') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($products as $product): ?>
             <tr>
-                <td><?= $this->Number->format($product->id) ?></td>
                 <td><?= h($product->name) ?></td>
                 <td><?= $this->Number->format($product->price) ?></td>
                 <td><?= $this->Number->format($product->quantity_available) ?></td>
                 <td><?= h($product->created) ?></td>
                 <td><?= h($product->modified) ?></td>
+                <td><?php
+                        if (isset($article->files[0])) {
+                            echo $this->Html->image($article->files[0]->path . $article->files[0]->name, [
+                                "alt" => $article->files[0]->name,
+                                "width" => "220px",
+                                "height" => "150px",
+                                'url' => ['controller' => 'Files', 'action' => 'view', $article->files[0]->id]
+                            ]);
+                        }
+                        ?>
+                    </td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>

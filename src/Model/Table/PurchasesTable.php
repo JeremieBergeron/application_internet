@@ -65,11 +65,6 @@ class PurchasesTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->integer('quantity_purchased')
-            ->requirePresence('quantity_purchased', 'create')
-            ->notEmptyString('quantity_purchased');
-
-        $validator
             ->scalar('detail')
             ->allowEmptyString('detail');
 
