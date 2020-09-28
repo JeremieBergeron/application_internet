@@ -14,18 +14,10 @@ use App\Controller\AppController;
 class PurchasesController extends AppController {
 
     public function isAuthorized($user) {
-        $action = $this->request->getParam('action');
-        // The add and tags actions are always allowed to logged in users.
-        if (in_array($action, ['add', 'tags'])) {
+        if ($user['role_id'] === 1 || $user['role_id'] === 2) {
             return true;
-        }        // All other actions require a slug.
-        $id = $this->request->getParam('pass.0');
-        if (!$id) {
-            return false;
         }
-        // Check that the article belongs to the current user.
-        $purchase = $this->Purchases->get($id);
-        return $purchase->user_id === $user['id'];
+        return false;
     }
 
     /**
@@ -66,6 +58,7 @@ class PurchasesController extends AppController {
         $purchase = $this->Purchases->newEntity();
         if ($this->request->is('post')) {
             $purchase = $this->Purchases->patchEntity($purchase, $this->request->getData());
+            $purchase->user_id = $this->Auth->user('id');
             if ($this->Purchases->save($purchase)) {
                 $this->Flash->success(__('The purchase has been saved.'));
 

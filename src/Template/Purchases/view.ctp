@@ -22,11 +22,7 @@
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('User') ?></th>
-            <td><?= $purchase->has('user') ? $this->Html->link($purchase->user->id, ['controller' => 'Users', 'action' => 'view', $purchase->user->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($purchase->id) ?></td>
+            <td><?= $purchase->has('user') ? $this->Html->link($purchase->user->username, ['controller' => 'Users', 'action' => 'view', $purchase->user->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
@@ -55,19 +51,19 @@
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($purchase->products as $products): ?>
+            <?php foreach ($purchase->products as $tags): ?>
             <tr>
-                <td><?= h($products->id) ?></td>
-                <td><?= h($products->name) ?></td>
-                <td><?= h($products->description) ?></td>
-                <td><?= h($products->price) ?></td>
-                <td><?= h($products->quantity_available) ?></td>
-                <td><?= h($products->created) ?></td>
-                <td><?= h($products->modified) ?></td>
+                <td><?= h($tags->id) ?></td>
+                <td><?= h($tags->name) ?></td>
+                <td><?= h($tags->description) ?></td>
+                <td><?= h($tags->price) ?></td>
+                <td><?= h($tags->quantity_available) ?></td>
+                <td><?= h($tags->created) ?></td>
+                <td><?= h($tags->modified) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Products', 'action' => 'view', $products->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Products', 'action' => 'edit', $products->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Products', 'action' => 'delete', $products->id], ['confirm' => __('Are you sure you want to delete # {0}?', $products->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Products', 'action' => 'view', $tags->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Products', 'action' => 'edit', $tags->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Products', 'action' => 'delete', $tags->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tags->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

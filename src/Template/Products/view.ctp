@@ -48,29 +48,28 @@
     <div class="related">
         <h4><?= __('Related Purchases') ?></h4>
         <?php if (!empty($product->purchases)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Detail') ?></th>
-                <th scope="col"><?= __('User Id') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($product->purchases as $purchases): ?>
-            <tr>
-                <td><?= h($purchases->id) ?></td>
-                <td><?= h($purchases->detail) ?></td>
-                <td><?= h($purchases->user_id) ?></td>
-                <td><?= h($purchases->created) ?></td>
-                <td><?= h($purchases->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Purchases', 'action' => 'view', $purchases->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Purchases', 'action' => 'edit', $purchases->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Purchases', 'action' => 'delete', $purchases->id], ['confirm' => __('Are you sure you want to delete # {0}?', $purchases->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <th scope="col"><?= __('User Id') ?></th>
+                    <th scope="col"><?= __('Created') ?></th>
+                    <th scope="col"><?= __('Modified') ?></th>
+                    <th scope="col"><?= __('Detail') ?></th>
+                    <th scope="col" class="actions"><?= __('Actions') ?></th>
+                </tr>
+                <?php foreach ($product->purchases as $purchases): ?>
+                    <tr>
+                        <td><?= h($purchases->user_id) ?></td>
+                        <td><?= h($purchases->created) ?></td>
+                        <td><?= h($purchases->modified) ?></td>
+                        <td><?= h($purchases->detail) ?></td>
+                        <td class="actions">
+                            <?= $this->Html->link(__('View'), ['controller' => 'Purchases', 'action' => 'view', $purchases->id]) ?>
+                            <?= $this->Html->link(__('Edit'), ['controller' => 'Purchases', 'action' => 'edit', $purchases->id]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['controller' => 'Purchases', 'action' => 'delete', $purchases->id], ['confirm' => __('Are you sure you want to delete # {0}?', $purchases->id)]) ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
         <?php endif; ?>
     </div>
 
@@ -86,9 +85,25 @@
                             ]);
                             ?></td>
                     </tr>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
             </table>
-<?php endif; ?>
-       
+        <?php endif; ?>
+
+    </div>
+
+    <div class="related">
+        <h4><?= __('Related Tags') ?></h4>
+        <?php if (!empty($product->tags)): ?>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <th scope="col"><?= __('Title') ?></th>
+                </tr>
+                <?php foreach ($product->tags as $tags): ?>
+                    <tr>
+                        <td><?= h($tags->title) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        <?php endif; ?>
     </div>
 </div>

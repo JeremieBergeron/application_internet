@@ -26,8 +26,6 @@
         <legend><?= __('Edit Purchase') ?></legend>
         <?php
             echo $this->Form->control('detail');
-            echo $this->Form->control('user_id', ['options' => $users]);
-            echo $this->Form->control('products._ids', ['options' => $products]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -47,6 +47,12 @@ class ProductsTable extends Table
             'joinTable' => 'products_purchases',
         ]);
         
+             $this->belongsToMany('Tags', [
+            'foreignKey' => 'product_id',
+            'targetForeignKey' => 'tag_id',
+            'joinTable' => 'products_tags',
+        ]);
+        
          $this->belongsToMany('Files', [
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'file_id',

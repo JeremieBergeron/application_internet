@@ -19,11 +19,12 @@
     <fieldset>
         <legend><?= __('Add Product') ?></legend>
         <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('description');
-            echo $this->Form->control('price');
-            echo $this->Form->control('quantity_available');
-             echo $this->Form->control('files._ids', ['options' => $files]);
+        echo $this->Form->control('name');
+        echo $this->Form->control('description');
+        echo $this->Form->control('price');
+        echo $this->Form->control('quantity_available');
+        echo $this->Form->control('files._ids', ['options' => $files]);
+        echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

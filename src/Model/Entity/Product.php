@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
@@ -17,8 +18,8 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Photo[] $photos
  * @property \App\Model\Entity\Purchase[] $purchases
  */
-class Product extends Entity
-{
+class Product extends Entity {
+
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -37,6 +38,8 @@ class Product extends Entity
         'modified' => true,
         'photos' => true,
         'purchases' => true,
-         'files' => true
+        'files' => true,
+        'tags' => true
     ];
+
 }
