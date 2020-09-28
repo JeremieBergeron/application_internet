@@ -31,7 +31,7 @@ class ProductsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users','Files'],
+            'contain' => ['Files'],
         ];
         
         $products = $this->paginate($this->Products);
