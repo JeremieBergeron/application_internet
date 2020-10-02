@@ -20,7 +20,6 @@
              echo $this->Form->control('name', ['type' => 'file']);
 //            echo $this->Form->control('path');
             echo $this->Form->control('status');
-            echo $this->Form->control('products._ids', ['options' => $tags]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

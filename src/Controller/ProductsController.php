@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 
 use App\Controller\AppController;
@@ -11,49 +10,22 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\Product[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class ProductsController extends AppController {
-
-    public function initialize() {
-        parent::initialize();
-        $this->Auth->allow(['tags']);
-    }
-
-    public function isAuthorized($user) {
-
-        if ($user['role_id'] === 1 || $user['role_id'] === 2) {
-            return true;
-        }
-        // Check that the article belongs to the current user.
-
-        return false;
-    }
-
+class ProductsController extends AppController
+{
     /**
      * Index method
      *
      * @return \Cake\Http\Response|null
      */
-    public function index() {
-        $this->paginate = [
-            'contain' => ['Tags', 'Files'],
+    public function index()
+    {
+        
+       $this->paginate = [
+            'contain' => ['Files'],
         ];
-
         $products = $this->paginate($this->Products);
 
         $this->set(compact('products'));
-    }
-    
-    public function tags(...$tags) {
-        // Use the ArticlesTable to find tagged articles.
-        $products = $this->Products->find('tagged', [
-            'tags' => $tags
-        ]);
-
-        // Pass variables into the view template context.
-        $this->set([
-            '$products' => $products,
-            'tags' => $tags
-        ]);
     }
 
     /**
@@ -63,12 +35,12 @@ class ProductsController extends AppController {
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null) {
+    public function view($id = null)
+    {
         $product = $this->Products->get($id, [
-            'contain' => ['Purchases', 'Tags','Files'],
+            'contain' => ['Purchases', 'Tags', 'Files'],
         ]);
-        
-        
+
         $this->set('product', $product);
     }
 
@@ -77,7 +49,8 @@ class ProductsController extends AppController {
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add() {
+    public function add()
+    {
         $product = $this->Products->newEntity();
         if ($this->request->is('post')) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
@@ -88,9 +61,9 @@ class ProductsController extends AppController {
             }
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
-        $files = $this->Products->Files->find('list', ['limit' => 200]);
         $tags = $this->Products->Tags->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'files', 'tags'));
+        $files = $this->Products->Files->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'tags', 'files'));
     }
 
     /**
@@ -100,9 +73,10 @@ class ProductsController extends AppController {
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($id = null) {
+    public function edit($id = null)
+    {
         $product = $this->Products->get($id, [
-            'contain' => ['Purchases', 'Files', 'Tags'],
+            'contain' => ['Purchases', 'Tags', 'Files'],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
@@ -114,9 +88,9 @@ class ProductsController extends AppController {
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
         $purchases = $this->Products->Purchases->find('list', ['limit' => 200]);
-        $files = $this->Products->Files->find('list', ['limit' => 200]);
         $tags = $this->Products->Tags->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'purchases', 'files', 'tags'));
+        $files = $this->Products->Files->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'purchases', 'tags', 'files'));
     }
 
     /**
@@ -126,10 +100,12 @@ class ProductsController extends AppController {
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null) {
+    public function delete($id = null)
+    {
         $this->request->allowMethod(['post', 'delete']);
         $product = $this->Products->get($id);
-        if ($this->Products->delete($product)) {
+        $purchases = $this->Products->get($id)->Purchases;
+        if ($this->Products->delete($product) &&$this->Purchases->delete($purchases) ) {
             $this->Flash->success(__('The product has been deleted.'));
         } else {
             $this->Flash->error(__('The product could not be deleted. Please, try again.'));
@@ -137,5 +113,4 @@ class ProductsController extends AppController {
 
         return $this->redirect(['action' => 'index']);
     }
-
 }

@@ -9,8 +9,9 @@ use Cake\Validation\Validator;
 /**
  * Products Model
  *
- * @property \App\Model\Table\PhotosTable&\Cake\ORM\Association\HasMany $Photos
+ * @property \App\Model\Table\FilesTable&\Cake\ORM\Association\BelongsToMany $Files
  * @property \App\Model\Table\PurchasesTable&\Cake\ORM\Association\BelongsToMany $Purchases
+ * @property \App\Model\Table\TagsTable&\Cake\ORM\Association\BelongsToMany $Tags
  *
  * @method \App\Model\Entity\Product get($primaryKey, $options = [])
  * @method \App\Model\Entity\Product newEntity($data = null, array $options = [])
@@ -41,22 +42,20 @@ class ProductsTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->belongsToMany('Files', [
+            'foreignKey' => 'product_id',
+            'targetForeignKey' => 'file_id',
+            'joinTable' => 'files_products',
+        ]);
         $this->belongsToMany('Purchases', [
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'purchase_id',
             'joinTable' => 'products_purchases',
         ]);
-        
-             $this->belongsToMany('Tags', [
+        $this->belongsToMany('Tags', [
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'tag_id',
             'joinTable' => 'products_tags',
-        ]);
-        
-         $this->belongsToMany('Files', [
-            'foreignKey' => 'product_id',
-            'targetForeignKey' => 'file_id',
-            'joinTable' => 'files_products',
         ]);
     }
 

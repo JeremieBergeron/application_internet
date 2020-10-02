@@ -45,8 +45,8 @@ class ProductsFixture extends TestFixture
                 'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
                 'price' => 1,
                 'quantity_available' => 1,
-                'created' => '2020-09-25 17:58:31',
-                'modified' => '2020-09-25 17:58:31',
+                'created' => '2020-10-02 18:16:00',
+                'modified' => '2020-10-02 18:16:00',
             ],
         ];
         parent::init();
