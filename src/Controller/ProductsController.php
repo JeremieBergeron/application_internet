@@ -104,8 +104,9 @@ class ProductsController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $product = $this->Products->get($id);
-        $purchases = $this->Products->get($id)->Purchases;
-        if ($this->Products->delete($product) &&$this->Purchases->delete($purchases) ) {
+        $query = $product->find('all')->contain(['Purchases']);
+
+        if ($this->Products->delete($product) &&  $this->Products->delete($query) ) {
             $this->Flash->success(__('The product has been deleted.'));
         } else {
             $this->Flash->error(__('The product could not be deleted. Please, try again.'));

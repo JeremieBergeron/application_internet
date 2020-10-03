@@ -36,10 +36,8 @@
         <?php if (!empty($role->users)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Username') ?></th>
                 <th scope="col"><?= __('Email') ?></th>
-                <th scope="col"><?= __('Password') ?></th>
                 <th scope="col"><?= __('Adress') ?></th>
                 <th scope="col"><?= __('First Name') ?></th>
                 <th scope="col"><?= __('Last Name') ?></th>
@@ -50,14 +48,12 @@
             </tr>
             <?php foreach ($role->users as $users): ?>
             <tr>
-                <td><?= h($users->id) ?></td>
                 <td><?= h($users->username) ?></td>
                 <td><?= h($users->email) ?></td>
-                <td><?= h($users->password) ?></td>
                 <td><?= h($users->adress) ?></td>
                 <td><?= h($users->first_name) ?></td>
                 <td><?= h($users->last_name) ?></td>
-                <td><?= h($users->role_id) ?></td>
+                <td><?= $users->has('role') ? $this->Html->link($users->role->name, ['controller' => 'Roles', 'action' => 'view', $users->role->id]) : '' ?></td>
                 <td><?= h($users->created) ?></td>
                 <td><?= h($users->modified) ?></td>
                 <td class="actions">
