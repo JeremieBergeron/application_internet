@@ -7,7 +7,9 @@ use Cake\ORM\Entity;
  * Purchase Entity
  *
  * @property int $id
+ * @property int $quantity_purchased
  * @property string|null $detail
+ * @property int $product_id
  * @property int $user_id
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
@@ -27,7 +29,9 @@ class Purchase extends Entity
      * @var array
      */
     protected $_accessible = [
+        'quantity_purchased' => true,
         'detail' => true,
+        'product_id' => true,
         'user_id' => true,
         'created' => true,
         'modified' => true,

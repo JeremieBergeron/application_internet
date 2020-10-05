@@ -18,7 +18,7 @@
     </ul>
 </nav>
 <div class="users view large-9 medium-8 columns content">
-    <h3><?= h($user->id) ?></h3>
+    <h3><?= h($user->username) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Username') ?></th>
@@ -27,10 +27,6 @@
         <tr>
             <th scope="row"><?= __('Email') ?></th>
             <td><?= h($user->email) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Password') ?></th>
-            <td><?= h($user->password) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Adress') ?></th>
@@ -49,10 +45,6 @@
             <td><?= $user->has('role') ? $this->Html->link($user->role->name, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($user->id) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($user->created) ?></td>
         </tr>
@@ -66,22 +58,18 @@
         <?php if (!empty($user->purchases)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Date') ?></th>
                 <th scope="col"><?= __('Quantity Purchased') ?></th>
                 <th scope="col"><?= __('Detail') ?></th>
-                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col"><?= __('Product Id') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($user->purchases as $purchases): ?>
             <tr>
-                <td><?= h($purchases->id) ?></td>
-                <td><?= h($purchases->date) ?></td>
                 <td><?= h($purchases->quantity_purchased) ?></td>
                 <td><?= h($purchases->detail) ?></td>
-                <td><?= h($purchases->user_id) ?></td>
+                <td><?= h($purchases->product_id) ?></td>
                 <td><?= h($purchases->created) ?></td>
                 <td><?= h($purchases->modified) ?></td>
                 <td class="actions">

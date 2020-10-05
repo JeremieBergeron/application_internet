@@ -13,6 +13,10 @@ use App\Controller\AppController;
 class FilesController extends AppController
 {
     public function isAuthorized($user) {
+        if ($user['role_id'] === 3) {
+            return false;
+        }
+        
         return true;
     }
 

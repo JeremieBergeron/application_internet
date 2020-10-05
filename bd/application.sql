@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 02 oct. 2020 à 19:03
+-- Généré le : lun. 05 oct. 2020 à 19:21
 -- Version du serveur :  8.0.18
 -- Version de PHP : 7.3.11
 
@@ -42,9 +42,7 @@ CREATE TABLE `files` (
 --
 
 INSERT INTO `files` (`id`, `name`, `path`, `created`, `modified`, `status`) VALUES
-(2, '3max (1).jpg', 'files/add/', '2020-09-28 15:07:31', '2020-09-28 15:07:31', 1),
-(3, '63072.jpg', 'files/add/', '2020-09-28 15:11:58', '2020-09-28 15:11:58', 1),
-(6, '250px-PS3Versions.png', 'files/add/', '2020-10-02 18:26:45', '2020-10-02 18:26:45', 1);
+(3, '63072.jpg', 'files/add/', '2020-09-28 15:11:58', '2020-09-28 15:11:58', 1);
 
 -- --------------------------------------------------------
 
@@ -57,6 +55,41 @@ CREATE TABLE `files_products` (
   `product_id` int(11) NOT NULL,
   `file_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `i18n`
+--
+
+CREATE TABLE `i18n` (
+  `id` int(11) NOT NULL,
+  `locale` varchar(6) COLLATE utf8mb4_general_ci NOT NULL,
+  `model` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `foreign_key` int(10) NOT NULL,
+  `field` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `content` text COLLATE utf8mb4_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `i18n`
+--
+
+INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) VALUES
+(1, 'fr_CA', 'Roles', 1, 'description', 'Administrateur du système'),
+(2, 'fr_CA', 'Roles', 2, 'description', 'Personne responsable de l\'ajout et de la modification des produits'),
+(3, 'fr_CA', 'Roles', 3, 'description', 'Personne qui peut voir et acheter des produits'),
+(4, 'fr_CA', 'Roles', 2, 'name', 'gestionnaire'),
+(5, 'fr_CA', 'Roles', 3, 'name', 'client'),
+(6, 'ja_JP', 'Roles', 1, 'description', 'システム管理者'),
+(7, 'ja_JP', 'Roles', 1, 'name', '管理者'),
+(8, 'ja_JP', 'Roles', 2, 'description', '商品の追加や修正を行う担当者'),
+(9, 'ja_JP', 'Roles', 2, 'name', '管理者'),
+(10, 'ja_JP', 'Roles', 3, 'description', '商品の閲覧・購入ができる人'),
+(11, 'ja_JP', 'Roles', 3, 'name', '御客様'),
+(12, 'ja_JP', 'Tags', 1, 'title', 'コンソール'),
+(13, 'ja_JP', 'Tags', 2, 'title', 'ソニー'),
+(14, 'ja_JP', 'Tags', 3, 'title', 'マイクロソフト');
 
 -- --------------------------------------------------------
 
@@ -74,18 +107,13 @@ CREATE TABLE `products` (
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Structure de la table `products_purchases`
+-- Déchargement des données de la table `products`
 --
 
-CREATE TABLE `products_purchases` (
-  `id` int(11) NOT NULL,
-  `quantity_purchased` int(11) NOT NULL DEFAULT '0',
-  `product_id` int(11) NOT NULL,
-  `purchase_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `quantity_available`, `created`, `modified`) VALUES
+(14, 'mirolo', '', 20, 7, '2020-10-02 19:51:25', '2020-10-02 19:51:25'),
+(16, 'PS3', '', 400, 100, '2020-10-03 14:40:12', '2020-10-03 14:40:12');
 
 -- --------------------------------------------------------
 
@@ -98,6 +126,15 @@ CREATE TABLE `products_tags` (
   `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Déchargement des données de la table `products_tags`
+--
+
+INSERT INTO `products_tags` (`product_id`, `tag_id`) VALUES
+(16, 1),
+(16, 2),
+(14, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -106,7 +143,9 @@ CREATE TABLE `products_tags` (
 
 CREATE TABLE `purchases` (
   `id` int(11) NOT NULL,
+  `quantity_purchased` int(11) NOT NULL,
   `detail` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `product_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -116,8 +155,9 @@ CREATE TABLE `purchases` (
 -- Déchargement des données de la table `purchases`
 --
 
-INSERT INTO `purchases` (`id`, `detail`, `user_id`, `created`, `modified`) VALUES
-(49, '', 1, '2020-10-02 19:02:38', '2020-10-02 19:02:38');
+INSERT INTO `purchases` (`id`, `quantity_purchased`, `detail`, `product_id`, `user_id`, `created`, `modified`) VALUES
+(57, 1, '', 16, 1, '2020-10-03 14:40:38', '2020-10-03 14:51:22'),
+(58, 1, '', 16, 2, '2020-10-03 14:41:44', '2020-10-03 14:41:44');
 
 -- --------------------------------------------------------
 
@@ -148,7 +188,7 @@ INSERT INTO `roles` (`id`, `name`, `description`) VALUES
 
 CREATE TABLE `tags` (
   `id` int(11) NOT NULL,
-  `title` varchar(191) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -158,9 +198,9 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`id`, `title`, `created`, `modified`) VALUES
-(1, 'Console', '2020-09-28 17:34:47', '2020-09-28 17:35:30'),
-(2, 'Sony', '2020-09-28 17:38:27', '2020-09-28 17:38:27'),
-(3, 'Microsoft', '2020-09-28 17:38:35', '2020-09-28 17:38:35');
+(1, 'Console', '2020-09-28 17:34:47', '2020-10-05 17:58:54'),
+(2, 'Sony', '2020-09-28 17:38:27', '2020-10-05 17:59:35'),
+(3, 'Microsoft', '2020-09-28 17:38:35', '2020-10-05 18:00:00');
 
 -- --------------------------------------------------------
 
@@ -173,6 +213,8 @@ CREATE TABLE `users` (
   `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `confirmed` tinyint(1) NOT NULL,
   `adress` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `first_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `last_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
@@ -185,10 +227,12 @@ CREATE TABLE `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `adress`, `first_name`, `last_name`, `role_id`, `created`, `modified`) VALUES
-(1, 'admin', 'admin@admin.com', '$2y$10$T44oYw0Ov4GgOGb.YPTNF.htJLoRJUxiCXPBvNysfn2ccZV7MPhqy', '2000 Rue de l\'école', 'Jérémie', 'Bergeron', 1, '2020-09-06 13:03:09', '2020-10-02 18:03:17'),
-(2, 'manager', 'manager@manager.com', '$2y$10$IH551bVho046lEsiAxG1Zuz0kRPHqpqf3004bCKl8WyeZ5CbwZgSa', '4000 rue de Lamontagne', 'Jean', 'Gagnon', 2, '2020-09-06 13:03:09', '2020-09-08 18:46:51'),
-(5, 'customer', 'customer@customer.com', '$2y$10$mRkfW.GsVc9JBxgOATJq0.U6uCvog5QZYrLNZE.NSP6Np6sO.hVYK', '34 Rue de la sagesse', 'Diego', 'Bouchard', 3, '2020-09-06 13:03:09', '2020-09-08 18:47:02');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `uuid`, `confirmed`, `adress`, `first_name`, `last_name`, `role_id`, `created`, `modified`) VALUES
+(1, 'admin', 'admin@admin.com', '$2y$10$T44oYw0Ov4GgOGb.YPTNF.htJLoRJUxiCXPBvNysfn2ccZV7MPhqy', '79d1e7b7-a337-4748-9a18-ea8f7f213b9d', 0, '2000 Rue de l\'école', 'Jérémie', 'Bergeron', 1, '2020-09-06 13:03:09', '2020-10-03 16:29:32'),
+(2, 'manager', 'manager@manager.com', '$2y$10$IH551bVho046lEsiAxG1Zuz0kRPHqpqf3004bCKl8WyeZ5CbwZgSa', '3d3d669d-e981-4965-882b-b796a33bdfcc', 0, '4000 rue de Lamontagne', 'Jean', 'Gagnon', 2, '2020-09-06 13:03:09', '2020-10-03 16:29:53'),
+(5, 'customer', 'customer@customer.com', '$2y$10$mRkfW.GsVc9JBxgOATJq0.U6uCvog5QZYrLNZE.NSP6Np6sO.hVYK', '5c2b2551-8efb-4343-b2c3-6759700a1032', 0, '34 Rue de la sagesse', 'Diego', 'Bouchard', 3, '2020-09-06 13:03:09', '2020-10-03 16:29:27'),
+(39, 'moi15moi', 'jeremiebergeronlol@outlook.com', '$2y$10$KqQaNRLaUBTM7ddOPRz32eZaFHyHw3ISiZIwpPRMzUGVNRkw7rPS6', 'a4fb6ea7-8ef5-48c5-a7d9-b59381cbec9c', 1, '1867 Rue de Limbourg', 'Jeremie', 'Bergeron', 1, '2020-10-03 16:48:57', '2020-10-03 16:49:59'),
+(40, 'test', 'jeremiebergeron1515@gmail.com', '$2y$10$ZBTgCsQmvQLmTp/1SP5/veNF6rdCvfNACXZFNLETGwUbAWHoUT9ya', '367ae43e-7389-4b45-b98a-c429ff66b19b', 0, '1867 Rue de Limbourg', 'Jeremie', 'Bergeron', 3, '2020-10-05 18:22:52', '2020-10-05 18:22:52');
 
 --
 -- Index pour les tables déchargées
@@ -209,18 +253,18 @@ ALTER TABLE `files_products`
   ADD KEY `file_id` (`file_id`);
 
 --
+-- Index pour la table `i18n`
+--
+ALTER TABLE `i18n`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `I18N_LOCALE_FIELD` (`locale`,`model`(100),`foreign_key`,`field`(100)),
+  ADD KEY `I18N_FIELD` (`model`(100),`foreign_key`,`field`(100));
+
+--
 -- Index pour la table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `products_purchases`
---
-ALTER TABLE `products_purchases`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `products_purchases_ibfk_1` (`product_id`),
-  ADD KEY `products_purchases_ibfk_2` (`purchase_id`);
 
 --
 -- Index pour la table `products_tags`
@@ -234,7 +278,8 @@ ALTER TABLE `products_tags`
 --
 ALTER TABLE `purchases`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `purchases_ibfk_1` (`user_id`);
+  ADD KEY `purchases_ibfk_1` (`user_id`),
+  ADD KEY `purchases_ibfk_2` (`product_id`);
 
 --
 -- Index pour la table `roles`
@@ -270,31 +315,31 @@ ALTER TABLE `files`
 -- AUTO_INCREMENT pour la table `files_products`
 --
 ALTER TABLE `files_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT pour la table `i18n`
+--
+ALTER TABLE `i18n`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT pour la table `products_purchases`
---
-ALTER TABLE `products_purchases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT pour la table `purchases`
 --
 ALTER TABLE `purchases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT pour la table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `tags`
@@ -306,7 +351,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- Contraintes pour les tables déchargées
@@ -320,13 +365,6 @@ ALTER TABLE `files_products`
   ADD CONSTRAINT `files_products_ibfk_2` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`);
 
 --
--- Contraintes pour la table `products_purchases`
---
-ALTER TABLE `products_purchases`
-  ADD CONSTRAINT `products_purchases_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `products_purchases_ibfk_2` FOREIGN KEY (`purchase_id`) REFERENCES `purchases` (`id`);
-
---
 -- Contraintes pour la table `products_tags`
 --
 ALTER TABLE `products_tags`
@@ -337,7 +375,8 @@ ALTER TABLE `products_tags`
 -- Contraintes pour la table `purchases`
 --
 ALTER TABLE `purchases`
-  ADD CONSTRAINT `purchases_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `purchases_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `purchases_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
 -- Contraintes pour la table `users`

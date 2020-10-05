@@ -22,10 +22,6 @@
             <th scope="row"><?= __('Name') ?></th>
             <td><?= h($role->name) ?></td>
         </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($role->id) ?></td>
-        </tr>
     </table>
     <div class="row">
         <h4><?= __('Description') ?></h4>
@@ -41,7 +37,6 @@
                 <th scope="col"><?= __('Adress') ?></th>
                 <th scope="col"><?= __('First Name') ?></th>
                 <th scope="col"><?= __('Last Name') ?></th>
-                <th scope="col"><?= __('Role Id') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -53,7 +48,6 @@
                 <td><?= h($users->adress) ?></td>
                 <td><?= h($users->first_name) ?></td>
                 <td><?= h($users->last_name) ?></td>
-                <td><?= $users->has('role') ? $this->Html->link($users->role->name, ['controller' => 'Roles', 'action' => 'view', $users->role->id]) : '' ?></td>
                 <td><?= h($users->created) ?></td>
                 <td><?= h($users->modified) ?></td>
                 <td class="actions">

@@ -25,6 +25,14 @@
             <td><?= $purchase->has('user') ? $this->Html->link($purchase->user->username, ['controller' => 'Users', 'action' => 'view', $purchase->user->id]) : '' ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Quantity Purchased') ?></th>
+            <td><?= $this->Number->format($purchase->quantity_purchased) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Product') ?></th>
+            <td><?= $purchase->has('product') ? $this->Html->link($purchase->product->name, ['controller' => 'Users', 'action' => 'view', $purchase->product->id]) : '' ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($purchase->created) ?></td>
         </tr>
@@ -36,38 +44,5 @@
     <div class="row">
         <h4><?= __('Detail') ?></h4>
         <?= $this->Text->autoParagraph(h($purchase->detail)); ?>
-    </div>
-    <div class="related">
-        <h4><?= __('Related Products') ?></h4>
-        <?php if (!empty($purchase->products)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Name') ?></th>
-                <th scope="col"><?= __('Description') ?></th>
-                <th scope="col"><?= __('Price') ?></th>
-                <th scope="col"><?= __('Quantity Available') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($purchase->products as $tags): ?>
-            <tr>
-                <td><?= h($tags->id) ?></td>
-                <td><?= h($tags->name) ?></td>
-                <td><?= h($tags->description) ?></td>
-                <td><?= h($tags->price) ?></td>
-                <td><?= h($tags->quantity_available) ?></td>
-                <td><?= h($tags->created) ?></td>
-                <td><?= h($tags->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Products', 'action' => 'view', $tags->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Products', 'action' => 'edit', $tags->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Products', 'action' => 'delete', $tags->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tags->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
     </div>
 </div>

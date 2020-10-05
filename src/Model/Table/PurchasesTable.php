@@ -9,8 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Purchases Model
  *
+ * @property \App\Model\Table\ProductsTable&\Cake\ORM\Association\BelongsTo $Products
  * @property \App\Model\Table\UsersTable&\Cake\ORM\Association\BelongsTo $Users
- * @property \App\Model\Table\ProductsTable&\Cake\ORM\Association\BelongsToMany $Products
  *
  * @method \App\Model\Entity\Purchase get($primaryKey, $options = [])
  * @method \App\Model\Entity\Purchase newEntity($data = null, array $options = [])
@@ -41,14 +41,13 @@ class PurchasesTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->belongsTo('Products', [
+            'foreignKey' => 'product_id',
+            'joinType' => 'INNER',
+        ]);
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
             'joinType' => 'INNER',
-        ]);
-        $this->belongsToMany('Products', [
-            'foreignKey' => 'purchase_id',
-            'targetForeignKey' => 'product_id',
-            'joinTable' => 'products_purchases',
         ]);
     }
 
@@ -63,6 +62,11 @@ class PurchasesTable extends Table
         $validator
             ->integer('id')
             ->allowEmptyString('id', null, 'create');
+
+        $validator
+            ->integer('quantity_purchased')
+            ->requirePresence('quantity_purchased', 'create')
+            ->notEmptyString('quantity_purchased');
 
         $validator
             ->scalar('detail')
@@ -80,6 +84,7 @@ class PurchasesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
+        $rules->add($rules->existsIn(['product_id'], 'Products'));
         $rules->add($rules->existsIn(['user_id'], 'Users'));
 
         return $rules;

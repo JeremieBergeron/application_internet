@@ -12,6 +12,13 @@ use App\Controller\AppController;
  */
 class ProductsController extends AppController
 {
+    
+     public function isAuthorized($user) {
+        if ($user['role_id'] === 1 || $user['role_id'] === 2) {
+            return true;
+        }
+        return false;
+    }
     /**
      * Index method
      *
@@ -19,8 +26,7 @@ class ProductsController extends AppController
      */
     public function index()
     {
-        
-       $this->paginate = [
+        $this->paginate = [
             'contain' => ['Files'],
         ];
         $products = $this->paginate($this->Products);
@@ -38,7 +44,7 @@ class ProductsController extends AppController
     public function view($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['Purchases', 'Tags', 'Files'],
+            'contain' => ['Files', 'Purchases', 'Tags'],
         ]);
 
         $this->set('product', $product);
@@ -61,9 +67,9 @@ class ProductsController extends AppController
             }
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
-        $tags = $this->Products->Tags->find('list', ['limit' => 200]);
         $files = $this->Products->Files->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'tags', 'files'));
+        $tags = $this->Products->Tags->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'files', 'tags'));
     }
 
     /**
@@ -76,7 +82,7 @@ class ProductsController extends AppController
     public function edit($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['Purchases', 'Tags', 'Files'],
+            'contain' => ['Files', 'Purchases', 'Tags'],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
@@ -87,10 +93,9 @@ class ProductsController extends AppController
             }
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
-        $purchases = $this->Products->Purchases->find('list', ['limit' => 200]);
-        $tags = $this->Products->Tags->find('list', ['limit' => 200]);
         $files = $this->Products->Files->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'purchases', 'tags', 'files'));
+        $tags = $this->Products->Tags->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'files', 'tags'));
     }
 
     /**
@@ -104,9 +109,7 @@ class ProductsController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $product = $this->Products->get($id);
-        $query = $product->find('all')->contain(['Purchases']);
-
-        if ($this->Products->delete($product) &&  $this->Products->delete($query) ) {
+        if ($this->Products->delete($product)) {
             $this->Flash->success(__('The product has been deleted.'));
         } else {
             $this->Flash->error(__('The product could not be deleted. Please, try again.'));

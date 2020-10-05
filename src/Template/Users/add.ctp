@@ -25,7 +25,6 @@
             echo $this->Form->control('adress');
             echo $this->Form->control('first_name');
             echo $this->Form->control('last_name');
-            echo $this->Form->control('role_id', ['options' => $roles]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -19,6 +19,8 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <th scope="col"><?= $this->Paginator->sort('quantity_purchased') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('product_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
@@ -28,6 +30,8 @@
         <tbody>
             <?php foreach ($purchases as $purchase): ?>
             <tr>
+                <td><?= $this->Number->format($purchase->quantity_purchased) ?></td>
+                <td><?= $purchase->has('product') ? $this->Html->link($purchase->product->name, ['controller' => 'Products', 'action' => 'view', $purchase->product->id]) : '' ?></td>
                 <td><?= $purchase->has('user') ? $this->Html->link($purchase->user->username, ['controller' => 'Users', 'action' => 'view', $purchase->user->id]) : '' ?></td>
                 <td><?= h($purchase->created) ?></td>
                 <td><?= h($purchase->modified) ?></td>

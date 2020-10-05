@@ -33,6 +33,7 @@ class TagsTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
+        $this->addBehavior('Translate', ['fields' => ['title']]);
 
         $this->setTable('tags');
         $this->setDisplayField('title');

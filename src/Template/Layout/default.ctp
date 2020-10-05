@@ -44,6 +44,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <ul class="right">
                     <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]); ?></li>
                     <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]); ?></li>
+                    <li><?= $this->Html->link('日本語', ['action' => 'changeLang', 'ja_JP'], ['escape' => false]); ?></li>
                     <li> <?php
                         $loguser = $this->request->session()->read('Auth.User');
                         if ($loguser) {
@@ -54,6 +55,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             echo $this->Html->link(__('login'), ['controller' => 'Users', 'action' => 'login']);
                         }
                         ?> </li>
+                    <li><?= $this->Html->link(__('About us'), ['controller' => 'Pages', 'action' => 'aPropos']);?></li>
                     <li><a target="_blank" href="https://book.cakephp.org/3/">Documentation</a></li>
                     <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
                 </ul>

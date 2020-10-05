@@ -19,9 +19,9 @@
     <fieldset>
         <legend><?= __('Add Purchase') ?></legend>
         <?php
-        echo $this->Form->control('quantity_purchased');
-        echo $this->Form->control('products._ids', ['options' => $products]);
-        echo $this->Form->control('detail');
+            echo $this->Form->control('quantity_purchased');
+            echo $this->Form->control('detail');
+            echo $this->Form->control('product_id');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

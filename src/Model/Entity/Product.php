@@ -14,9 +14,9 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
+ * @property \App\Model\Entity\File[] $files
  * @property \App\Model\Entity\Purchase[] $purchases
  * @property \App\Model\Entity\Tag[] $tags
- * @property \App\Model\Entity\File[] $files
  */
 class Product extends Entity
 {
@@ -36,8 +36,8 @@ class Product extends Entity
         'quantity_available' => true,
         'created' => true,
         'modified' => true,
+        'files' => true,
         'purchases' => true,
         'tags' => true,
-        'files' => true,
     ];
 }

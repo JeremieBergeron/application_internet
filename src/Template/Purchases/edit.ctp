@@ -25,7 +25,9 @@
     <fieldset>
         <legend><?= __('Edit Purchase') ?></legend>
         <?php
+            echo $this->Form->control('quantity_purchased');
             echo $this->Form->control('detail');
+            echo $this->Form->control('product_id');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

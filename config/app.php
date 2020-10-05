@@ -18,7 +18,6 @@ return [
      * true: Errors and warnings shown.
      */
     'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
-
     /*
      * Configure basic information about the application.
      *
@@ -67,7 +66,6 @@ return [
             'locales' => [APP . 'Locale' . DS],
         ],
     ],
-
     /*
      * Security and encryption configuration
      *
@@ -78,7 +76,6 @@ return [
     'Security' => [
         'salt' => env('SECURITY_SALT'),
     ],
-
     /*
      * Apply timestamps with the last modified time to static assets (js, css, images).
      * Will append a querystring parameter containing the time the file was modified.
@@ -88,10 +85,9 @@ return [
      * enable timestamping regardless of debug value.
      */
     'Asset' => [
-        //'timestamp' => true,
-        // 'cacheTime' => '+1 year'
+    //'timestamp' => true,
+    // 'cacheTime' => '+1 year'
     ],
-
     /*
      * Configure the cache adapters.
      */
@@ -101,7 +97,6 @@ return [
             'path' => CACHE,
             'url' => env('CACHE_DEFAULT_URL', null),
         ],
-
         /*
          * Configure the cache used for general framework caching.
          * Translation cache files are stored with this configuration.
@@ -116,7 +111,6 @@ return [
             'duration' => '+1 years',
             'url' => env('CACHE_CAKECORE_URL', null),
         ],
-
         /*
          * Configure the cache for model and datasource caches. This cache
          * configuration is used to store schema descriptions, and table listings
@@ -131,7 +125,6 @@ return [
             'duration' => '+1 years',
             'url' => env('CACHE_CAKEMODEL_URL', null),
         ],
-
         /*
          * Configure the cache for routes. The cached routes collection is built the
          * first time the routes are processed through `config/routes.php`.
@@ -146,7 +139,6 @@ return [
             'url' => env('CACHE_CAKEROUTES_URL', null),
         ],
     ],
-
     /*
      * Configure the Error and Exception handlers used by your application.
      *
@@ -183,8 +175,26 @@ return [
         'log' => true,
         'trace' => true,
     ],
-
     /*
+     * Email configuration.
+     *
+     * By defining transports separately from delivery profiles you can easily
+     * re-use transport configuration across multiple profiles.
+     *
+     * You can specify multiple configurations for production, development and
+     * testing.
+     *
+     * Each transport needs a `className`. Valid options are as follows:
+     *
+     *  Mail   - Send using PHP mail function
+     *  Smtp   - Send using SMTP
+     *  Debug  - Do not send the email, just return the result
+     *
+     * You can add custom transports (or override existing transports) by adding the
+     * appropriate file to src/Mailer/Transport. Transports should be named
+     * 'YourTransport.php', where 'Your' is the name of the transport.
+     */
+    /**
      * Email configuration.
      *
      * By defining transports separately from delivery profiles you can easily
@@ -207,24 +217,33 @@ return [
         'default' => [
             'className' => MailTransport::class,
             /*
-             * The keys host, port, timeout, username, password, client and tls
-             * are used in SMTP transports
+             * The following keys are used in SMTP transports:
              */
             'host' => 'localhost',
             'port' => 25,
             'timeout' => 30,
-            /*
-             * It is recommended to set these options through your environment or app_local.php
-             */
-            //'username' => null,
-            //'password' => null,
+            'username' => null,
+            'password' => null,
             'client' => null,
-            'tls' => false,
+            'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
+        'davmail' => [
+            'host' => 'localhost',
+            'port' => 1025,
+            'username' => 'votreNoDA@cmontmorency.qc.ca',
+            'password' => 'votreMotDePasse',
+            'className' => 'Smtp'
+        ],
+        'gmail' => [
+            'host' => 'ssl://smtp.gmail.com',
+            'port' => 465,
+            'username' => 'jeremiebergeron1515@gmail.com',
+            'password' => 'thhqwgbmolakjevq',
+            'className' => 'Smtp'
+        ]
     ],
-
-    /*
+    /**
      * Email delivery profiles
      *
      * Delivery profiles allow you to predefine various properties about email
@@ -235,16 +254,13 @@ return [
      */
     'Email' => [
         'default' => [
-            'transport' => 'default',
-            'from' => 'you@localhost',
-            /*
-             * Will by default be set to config value of App.encoding, if that exists otherwise to UTF-8.
-             */
-            //'charset' => 'utf-8',
-            //'headerCharset' => 'utf-8',
+            'transport' => 'gmail',
+//            'transport' => 'davmail',
+            'from' => 'votrecompte@gmail.com',
+        //'charset' => 'utf-8',
+        //'headerCharset' => 'utf-8',
         ],
     ],
-
     /*
      * Connection information used by the ORM to connect
      * to your application's datastores.
@@ -284,7 +300,6 @@ return [
             'flags' => [],
             'cacheMetadata' => true,
             'log' => false,
-
             /*
              * Set identifier quoting to true if you are using reserved words or
              * special characters in your table or column names. Enabling this
@@ -294,7 +309,6 @@ return [
              * manipulated before being executed.
              */
             'quoteIdentifiers' => false,
-
             /*
              * During development, if using MySQL < 5.6, uncommenting the
              * following line could boost the speed at which schema metadata is
@@ -303,10 +317,8 @@ return [
              * which is the recommended value in production environments
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-
             'url' => env('DATABASE_URL', null),
         ],
-
         /*
          * The test connection is used during the test suite.
          */
@@ -328,7 +340,6 @@ return [
             'url' => env('DATABASE_TEST_URL', null),
         ],
     ],
-
     /*
      * Configures logging options
      */
@@ -358,7 +369,6 @@ return [
             'scopes' => ['queriesLog'],
         ],
     ],
-
     /*
      * Session configuration.
      *

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 
 use App\Controller\AppController;
@@ -11,23 +10,28 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\Purchase[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class PurchasesController extends AppController {
-
+class PurchasesController extends AppController
+{
+    
     public function isAuthorized($user) {
+        
         if ($user['role_id'] === 1 || $user['role_id'] === 2) {
             return true;
         }
-        return false;
-    }
+         $id = $this->request->getParam('pass.0');
+        $purchases = $this->Purchases->findById($id)->first();
 
+        return $purchases->user_id === $user['id'];
+    }
     /**
      * Index method
      *
      * @return \Cake\Http\Response|null
      */
-    public function index() {
+    public function index()
+    {
         $this->paginate = [
-            'contain' => ['Users'],
+            'contain' => ['Users' , 'Products'],
         ];
         $purchases = $this->paginate($this->Purchases);
 
@@ -41,7 +45,8 @@ class PurchasesController extends AppController {
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null) {
+    public function view($id = null)
+    {
         $purchase = $this->Purchases->get($id, [
             'contain' => ['Users', 'Products'],
         ]);
@@ -54,7 +59,8 @@ class PurchasesController extends AppController {
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add() {
+    public function add()
+    {
         $purchase = $this->Purchases->newEntity();
         if ($this->request->is('post')) {
             $purchase = $this->Purchases->patchEntity($purchase, $this->request->getData());
@@ -114,5 +120,4 @@ class PurchasesController extends AppController {
 
         return $this->redirect(['action' => 'index']);
     }
-
 }
