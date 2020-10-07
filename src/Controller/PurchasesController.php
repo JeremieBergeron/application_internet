@@ -14,6 +14,10 @@ class PurchasesController extends AppController
 {
     
     public function isAuthorized($user) {
+
+        /*if($user['confirmed'] == false){
+            return false;
+        }*/
         
         if ($user['role_id'] === 1 || $user['role_id'] === 2) {
             return true;

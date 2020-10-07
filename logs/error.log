@@ -7202,3 +7202,1164 @@ Request URL: /img/pagesdiagramme_bdd.png
 Referer URL: http://localhost/TP1/pages/a-propos
 
 
+2020-10-07 18:01:25 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/users/send-confirm-email/{
+    "id": 40,
+    "username": "test",
+    "email": "jeremiebergeron1515@gmail.com",
+    "uuid": "367ae43e-7389-4b45-b98a-c429ff66b19b",
+    "confirmed": false,
+    "adress": "1867 Rue de Limbourg",
+    "first_name": "Jeremie",
+    "last_name": "Bergeron",
+    "role_id": 3,
+    "created": "2020-10-05T18:22:52+00:00",
+    "modified": "2020-10-05T18:22:52+00:00"
+}" could not be found. (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\RouteCollection.php:216)
+Exception Attributes: array (
+  'url' => '/users/send-confirm-email/{
+    "id": 40,
+    "username": "test",
+    "email": "jeremiebergeron1515@gmail.com",
+    "uuid": "367ae43e-7389-4b45-b98a-c429ff66b19b",
+    "confirmed": false,
+    "adress": "1867 Rue de Limbourg",
+    "first_name": "Jeremie",
+    "last_name": "Bergeron",
+    "role_id": 3,
+    "created": "2020-10-05T18:22:52+00:00",
+    "modified": "2020-10-05T18:22:52+00:00"
+}',
+)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Router.php(389): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(148): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+Request URL: /users/send-confirm-email/%7B%0A%20%20%20%20%22id%22%3A%2040%2C%0A%20%20%20%20%22username%22%3A%20%22test%22%2C%0A%20%20%20%20%22email%22%3A%20%22jeremiebergeron1515%40gmail.com%22%2C%0A%20%20%20%20%22uuid%22%3A%20%22367ae43e-7389-4b45-b98a-c429ff66b19b%22%2C%0A%20%20%20%20%22confirmed%22%3A%20false%2C%0A%20%20%20%20%22adress%22%3A%20%221867%20Rue%20de%20Limbourg%22%2C%0A%20%20%20%20%22first_name%22%3A%20%22Jeremie%22%2C%0A%20%20%20%20%22last_name%22%3A%20%22Bergeron%22%2C%0A%20%20%20%20%22role_id%22%3A%203%2C%0A%20%20%20%20%22created%22%3A%20%222020-10-05T18%3A22%3A52%2B00%3A00%22%2C%0A%20%20%20%20%22modified%22%3A%20%222020-10-05T18%3A22%3A52%2B00%3A00%22%0A%7D
+Referer URL: http://localhost/TP1/users/non-confirmer/40
+
+
+2020-10-07 18:10:10 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'role_id' doesn't have a default value (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\User), Array)
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\User), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\UsersController.php(118): Cake\ORM\Table->save(Object(App\Model\Entity\User))
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\UsersController->add()
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /users/add
+Referer URL: http://localhost/TP1/users/add
+
+
+2020-10-07 18:10:16 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'role_id' doesn't have a default value (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\User), Array)
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\User), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\UsersController.php(118): Cake\ORM\Table->save(Object(App\Model\Entity\User))
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\UsersController->add()
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /users/add
+Referer URL: http://localhost/TP1/users/add
+
+
+2020-10-07 18:10:46 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'role_id' doesn't have a default value (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\User), Array)
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\User), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\UsersController.php(118): Cake\ORM\Table->save(Object(App\Model\Entity\User))
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\UsersController->add()
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /users/add
+Referer URL: http://localhost/TP1/users/add
+
+
+2020-10-07 18:12:07 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'role_id' doesn't have a default value (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\User), Array)
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\User), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\UsersController.php(118): Cake\ORM\Table->save(Object(App\Model\Entity\User))
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\UsersController->add()
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /users/add
+Referer URL: http://localhost/TP1/users/add
+
+
+2020-10-07 18:21:24 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/users/send-confirm-email/{
+    "id": 41,
+    "username": "test",
+    "email": "jeremiebergeron1515@gmail.com",
+    "uuid": "42374759-2d0b-4b84-b5f7-79120085d095",
+    "confirmed": false,
+    "adress": "1867 Rue de Limbourg",
+    "first_name": "Jeremie",
+    "last_name": "Bergeron",
+    "role_id": 3,
+    "created": "2020-10-07T18:18:03+00:00",
+    "modified": "2020-10-07T18:18:03+00:00"
+}" could not be found. (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\RouteCollection.php:216)
+Exception Attributes: array (
+  'url' => '/users/send-confirm-email/{
+    "id": 41,
+    "username": "test",
+    "email": "jeremiebergeron1515@gmail.com",
+    "uuid": "42374759-2d0b-4b84-b5f7-79120085d095",
+    "confirmed": false,
+    "adress": "1867 Rue de Limbourg",
+    "first_name": "Jeremie",
+    "last_name": "Bergeron",
+    "role_id": 3,
+    "created": "2020-10-07T18:18:03+00:00",
+    "modified": "2020-10-07T18:18:03+00:00"
+}',
+)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Router.php(389): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(148): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+Request URL: /users/send-confirm-email/%7B%0A%20%20%20%20%22id%22%3A%2041%2C%0A%20%20%20%20%22username%22%3A%20%22test%22%2C%0A%20%20%20%20%22email%22%3A%20%22jeremiebergeron1515%40gmail.com%22%2C%0A%20%20%20%20%22uuid%22%3A%20%2242374759-2d0b-4b84-b5f7-79120085d095%22%2C%0A%20%20%20%20%22confirmed%22%3A%20false%2C%0A%20%20%20%20%22adress%22%3A%20%221867%20Rue%20de%20Limbourg%22%2C%0A%20%20%20%20%22first_name%22%3A%20%22Jeremie%22%2C%0A%20%20%20%20%22last_name%22%3A%20%22Bergeron%22%2C%0A%20%20%20%20%22role_id%22%3A%203%2C%0A%20%20%20%20%22created%22%3A%20%222020-10-07T18%3A18%3A03%2B00%3A00%22%2C%0A%20%20%20%20%22modified%22%3A%20%222020-10-07T18%3A18%3A03%2B00%3A00%22%0A%7D
+Referer URL: http://localhost/TP1/users/non-confirmer/41
+
+
+2020-10-07 18:24:06 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/users/send-confirm-email/{
+    "id": 41,
+    "username": "test",
+    "email": "jeremiebergeron1515@gmail.com",
+    "uuid": "42374759-2d0b-4b84-b5f7-79120085d095",
+    "confirmed": false,
+    "adress": "1867 Rue de Limbourg",
+    "first_name": "Jeremie",
+    "last_name": "Bergeron",
+    "role_id": 3,
+    "created": "2020-10-07T18:18:03+00:00",
+    "modified": "2020-10-07T18:18:03+00:00"
+}" could not be found. (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\RouteCollection.php:216)
+Exception Attributes: array (
+  'url' => '/users/send-confirm-email/{
+    "id": 41,
+    "username": "test",
+    "email": "jeremiebergeron1515@gmail.com",
+    "uuid": "42374759-2d0b-4b84-b5f7-79120085d095",
+    "confirmed": false,
+    "adress": "1867 Rue de Limbourg",
+    "first_name": "Jeremie",
+    "last_name": "Bergeron",
+    "role_id": 3,
+    "created": "2020-10-07T18:18:03+00:00",
+    "modified": "2020-10-07T18:18:03+00:00"
+}',
+)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Router.php(389): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(148): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+Request URL: /users/send-confirm-email/%7B%0A%20%20%20%20%22id%22%3A%2041%2C%0A%20%20%20%20%22username%22%3A%20%22test%22%2C%0A%20%20%20%20%22email%22%3A%20%22jeremiebergeron1515%40gmail.com%22%2C%0A%20%20%20%20%22uuid%22%3A%20%2242374759-2d0b-4b84-b5f7-79120085d095%22%2C%0A%20%20%20%20%22confirmed%22%3A%20false%2C%0A%20%20%20%20%22adress%22%3A%20%221867%20Rue%20de%20Limbourg%22%2C%0A%20%20%20%20%22first_name%22%3A%20%22Jeremie%22%2C%0A%20%20%20%20%22last_name%22%3A%20%22Bergeron%22%2C%0A%20%20%20%20%22role_id%22%3A%203%2C%0A%20%20%20%20%22created%22%3A%20%222020-10-07T18%3A18%3A03%2B00%3A00%22%2C%0A%20%20%20%20%22modified%22%3A%20%222020-10-07T18%3A18%3A03%2B00%3A00%22%0A%7D
+Referer URL: http://localhost/TP1/users/non-confirmer/41
+
+
+2020-10-07 18:28:29 Error: [ParseError] syntax error, unexpected 'method' (T_STRING) (C:\Program Files\Ampps\www\TP1\src\Template\Users\non_confirmer.ctp:16)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /users/non-confirmer/41
+Referer URL: http://localhost/TP1/users/non-confirmer/41
+
+
+2020-10-07 18:33:31 Error: [Error] Call to a member function subject() on array (C:\Program Files\Ampps\www\TP1\src\Controller\UsersController.php:178)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\UsersController->sendConfirmEmail('41')
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /users/send-confirm-email/41
+Referer URL: http://localhost/TP1/users/non-confirmer/41
+
+
+2020-10-07 18:33:31 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Debugger.php line=855 in [C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 53]
+Request URL: /users/send-confirm-email/41
+Referer URL: http://localhost/TP1/users/non-confirmer/41
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 53
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-10-07 18:33:32 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 154]
+Request URL: /users/send-confirm-email/41
+Referer URL: http://localhost/TP1/users/non-confirmer/41
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 154
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 59
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-10-07 18:33:32 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 183]
+Request URL: /users/send-confirm-email/41
+Referer URL: http://localhost/TP1/users/non-confirmer/41
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 183
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 60
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-10-07 18:33:32 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 183]
+Request URL: /users/send-confirm-email/41
+Referer URL: http://localhost/TP1/users/non-confirmer/41
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 183
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 60
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-10-07 18:46:58 Error: [ArgumentCountError] Too few arguments to function debug(), 0 passed in C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php on line 17 and at least 1 expected (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\basics.php:43)
+#0 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(17): debug()
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#28 {main}
+Request URL: /purchases/edit/57
+Referer URL: http://localhost/TP1/
+
+
+2020-10-07 18:52:47 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:53:03 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:53:06 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:53:22 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:53:28 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:53:36 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:54:16 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:54:19 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:54:29 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:54:34 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:54:47 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:54:50 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:55:03 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:55:17 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+
+2020-10-07 18:56:31 Error: [InvalidArgumentException] Cannot convert value of type `boolean` to integer (C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:64)
+#0 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php(84): Cake\Database\Type\IntegerType->checkNumeric(false)
+#1 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(36): Cake\Database\Type\IntegerType->toDatabase(false, Object(Cake\Database\Driver\Mysql))
+#2 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(68): Cake\Database\Statement\StatementDecorator->cast(false, Object(Cake\Database\Type\IntegerType))
+#3 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(106): Cake\Database\Statement\PDOStatement->bindValue('c0', false, 'integer')
+#4 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', false, 'integer')
+#5 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\ValueBinder.php(146): Cake\Database\Log\LoggingStatement->bindValue('c0', false, 'integer')
+#6 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#10 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#11 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#12 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#13 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(472): Cake\ORM\Query->all()
+#14 C:\Program Files\Ampps\www\TP1\src\Controller\PurchasesController.php(26): Cake\ORM\Query->first()
+#15 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\PurchasesController->isAuthorized(Array)
+#16 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(542): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Http\ServerRequest))
+#17 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(328): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#18 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(277): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#19 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#20 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventManager.php(328): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#21 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(112): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#22 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Controller\Controller.php(677): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#23 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#24 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#25 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\TP1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\TP1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\TP1\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /purchases/add
+Referer URL: http://localhost/TP1/purchases
+
+

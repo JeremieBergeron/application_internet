@@ -42,9 +42,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </ul>
             <div class="top-bar-section">
                 <ul class="right">
-                    <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]); ?></li>
-                    <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]); ?></li>
-                    <li><?= $this->Html->link('日本語', ['action' => 'changeLang', 'ja_JP'], ['escape' => false]); ?></li>
                     <li> <?php
                         $loguser = $this->request->session()->read('Auth.User');
                         if ($loguser) {
@@ -52,9 +49,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             echo "<span>" .$this->Html->link($user , ['controller' => 'Users', 'action' => 'view', $loguser['id']]);
                             echo $this->Html->link(__('logout'), ['controller' => 'Users', 'action' => 'logout']). "</span>";
                         } else {
-                            echo $this->Html->link(__('login'), ['controller' => 'Users', 'action' => 'login']);
+                            echo "<span>" .$this->Html->link(__('login'), ['controller' => 'Users', 'action' => 'login']);
+                            echo $this->Html->link(__('sign up'), ['controller' => 'Users', 'action' => 'add']). "</span>";
                         }
-                        ?> </li>
+                        ?> 
+                    </li>
+                    <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]); ?></li>
+                    <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]); ?></li>
+                    <li><?= $this->Html->link('日本語', ['action' => 'changeLang', 'ja_JP'], ['escape' => false]); ?></li>
                     <li><?= $this->Html->link(__('About us'), ['controller' => 'Pages', 'action' => 'aPropos']);?></li>
                     <li><a target="_blank" href="https://book.cakephp.org/3/">Documentation</a></li>
                     <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>

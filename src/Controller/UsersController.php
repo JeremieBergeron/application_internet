@@ -115,6 +115,9 @@ $user = $this->Users->get($id, [
             $user = $this->Users->patchEntity($user, $this->request->getData());
             $user->uuid = Text::uuid();
             $user->confirmed = false;
+            $user->role_id = 3;
+            //debug($user);
+            //die();
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
                 $this->sendConfirmEmail($user);

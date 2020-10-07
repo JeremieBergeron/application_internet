@@ -14,6 +14,11 @@ class ProductsController extends AppController
 {
     
      public function isAuthorized($user) {
+         
+         if($user['confirmed'] === 0){
+            return false;
+        }
+        
         if ($user['role_id'] === 1 || $user['role_id'] === 2) {
             return true;
         }
@@ -44,7 +49,7 @@ class ProductsController extends AppController
     public function view($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['Files', 'Purchases' => ['Products'], 'Tags'],
+            'contain' => ['Files', 'Purchases' => ['Users'], 'Tags'],
         ]);
 
         $this->set('product', $product);
