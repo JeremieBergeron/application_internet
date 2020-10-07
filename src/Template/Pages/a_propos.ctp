@@ -67,9 +67,13 @@
                     <li>Fait dans le contrôleur Emails.</li>s
                 </ol>
             </ol>
-<li>Base de données : <a href="http://www.databaseanswers.org/data_models/hardware_sales/index.htm">Customers and Hardware Store</a></li>
+            <li>Base de données : <a href="http://www.databaseanswers.org/data_models/hardware_sales/index.htm">Customers and Hardware Store</a></li>
 
-            <img src="diagramme_bdd.png" alt="Diagramme de ma base de données">
+            <p><?php
+                echo $this->Html->image("pages/" . "diagramme_bdd.png", [
+                ]);
+                ?>
+            </p>
 
         </ol>
     </li>

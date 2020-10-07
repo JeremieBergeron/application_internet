@@ -31,8 +31,7 @@ class UsersController extends AppController {
 
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
-
-        if (in_array($action, ['index'])) {
+        if (in_array($action, ['index', 'nonConfirmer'])) {
             return true;
         }
 
@@ -59,16 +58,17 @@ class UsersController extends AppController {
     public function login() {
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
-            
-            debug($user);
-            die();
-            
+
+            //debug($user);
+            // die();
+
             if ($user) {
-                if ($user->confirmed) {
+                if ($user['confirmed']) {
                     $this->Auth->setUser($user);
                     return $this->redirect($this->Auth->redirectUrl());
                 } else {
-                $this->Flash->error(__('Your account is not confirmed.'));
+                    $this->Auth->setUser($user);
+                   return $this->redirect(['action' => 'nonConfirmer', $user['id']]);
                 }
             }
             $this->Flash->error('Your username or password is incorrect.');
@@ -79,6 +79,15 @@ class UsersController extends AppController {
         $this->Flash->success('You are now logged out.');
         return $this->redirect($this->Auth->logout());
     }
+
+    public function nonConfirmer($id) {
+$user = $this->Users->get($id, [
+            'contain' => [],
+        ]);
+        $this->Flash->error(__('Your account is not confirmed.'));
+        
+         $this->set('user', $user);
+             }
 
     /**
      * View method
