@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Program%20Files/Ampps/www/TP1/src/Template/Layout/default.ctp</file>
-            <file>file:/C:/Program%20Files/Ampps/www/TP1/src/Template/Products/view.ctp</file>
-            <file>file:/C:/Program%20Files/Ampps/www/TP1/src/Controller/ProductsController.php</file>
+            <file>file:/C:/Program%20Files/Ampps/www/application_internet/src/Controller/UsersController.php</file>
+            <file>file:/C:/Program%20Files/Ampps/www/application_internet/src/Template/Users/non_confirmer.ctp</file>
+            <file>file:/C:/Program%20Files/Ampps/www/application_internet/src/Template/Users/add.ctp</file>
         </group>
     </open-files>
 </project-private>

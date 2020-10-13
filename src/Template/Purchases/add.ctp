@@ -21,7 +21,7 @@
         <?php
             echo $this->Form->control('quantity_purchased');
             echo $this->Form->control('detail');
-            echo $this->Form->control('product_id');
+            echo $this->Form->control('products._ids', ['options' => $products]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

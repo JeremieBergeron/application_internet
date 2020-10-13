@@ -31,7 +31,7 @@ class UsersController extends AppController {
 
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
-        if (in_array($action, ['index', 'nonConfirmer'])) {
+        if (in_array($action, ['index', 'nonConfirmer', 'sendConfirmEmail'])) {
             return true;
         }
 
@@ -81,13 +81,14 @@ class UsersController extends AppController {
     }
 
     public function nonConfirmer($id) {
-$user = $this->Users->get($id, [
+        $user = $this->Users->get($id, [
             'contain' => [],
         ]);
+
         $this->Flash->error(__('Your account is not confirmed.'));
         
-         $this->set('user', $user);
-             }
+        $this->set('user', $user);
+    }
 
     /**
      * View method
@@ -120,7 +121,7 @@ $user = $this->Users->get($id, [
             //die();
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-                $this->sendConfirmEmail($user);
+                $this->sendConfirmEmail($user->uuid);
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
@@ -173,7 +174,8 @@ $user = $this->Users->get($id, [
         return $this->redirect(['action' => 'index']);
     }
 
-    public function sendConfirmEmail($user) {
+    public function sendConfirmEmail($uuid) {
+        $user = $this->Users->findByUuid($uuid)->firstOrFail();
         $email = new Email('default');
         $email->to($user->email)->subject(__('Confirm your email'))->send('http://' . $_SERVER['HTTP_HOST'] . $this->request->webroot . 'users/confirm/' . $user->uuid);
     }
