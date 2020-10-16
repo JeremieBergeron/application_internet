@@ -44,6 +44,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <ul class="right">
                     <li> <?php
                         $loguser = $this->request->session()->read('Auth.User');
+                        if ($loguser['confirmed']) {
+                            echo "<span>" (__('Your account is confirmed')). "</span>";
+                        } else {
+                            echo "<span>" .$this->Html->link(__('Your account is not confirmed'), ['controller' => 'Users', 'action' => 'sendConfirmEmail', $loguser['uuid']]). "</span>";
+                        }
+                        ?> 
+                    </li>
+                    <li> <?php
+                        $loguser = $this->request->session()->read('Auth.User');
                         if ($loguser) {
                             $user = $loguser['email'];
                             echo "<span>" .$this->Html->link($user , ['controller' => 'Users', 'action' => 'view', $loguser['id']]);

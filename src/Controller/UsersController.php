@@ -31,9 +31,17 @@ class UsersController extends AppController {
 
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
-        if (in_array($action, ['index', 'nonConfirmer', 'sendConfirmEmail'])) {
+        if (in_array($action, ['index'])) {
+            if (!$user['confirmed']) {
+                $this->Flash->success(__('Please confirme your email'));
+                return parent::isAuthorized($user);
+            }
             return true;
         }
+
+         if (in_array($action, ['nonConfirmer', 'sendConfirmEmail'])) {
+          return true;
+          } 
 
         $id = $this->request->getParam('pass.0');
         if (!$id) {
@@ -63,13 +71,11 @@ class UsersController extends AppController {
             // die();
 
             if ($user) {
-                if ($user['confirmed']) {
-                    $this->Auth->setUser($user);
-                    return $this->redirect($this->Auth->redirectUrl());
-                } else {
-                    $this->Auth->setUser($user);
-                   return $this->redirect(['action' => 'nonConfirmer', $user['id']]);
+                $this->Auth->setUser($user);
+                if (!$user['confirmed']) {
+                    $this->Flash->error(_('Please confirm your email to access users\' list'));
                 }
+                return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error('Your username or password is incorrect.');
         }
@@ -86,7 +92,7 @@ class UsersController extends AppController {
         ]);
 
         $this->Flash->error(__('Your account is not confirmed.'));
-        
+
         $this->set('user', $user);
     }
 

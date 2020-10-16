@@ -10396,3 +10396,158 @@ Request URL: /users/send-confirm-email/42374759-2d0b-4b84-b5f7-79120085d095
 Referer URL: http://localhost/application_internet/users/non-confirmer/41
 
 
+2020-10-16 13:39:40 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\send_confirm_email.ctp" is missing. (C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Users\\send_confirm_email.ctp',
+)
+#0 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php(888): Cake\View\View->_getViewFileName('Users\\send_conf...')
+#1 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\application_internet\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /users/send-confirm-email/42374759-2d0b-4b84-b5f7-79120085d095
+Referer URL: http://localhost/application_internet/
+
+
+2020-10-16 13:40:05 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\send_confirm_email.ctp" is missing. (C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Users\\send_confirm_email.ctp',
+)
+#0 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php(888): Cake\View\View->_getViewFileName('Users\\send_conf...')
+#1 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\application_internet\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /users/send-confirm-email/42374759-2d0b-4b84-b5f7-79120085d095
+Referer URL: http://localhost/application_internet/
+
+
+2020-10-16 13:41:04 Error: [Error] Call to undefined method App\View\AppView::redirect() (C:\Program Files\Ampps\www\application_internet\src\Template\Layout\default.ctp:50)
+#0 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php(1435): include()
+#1 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#2 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php(939): Cake\View\View->_render('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php(897): Cake\View\View->renderLayout('', 'default')
+#4 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#5 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#6 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PurchasesController))
+#7 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\application_internet\webroot\index.php(40): Cake\Http\Server->run()
+#24 {main}
+Request URL: /
+Referer URL: http://localhost/application_internet/
+
+
+2020-10-16 13:41:18 Warning: Warning (512): Method Cake\View\Helper\HtmlHelper::redirect does not exist in [C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\Helper.php, line 116]
+Request URL: /
+Referer URL: http://localhost/application_internet/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper::__call() - CORE\src\View\Helper.php, line 116
+include - APP/Template\Layout\default.ctp, line 50
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 939
+Cake\View\View::render() - CORE\src\View\View.php, line 897
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-10-16 13:44:48 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\send_confirm_email.ctp" is missing. (C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Users\\send_confirm_email.ctp',
+)
+#0 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\View\View.php(888): Cake\View\View->_getViewFileName('Users\\send_conf...')
+#1 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\application_internet\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\application_internet\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /users/send-confirm-email/42374759-2d0b-4b84-b5f7-79120085d095
+Referer URL: http://localhost/application_internet/
+
+
