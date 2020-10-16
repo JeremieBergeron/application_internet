@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : lun. 05 oct. 2020 à 19:21
+-- Généré le : ven. 16 oct. 2020 à 18:04
 -- Version du serveur :  8.0.18
 -- Version de PHP : 7.3.11
 
@@ -42,7 +42,9 @@ CREATE TABLE `files` (
 --
 
 INSERT INTO `files` (`id`, `name`, `path`, `created`, `modified`, `status`) VALUES
-(3, '63072.jpg', 'files/add/', '2020-09-28 15:11:58', '2020-09-28 15:11:58', 1);
+(3, '63072.jpg', 'files/add/', '2020-09-28 15:11:58', '2020-09-28 15:11:58', 1),
+(7, '3max.jpg', 'files/add/', '2020-10-16 15:16:56', '2020-10-16 15:16:56', 1),
+(8, 'headset.jpg', 'files/add/', '2020-10-16 17:08:19', '2020-10-16 17:08:19', 1);
 
 -- --------------------------------------------------------
 
@@ -55,6 +57,15 @@ CREATE TABLE `files_products` (
   `product_id` int(11) NOT NULL,
   `file_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `files_products`
+--
+
+INSERT INTO `files_products` (`id`, `product_id`, `file_id`) VALUES
+(16, 16, 3),
+(17, 17, 7),
+(18, 18, 8);
 
 -- --------------------------------------------------------
 
@@ -89,7 +100,11 @@ INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) 
 (11, 'ja_JP', 'Roles', 3, 'name', '御客様'),
 (12, 'ja_JP', 'Tags', 1, 'title', 'コンソール'),
 (13, 'ja_JP', 'Tags', 2, 'title', 'ソニー'),
-(14, 'ja_JP', 'Tags', 3, 'title', 'マイクロソフト');
+(14, 'ja_JP', 'Tags', 3, 'title', 'マイクロソフト'),
+(15, 'fr_CA', 'Tags', 4, 'title', 'Écouteur'),
+(16, 'ja_JP', 'Tags', 4, 'title', 'ヘッドセット'),
+(17, 'fr_CA', 'Tags', 5, 'title', 'Logitech'),
+(18, 'ja_JP', 'Tags', 5, 'title', 'ロジクール');
 
 -- --------------------------------------------------------
 
@@ -112,8 +127,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `quantity_available`, `created`, `modified`) VALUES
-(14, 'mirolo', '', 20, 7, '2020-10-02 19:51:25', '2020-10-02 19:51:25'),
-(16, 'PS3', '', 400, 100, '2020-10-03 14:40:12', '2020-10-03 14:40:12');
+(16, 'PS4', '', 400, 100, '2020-10-03 14:40:12', '2020-10-16 17:04:40'),
+(17, 'Xbox One', 'Console de jeu vidéo', 400, 20, '2020-10-16 15:17:28', '2020-10-16 15:17:28'),
+(18, 'Écouteur', '', 100, 10, '2020-10-16 17:10:01', '2020-10-16 17:10:01');
 
 -- --------------------------------------------------------
 
@@ -132,8 +148,11 @@ CREATE TABLE `products_tags` (
 
 INSERT INTO `products_tags` (`product_id`, `tag_id`) VALUES
 (16, 1),
+(17, 1),
 (16, 2),
-(14, 3);
+(17, 3),
+(18, 4),
+(18, 5);
 
 -- --------------------------------------------------------
 
@@ -157,7 +176,10 @@ CREATE TABLE `purchases` (
 
 INSERT INTO `purchases` (`id`, `quantity_purchased`, `detail`, `product_id`, `user_id`, `created`, `modified`) VALUES
 (57, 1, '', 16, 1, '2020-10-03 14:40:38', '2020-10-03 14:51:22'),
-(58, 1, '', 16, 2, '2020-10-03 14:41:44', '2020-10-03 14:41:44');
+(58, 1, '', 16, 2, '2020-10-03 14:41:44', '2020-10-03 14:41:44'),
+(60, 1, '', 18, 1, '2020-10-16 17:10:35', '2020-10-16 17:10:35'),
+(61, 3, '', 17, 5, '2020-10-16 17:10:57', '2020-10-16 17:10:57'),
+(62, 1, '', 16, 5, '2020-10-16 17:11:43', '2020-10-16 17:11:43');
 
 -- --------------------------------------------------------
 
@@ -200,7 +222,9 @@ CREATE TABLE `tags` (
 INSERT INTO `tags` (`id`, `title`, `created`, `modified`) VALUES
 (1, 'Console', '2020-09-28 17:34:47', '2020-10-05 17:58:54'),
 (2, 'Sony', '2020-09-28 17:38:27', '2020-10-05 17:59:35'),
-(3, 'Microsoft', '2020-09-28 17:38:35', '2020-10-05 18:00:00');
+(3, 'Microsoft', '2020-09-28 17:38:35', '2020-10-05 18:00:00'),
+(4, 'Headset', '2020-10-16 17:05:32', '2020-10-16 17:06:30'),
+(5, 'Logitech', '2020-10-16 17:08:55', '2020-10-16 17:09:28');
 
 -- --------------------------------------------------------
 
@@ -228,11 +252,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `uuid`, `confirmed`, `adress`, `first_name`, `last_name`, `role_id`, `created`, `modified`) VALUES
-(1, 'admin', 'admin@admin.com', '$2y$10$T44oYw0Ov4GgOGb.YPTNF.htJLoRJUxiCXPBvNysfn2ccZV7MPhqy', '79d1e7b7-a337-4748-9a18-ea8f7f213b9d', 0, '2000 Rue de l\'école', 'Jérémie', 'Bergeron', 1, '2020-09-06 13:03:09', '2020-10-03 16:29:32'),
-(2, 'manager', 'manager@manager.com', '$2y$10$IH551bVho046lEsiAxG1Zuz0kRPHqpqf3004bCKl8WyeZ5CbwZgSa', '3d3d669d-e981-4965-882b-b796a33bdfcc', 0, '4000 rue de Lamontagne', 'Jean', 'Gagnon', 2, '2020-09-06 13:03:09', '2020-10-03 16:29:53'),
-(5, 'customer', 'customer@customer.com', '$2y$10$mRkfW.GsVc9JBxgOATJq0.U6uCvog5QZYrLNZE.NSP6Np6sO.hVYK', '5c2b2551-8efb-4343-b2c3-6759700a1032', 0, '34 Rue de la sagesse', 'Diego', 'Bouchard', 3, '2020-09-06 13:03:09', '2020-10-03 16:29:27'),
-(39, 'moi15moi', 'jeremiebergeronlol@outlook.com', '$2y$10$KqQaNRLaUBTM7ddOPRz32eZaFHyHw3ISiZIwpPRMzUGVNRkw7rPS6', 'a4fb6ea7-8ef5-48c5-a7d9-b59381cbec9c', 1, '1867 Rue de Limbourg', 'Jeremie', 'Bergeron', 1, '2020-10-03 16:48:57', '2020-10-03 16:49:59'),
-(40, 'test', 'jeremiebergeron1515@gmail.com', '$2y$10$ZBTgCsQmvQLmTp/1SP5/veNF6rdCvfNACXZFNLETGwUbAWHoUT9ya', '367ae43e-7389-4b45-b98a-c429ff66b19b', 0, '1867 Rue de Limbourg', 'Jeremie', 'Bergeron', 3, '2020-10-05 18:22:52', '2020-10-05 18:22:52');
+(1, 'admin', 'admin@admin.com', '$2y$10$T44oYw0Ov4GgOGb.YPTNF.htJLoRJUxiCXPBvNysfn2ccZV7MPhqy', '79d1e7b7-a337-4748-9a18-ea8f7f213b9d', 1, '2000 Rue de l\'école', 'Jérémie', 'Bergeron', 1, '2020-09-06 13:03:09', '2020-10-03 16:29:32'),
+(2, 'manager', 'manager@manager.com', '$2y$10$IH551bVho046lEsiAxG1Zuz0kRPHqpqf3004bCKl8WyeZ5CbwZgSa', '3d3d669d-e981-4965-882b-b796a33bdfcc', 1, '4000 rue de Lamontagne', 'Jean', 'Gagnon', 2, '2020-09-06 13:03:09', '2020-10-03 16:29:53'),
+(5, 'customer', 'customer@customer.com', '$2y$10$mRkfW.GsVc9JBxgOATJq0.U6uCvog5QZYrLNZE.NSP6Np6sO.hVYK', '5c2b2551-8efb-4343-b2c3-6759700a1032', 1, '34 Rue de la sagesse', 'Diego', 'Bouchard', 3, '2020-09-06 13:03:09', '2020-10-03 16:29:27'),
+(41, 'test', 'jeremiebergeron1515@gmail.com', '$2y$10$ZsXg3YpUBk2pkz/hVn14je47VYt4CFFCAM1lMpTmeKVWn13CBzpOS', '42374759-2d0b-4b84-b5f7-79120085d095', 0, '1867 Rue de Limbourg', 'Jeremie', 'Bergeron', 3, '2020-10-07 18:18:03', '2020-10-07 18:18:03');
 
 --
 -- Index pour les tables déchargées
@@ -309,31 +332,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `files_products`
 --
 ALTER TABLE `files_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT pour la table `i18n`
 --
 ALTER TABLE `i18n`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT pour la table `purchases`
 --
 ALTER TABLE `purchases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT pour la table `roles`
@@ -345,13 +368,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT pour la table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- Contraintes pour les tables déchargées
