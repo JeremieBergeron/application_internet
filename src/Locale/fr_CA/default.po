@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2020-10-05 15:02+0000\n"
-"PO-Revision-Date: 2020-10-05 11:15-0400\n"
+"POT-Creation-Date: 2020-10-16 17:27+0000\n"
+"PO-Revision-Date: 2020-10-16 13:33-0400\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -15,287 +15,299 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.4.1\n"
 
-#: Controller/FilesController.php:70
+#: /Controller/FilesController.php:77
 msgid "File has been uploaded and inserted successfully."
 msgstr "Le fichier a été téléversé et inséré avec succès."
 
-#: Controller/FilesController.php:74 Controller/FilesController.php:77
+#: /Controller/FilesController.php:81 /Controller/FilesController.php:84
 msgid "Unable to upload file, please try again."
 msgstr "Impossible de téléversé le fichier, veuillez réessayer."
 
-#: Controller/FilesController.php:80
+#: /Controller/FilesController.php:87
 msgid "Please choose a file to upload."
 msgstr "Veuillez choisir un fichier à téléversé."
 
-#: Controller/FilesController.php:101
+#: /Controller/FilesController.php:108
 msgid "The file has been saved."
 msgstr "Le fichier a été sauvegardé."
 
-#: Controller/FilesController.php:105
+#: /Controller/FilesController.php:112
 msgid "The file could not be saved. Please, try again."
 msgstr "Le fichier n'a pas pu être sauvegardé. Veuillez réessayer."
 
-#: Controller/FilesController.php:122
+#: /Controller/FilesController.php:129
 msgid "The file has been deleted."
 msgstr "Le fichier a été supprimé."
 
-#: Controller/FilesController.php:124
+#: /Controller/FilesController.php:131
 msgid "The file could not be deleted. Please, try again."
 msgstr "Le fichier n'a pas pu être supprimé. Veuillez réessayer."
 
-#: Controller/ProductsController.php:64 Controller/ProductsController.php:90
+#: /Controller/ProductsController.php:64 /Controller/ProductsController.php:90
 msgid "The product has been saved."
 msgstr "Le produit a été sauvegardé."
 
-#: Controller/ProductsController.php:68 Controller/ProductsController.php:94
+#: /Controller/ProductsController.php:68 /Controller/ProductsController.php:94
 msgid "The product could not be saved. Please, try again."
 msgstr "Le produit n'a pas pu être sauvegardé. Veuillez réessayer."
 
-#: Controller/ProductsController.php:113
+#: /Controller/ProductsController.php:113
 msgid "The product has been deleted."
 msgstr "Le produit a été supprimé."
 
-#: Controller/ProductsController.php:115
+#: /Controller/ProductsController.php:115
 msgid "The product could not be deleted. Please, try again."
 msgstr "Le produit n'a pas pu être supprimé. Veuillez réessayer."
 
-#: Controller/PurchasesController.php:69 Controller/PurchasesController.php:94
+#: /Controller/PurchasesController.php:86
+#: /Controller/PurchasesController.php:111
 msgid "The purchase has been saved."
 msgstr "L'achat a été sauvegardé."
 
-#: Controller/PurchasesController.php:73 Controller/PurchasesController.php:98
+#: /Controller/PurchasesController.php:90
+#: /Controller/PurchasesController.php:115
 msgid "The purchase could not be saved. Please, try again."
 msgstr "L'achat n'a pas pu être sauvegardé. Veuillez réessayer."
 
-#: Controller/PurchasesController.php:116
+#: /Controller/PurchasesController.php:133
 msgid "The purchase has been deleted."
 msgstr "L'achat a été supprimé."
 
-#: Controller/PurchasesController.php:118
+#: /Controller/PurchasesController.php:135
 msgid "The purchase could not be deleted. Please, try again."
 msgstr "L'achat n'a pas pu être supprimé. Veuillez réessayer."
 
-#: Controller/RolesController.php:60 Controller/RolesController.php:84
+#: /Controller/RolesController.php:68 /Controller/RolesController.php:92
 msgid "The role has been saved."
 msgstr "Le rôle a été sauvegardé."
 
-#: Controller/RolesController.php:64 Controller/RolesController.php:88
+#: /Controller/RolesController.php:72 /Controller/RolesController.php:96
 msgid "The role could not be saved. Please, try again."
 msgstr ""
 "Le rôle n'a pas pu être sauvegardé. S'il vous plaît, essayez à nouveau."
 
-#: Controller/RolesController.php:105
+#: /Controller/RolesController.php:113
 msgid "The role has been deleted."
 msgstr "Le rôle a été supprimé."
 
-#: Controller/RolesController.php:107
+#: /Controller/RolesController.php:115
 msgid "The role could not be deleted. Please, try again."
 msgstr "Le rôle n'a pas pu être supprimé. Veuillez réessayer."
 
-#: Controller/TagsController.php:54 Controller/TagsController.php:79
+#: /Controller/TagsController.php:69 /Controller/TagsController.php:94
 msgid "The tag has been saved."
 msgstr "L'étiquette a été sauvegardée."
 
-#: Controller/TagsController.php:58 Controller/TagsController.php:83
+#: /Controller/TagsController.php:73 /Controller/TagsController.php:98
 msgid "The tag could not be saved. Please, try again."
 msgstr "L'étiquette n'a pas pu être sauvegardée. Veuillez réessayer."
 
-#: Controller/TagsController.php:101
+#: /Controller/TagsController.php:116
 msgid "The tag has been deleted."
 msgstr "L'étiquette a été supprimée."
 
-#: Controller/TagsController.php:103
+#: /Controller/TagsController.php:118
 msgid "The tag could not be deleted. Please, try again."
 msgstr "L'étiquette n'a pas pu être supprimée. Veuillez réessayer."
 
-#: Controller/UsersController.php:101 Controller/UsersController.php:126
+#: /Controller/UsersController.php:36
+msgid "Please confirme your email"
+msgstr "Confirmez votre e-mail"
+
+#: /Controller/UsersController.php:94
+msgid "Your account is not confirmed."
+msgstr "Votre e-mail a été confirmé"
+
+#: /Controller/UsersController.php:129 /Controller/UsersController.php:154
 msgid "The user has been saved."
 msgstr "L'utilisateur a été sauvegardé."
 
-#: Controller/UsersController.php:105 Controller/UsersController.php:130
+#: /Controller/UsersController.php:133 /Controller/UsersController.php:158
 msgid "The user could not be saved. Please, try again."
 msgstr "L'utilisateur n'a pas pu être sauvegardé. Veuillez réessayer."
 
-#: Controller/UsersController.php:147
+#: /Controller/UsersController.php:175
 msgid "The user has been deleted."
 msgstr "L'utilisateur a été supprimé."
 
-#: Controller/UsersController.php:149
+#: /Controller/UsersController.php:177
 msgid "The user could not be deleted. Please, try again."
 msgstr "L'utilisateur n'a pas pu être supprimé. Veuillez réessayer."
 
-#: Controller/UsersController.php:157
+#: /Controller/UsersController.php:186
 msgid "Confirm your email"
 msgstr "Confirmez votre e-mail"
 
-#: Controller/UsersController.php:164
+#: /Controller/UsersController.php:193
 msgid "Thank you"
 msgstr "Merci"
 
-#: Controller/UsersController.php:164
+#: /Controller/UsersController.php:193
 msgid "Your email has been confirmed"
 msgstr "Votre e-mail a été confirmé"
 
-#: Controller/UsersController.php:167
+#: /Controller/UsersController.php:196
 msgid "The confirmation could not be saved. Please, try again"
 msgstr "La confirmation n'a pas pu être sauvegardée. Veuillez réessayer."
 
-#: Template/Emails/index.ctp:1
+#: /Template/Emails/index.ctp:1
 msgid "sent"
 msgstr "envoyé à"
 
-#: Template/Files/add.ctp:9 Template/Files/edit.ctp:9
-#: Template/Files/index.ctp:9 Template/Files/index.ctp:24
-#: Template/Files/view.ctp:9 Template/Files/view.ctp:59
-#: Template/Products/add.ctp:9 Template/Products/edit.ctp:9
-#: Template/Products/index.ctp:9 Template/Products/index.ctp:30
-#: Template/Products/view.ctp:9 Template/Products/view.ctp:56
-#: Template/Products/view.ctp:87 Template/Products/view.ctp:114
-#: Template/Purchases/add.ctp:9 Template/Purchases/edit.ctp:9
-#: Template/Purchases/index.ctp:9 Template/Purchases/index.ctp:27
-#: Template/Purchases/view.ctp:9 Template/Roles/add.ctp:9
-#: Template/Roles/edit.ctp:9 Template/Roles/index.ctp:9
-#: Template/Roles/index.ctp:21 Template/Roles/view.ctp:9
-#: Template/Roles/view.ctp:42 Template/Tags/add.ctp:9 Template/Tags/edit.ctp:9
-#: Template/Tags/index.ctp:9 Template/Tags/index.ctp:23
-#: Template/Tags/view.ctp:9 Template/Tags/view.ctp:46 Template/Users/add.ctp:9
-#: Template/Users/edit.ctp:9 Template/Users/index.ctp:9
-#: Template/Users/index.ctp:30 Template/Users/view.ctp:9
-#: Template/Users/view.ctp:66
+#: /Template/Files/add.ctp:9 /Template/Files/edit.ctp:9
+#: /Template/Files/index.ctp:9 /Template/Files/index.ctp:24
+#: /Template/Files/view.ctp:9 /Template/Files/view.ctp:59
+#: /Template/Products/add.ctp:9 /Template/Products/edit.ctp:9
+#: /Template/Products/index.ctp:9 /Template/Products/index.ctp:30
+#: /Template/Products/view.ctp:9 /Template/Products/view.ctp:56
+#: /Template/Products/view.ctp:90 /Template/Products/view.ctp:117
+#: /Template/Purchases/add.ctp:9 /Template/Purchases/edit.ctp:9
+#: /Template/Purchases/index.ctp:9 /Template/Purchases/index.ctp:27
+#: /Template/Purchases/view.ctp:9 /Template/Roles/add.ctp:9
+#: /Template/Roles/edit.ctp:9 /Template/Roles/index.ctp:9
+#: /Template/Roles/index.ctp:21 /Template/Roles/view.ctp:9
+#: /Template/Roles/view.ctp:42 /Template/Tags/add.ctp:9
+#: /Template/Tags/edit.ctp:9 /Template/Tags/index.ctp:9
+#: /Template/Tags/index.ctp:23 /Template/Tags/view.ctp:9
+#: /Template/Tags/view.ctp:46 /Template/Users/add.ctp:9
+#: /Template/Users/edit.ctp:9 /Template/Users/index.ctp:9
+#: /Template/Users/index.ctp:30 /Template/Users/view.ctp:9
+#: /Template/Users/view.ctp:66
 msgid "Actions"
 msgstr "Commandes"
 
-#: Template/Files/add.ctp:10 Template/Files/edit.ctp:16
-#: Template/Files/view.ctp:12 Template/Products/add.ctp:11
-#: Template/Products/edit.ctp:17 Template/Products/index.ctp:11
-#: Template/Products/view.ctp:14
+#: /Template/Files/add.ctp:10 /Template/Files/edit.ctp:16
+#: /Template/Files/view.ctp:12 /Template/Products/add.ctp:11
+#: /Template/Products/edit.ctp:17 /Template/Products/index.ctp:11
+#: /Template/Products/view.ctp:14
 msgid "List Files"
 msgstr "Liste des fichiers"
 
-#: Template/Files/add.ctp:11 Template/Files/edit.ctp:17
-#: Template/Files/index.ctp:11 Template/Files/view.ctp:14
-#: Template/Products/add.ctp:10 Template/Products/edit.ctp:16
-#: Template/Products/view.ctp:12 Template/Purchases/add.ctp:13
-#: Template/Purchases/edit.ctp:19 Template/Purchases/index.ctp:13
-#: Template/Purchases/view.ctp:16 Template/Tags/add.ctp:11
-#: Template/Tags/edit.ctp:17 Template/Tags/index.ctp:11
-#: Template/Tags/view.ctp:14
+#: /Template/Files/add.ctp:11 /Template/Files/edit.ctp:17
+#: /Template/Files/index.ctp:11 /Template/Files/view.ctp:14
+#: /Template/Products/add.ctp:10 /Template/Products/edit.ctp:16
+#: /Template/Products/view.ctp:12 /Template/Purchases/add.ctp:11
+#: /Template/Purchases/edit.ctp:17 /Template/Purchases/index.ctp:13
+#: /Template/Purchases/view.ctp:16 /Template/Tags/add.ctp:11
+#: /Template/Tags/edit.ctp:17 /Template/Tags/index.ctp:11
+#: /Template/Tags/view.ctp:14
 msgid "List Products"
 msgstr "Liste des produits"
 
-#: Template/Files/add.ctp:12 Template/Files/edit.ctp:18
-#: Template/Files/index.ctp:12 Template/Files/view.ctp:15
-#: Template/Products/index.ctp:10 Template/Products/view.ctp:13
-#: Template/Purchases/add.ctp:14 Template/Purchases/edit.ctp:20
-#: Template/Purchases/index.ctp:14 Template/Purchases/view.ctp:17
-#: Template/Tags/add.ctp:12 Template/Tags/edit.ctp:18
-#: Template/Tags/index.ctp:12 Template/Tags/view.ctp:15
+#: /Template/Files/add.ctp:12 /Template/Files/edit.ctp:18
+#: /Template/Files/index.ctp:12 /Template/Files/view.ctp:15
+#: /Template/Products/index.ctp:10 /Template/Products/view.ctp:13
+#: /Template/Purchases/add.ctp:12 /Template/Purchases/edit.ctp:18
+#: /Template/Purchases/index.ctp:14 /Template/Purchases/view.ctp:17
+#: /Template/Tags/add.ctp:12 /Template/Tags/edit.ctp:18
+#: /Template/Tags/index.ctp:12 /Template/Tags/view.ctp:15
 msgid "New Product"
 msgstr "Nouveau produit"
 
-#: Template/Files/add.ctp:18
+#: /Template/Files/add.ctp:18
 msgid "Add File"
 msgstr "Ajouter un fichier"
 
-#: Template/Files/add.ctp:25 Template/Files/edit.ctp:31
-#: Template/Products/add.ctp:32 Template/Products/edit.ctp:39
-#: Template/Purchases/add.ctp:27 Template/Purchases/edit.ctp:33
-#: Template/Roles/add.ctp:24 Template/Roles/edit.ctp:30
-#: Template/Tags/add.ctp:23 Template/Tags/edit.ctp:29 Template/Users/add.ctp:31
-#: Template/Users/edit.ctp:37
+#: /Template/Files/add.ctp:25 /Template/Files/edit.ctp:31
+#: /Template/Products/add.ctp:32 /Template/Products/edit.ctp:38
+#: /Template/Purchases/add.ctp:27 /Template/Purchases/edit.ctp:33
+#: /Template/Roles/add.ctp:24 /Template/Roles/edit.ctp:30
+#: /Template/Tags/add.ctp:23 /Template/Tags/edit.ctp:29
+#: /Template/Users/add.ctp:30 /Template/Users/edit.ctp:37
+#: View/Helper/FormHelper.php:2036
 msgid "Submit"
 msgstr "Envoyer"
 
-#: Template/Files/edit.ctp:11 Template/Files/index.ctp:46
-#: Template/Files/view.ctp:73 Template/Products/edit.ctp:11
-#: Template/Products/index.ctp:55 Template/Products/view.ctp:70
-#: Template/Products/view.ctp:99 Template/Products/view.ctp:124
-#: Template/Purchases/edit.ctp:11 Template/Purchases/index.ctp:41
-#: Template/Roles/edit.ctp:11 Template/Roles/index.ctp:31
-#: Template/Roles/view.ctp:56 Template/Tags/edit.ctp:11
-#: Template/Tags/index.ctp:35 Template/Tags/view.ctp:60
-#: Template/Users/edit.ctp:11 Template/Users/index.ctp:47
-#: Template/Users/view.ctp:78
+#: /Template/Files/edit.ctp:11 /Template/Files/index.ctp:46
+#: /Template/Files/view.ctp:73 /Template/Products/edit.ctp:11
+#: /Template/Products/index.ctp:55 /Template/Products/view.ctp:73
+#: /Template/Products/view.ctp:102 /Template/Products/view.ctp:127
+#: /Template/Purchases/edit.ctp:11 /Template/Purchases/index.ctp:41
+#: /Template/Roles/edit.ctp:11 /Template/Roles/index.ctp:31
+#: /Template/Roles/view.ctp:56 /Template/Tags/edit.ctp:11
+#: /Template/Tags/index.ctp:35 /Template/Tags/view.ctp:60
+#: /Template/Users/edit.ctp:11 /Template/Users/index.ctp:47
+#: /Template/Users/view.ctp:78
 msgid "Delete"
 msgstr "Supprimer"
 
-#: Template/Files/edit.ctp:13 Template/Files/index.ctp:46
-#: Template/Files/view.ctp:11 Template/Files/view.ctp:73
-#: Template/Products/edit.ctp:13 Template/Products/index.ctp:55
-#: Template/Products/view.ctp:11 Template/Products/view.ctp:70
-#: Template/Products/view.ctp:99 Template/Products/view.ctp:124
-#: Template/Purchases/edit.ctp:13 Template/Purchases/index.ctp:41
-#: Template/Purchases/view.ctp:11 Template/Roles/edit.ctp:13
-#: Template/Roles/index.ctp:31 Template/Roles/view.ctp:11
-#: Template/Roles/view.ctp:56 Template/Tags/edit.ctp:13
-#: Template/Tags/index.ctp:35 Template/Tags/view.ctp:11
-#: Template/Tags/view.ctp:60 Template/Users/edit.ctp:13
-#: Template/Users/index.ctp:47 Template/Users/view.ctp:11
-#: Template/Users/view.ctp:78
+#: /Template/Files/edit.ctp:13 /Template/Files/index.ctp:46
+#: /Template/Files/view.ctp:11 /Template/Files/view.ctp:73
+#: /Template/Products/edit.ctp:13 /Template/Products/index.ctp:55
+#: /Template/Products/view.ctp:11 /Template/Products/view.ctp:73
+#: /Template/Products/view.ctp:102 /Template/Products/view.ctp:127
+#: /Template/Purchases/edit.ctp:13 /Template/Purchases/index.ctp:41
+#: /Template/Purchases/view.ctp:11 /Template/Roles/edit.ctp:13
+#: /Template/Roles/index.ctp:31 /Template/Roles/view.ctp:11
+#: /Template/Roles/view.ctp:56 /Template/Tags/edit.ctp:13
+#: /Template/Tags/index.ctp:35 /Template/Tags/view.ctp:11
+#: /Template/Tags/view.ctp:60 /Template/Users/edit.ctp:13
+#: /Template/Users/index.ctp:47 /Template/Users/view.ctp:11
+#: /Template/Users/view.ctp:78
 msgid "Are you sure you want to delete # {0}?"
 msgstr "Êtes-vous sûr de vouloir supprimer # {0} ?"
 
-#: Template/Files/edit.ctp:24 Template/Files/view.ctp:10
+#: /Template/Files/edit.ctp:24 /Template/Files/view.ctp:10
 msgid "Edit File"
 msgstr "Modifier le fichier"
 
-#: Template/Files/index.ctp:10 Template/Files/view.ctp:13
-#: Template/Products/add.ctp:12 Template/Products/edit.ctp:18
-#: Template/Products/index.ctp:12 Template/Products/view.ctp:15
+#: /Template/Files/index.ctp:10 /Template/Files/view.ctp:13
+#: /Template/Products/add.ctp:12 /Template/Products/edit.ctp:18
+#: /Template/Products/index.ctp:12 /Template/Products/view.ctp:15
 msgid "New File"
 msgstr "Nouveau fichier"
 
-#: Template/Files/index.ctp:16
+#: /Template/Files/index.ctp:16
 msgid "Files"
 msgstr "Fichiers"
 
-#: Template/Files/index.ctp:44 Template/Files/view.ctp:71
-#: Template/Products/index.ctp:53 Template/Products/view.ctp:68
-#: Template/Products/view.ctp:97 Template/Products/view.ctp:122
-#: Template/Purchases/index.ctp:39 Template/Roles/index.ctp:29
-#: Template/Roles/view.ctp:54 Template/Tags/index.ctp:33
-#: Template/Tags/view.ctp:58 Template/Users/index.ctp:45
-#: Template/Users/view.ctp:76
+#: /Template/Files/index.ctp:44 /Template/Files/view.ctp:71
+#: /Template/Products/index.ctp:53 /Template/Products/view.ctp:71
+#: /Template/Products/view.ctp:100 /Template/Products/view.ctp:125
+#: /Template/Purchases/index.ctp:39 /Template/Roles/index.ctp:29
+#: /Template/Roles/view.ctp:54 /Template/Tags/index.ctp:33
+#: /Template/Tags/view.ctp:58 /Template/Users/index.ctp:45
+#: /Template/Users/view.ctp:76 View/Helper/PaginatorHelper.php:1273
 msgid "View"
 msgstr "Consulter"
 
-#: Template/Files/index.ctp:45 Template/Files/view.ctp:72
-#: Template/Products/index.ctp:54 Template/Products/view.ctp:69
-#: Template/Products/view.ctp:98 Template/Products/view.ctp:123
-#: Template/Purchases/index.ctp:40 Template/Roles/index.ctp:30
-#: Template/Roles/view.ctp:55 Template/Tags/index.ctp:34
-#: Template/Tags/view.ctp:59 Template/Users/index.ctp:46
-#: Template/Users/view.ctp:77
+#: /Template/Files/index.ctp:45 /Template/Files/view.ctp:72
+#: /Template/Products/index.ctp:54 /Template/Products/view.ctp:72
+#: /Template/Products/view.ctp:101 /Template/Products/view.ctp:126
+#: /Template/Purchases/index.ctp:40 /Template/Roles/index.ctp:30
+#: /Template/Roles/view.ctp:55 /Template/Tags/index.ctp:34
+#: /Template/Tags/view.ctp:59 /Template/Users/index.ctp:46
+#: /Template/Users/view.ctp:77
 msgid "Edit"
 msgstr "Modifier"
 
-#: Template/Files/index.ctp:54 Template/Products/index.ctp:63
-#: Template/Purchases/index.ctp:49 Template/Roles/index.ctp:39
-#: Template/Tags/index.ctp:43 Template/Users/index.ctp:55
+#: /Template/Files/index.ctp:54 /Template/Products/index.ctp:63
+#: /Template/Purchases/index.ctp:49 /Template/Roles/index.ctp:39
+#: /Template/Tags/index.ctp:43 /Template/Users/index.ctp:55
 msgid "first"
 msgstr "premier"
 
-#: Template/Files/index.ctp:55 Template/Products/index.ctp:64
-#: Template/Purchases/index.ctp:50 Template/Roles/index.ctp:40
-#: Template/Tags/index.ctp:44 Template/Users/index.ctp:56
+#: /Template/Files/index.ctp:55 /Template/Products/index.ctp:64
+#: /Template/Purchases/index.ctp:50 /Template/Roles/index.ctp:40
+#: /Template/Tags/index.ctp:44 /Template/Users/index.ctp:56
 msgid "previous"
 msgstr "précédent"
 
-#: Template/Files/index.ctp:57 Template/Products/index.ctp:66
-#: Template/Purchases/index.ctp:52 Template/Roles/index.ctp:42
-#: Template/Tags/index.ctp:46 Template/Users/index.ctp:58
+#: /Template/Files/index.ctp:57 /Template/Products/index.ctp:66
+#: /Template/Purchases/index.ctp:52 /Template/Roles/index.ctp:42
+#: /Template/Tags/index.ctp:46 /Template/Users/index.ctp:58
 msgid "next"
 msgstr "suivant"
 
-#: Template/Files/index.ctp:58 Template/Products/index.ctp:67
-#: Template/Purchases/index.ctp:53 Template/Roles/index.ctp:43
-#: Template/Tags/index.ctp:47 Template/Users/index.ctp:59
+#: /Template/Files/index.ctp:58 /Template/Products/index.ctp:67
+#: /Template/Purchases/index.ctp:53 /Template/Roles/index.ctp:43
+#: /Template/Tags/index.ctp:47 /Template/Users/index.ctp:59
 msgid "last"
 msgstr "dernier"
 
-#: Template/Files/index.ctp:60 Template/Products/index.ctp:69
-#: Template/Purchases/index.ctp:55 Template/Roles/index.ctp:45
-#: Template/Tags/index.ctp:49 Template/Users/index.ctp:61
+#: /Template/Files/index.ctp:60 /Template/Products/index.ctp:69
+#: /Template/Purchases/index.ctp:55 /Template/Roles/index.ctp:45
+#: /Template/Tags/index.ctp:49 /Template/Users/index.ctp:61
 msgid ""
 "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
 "total"
@@ -303,300 +315,602 @@ msgstr ""
 "Page {{page}} de {{pages}}, montrant le(s) enregistrement(s) {{current}} sur "
 "le total de {{count}}."
 
-#: Template/Files/view.ctp:11
+#: /Template/Files/view.ctp:11
 msgid "Delete File"
 msgstr "Supprimer un fichier"
 
-#: Template/Files/view.ctp:35 Template/Files/view.ctp:57
-#: Template/Products/view.ctp:38 Template/Products/view.ctp:85
-#: Template/Products/view.ctp:112 Template/Purchases/view.ctp:36
-#: Template/Roles/view.ctp:40 Template/Tags/view.ctp:26
-#: Template/Tags/view.ctp:44 Template/Users/view.ctp:48
-#: Template/Users/view.ctp:64
+#: /Template/Files/view.ctp:35 /Template/Files/view.ctp:57
+#: /Template/Products/view.ctp:38 /Template/Products/view.ctp:88
+#: /Template/Products/view.ctp:115 /Template/Purchases/view.ctp:36
+#: /Template/Roles/view.ctp:40 /Template/Tags/view.ctp:26
+#: /Template/Tags/view.ctp:44 /Template/Users/view.ctp:48
+#: /Template/Users/view.ctp:64
 msgid "Created"
 msgstr "Créé"
 
-#: Template/Files/view.ctp:39 Template/Files/view.ctp:58
-#: Template/Products/view.ctp:42 Template/Products/view.ctp:86
-#: Template/Products/view.ctp:113 Template/Purchases/view.ctp:40
-#: Template/Roles/view.ctp:41 Template/Tags/view.ctp:30
-#: Template/Tags/view.ctp:45 Template/Users/view.ctp:52
-#: Template/Users/view.ctp:65
+#: /Template/Files/view.ctp:39 /Template/Files/view.ctp:58
+#: /Template/Products/view.ctp:42 /Template/Products/view.ctp:89
+#: /Template/Products/view.ctp:116 /Template/Purchases/view.ctp:40
+#: /Template/Roles/view.ctp:41 /Template/Tags/view.ctp:30
+#: /Template/Tags/view.ctp:45 /Template/Users/view.ctp:52
+#: /Template/Users/view.ctp:65
 msgid "Modified"
 msgstr "Modifié"
 
-#: Template/Files/view.ctp:43
+#: /Template/Files/view.ctp:43
 msgid "Status"
 msgstr "Statut"
 
-#: Template/Files/view.ctp:44
+#: /Template/Files/view.ctp:44
 msgid "Yes"
 msgstr "Oui"
 
-#: Template/Files/view.ctp:44
+#: /Template/Files/view.ctp:44
 msgid "No"
 msgstr "Non"
 
-#: Template/Files/view.ctp:48 Template/Tags/view.ctp:35
+#: /Template/Files/view.ctp:48 /Template/Tags/view.ctp:35
 msgid "Related Products"
 msgstr "Produit acheté"
 
-#: Template/Files/view.ctp:52 Template/Tags/view.ctp:39
+#: /Template/Files/view.ctp:52 /Template/Tags/view.ctp:39
 msgid "Id"
 msgstr "Id"
 
-#: Template/Files/view.ctp:53 Template/Products/view.ctp:26
-#: Template/Roles/view.ctp:22 Template/Tags/view.ctp:40
+#: /Template/Files/view.ctp:53 /Template/Products/view.ctp:26
+#: /Template/Roles/view.ctp:22 /Template/Tags/view.ctp:40
 msgid "Name"
 msgstr "Nom"
 
-#: Template/Files/view.ctp:54 Template/Products/view.ctp:47
-#: Template/Roles/view.ctp:27 Template/Tags/view.ctp:41
+#: /Template/Files/view.ctp:54 /Template/Products/view.ctp:47
+#: /Template/Roles/view.ctp:27 /Template/Tags/view.ctp:41
 msgid "Description"
 msgstr "Description"
 
-#: Template/Files/view.ctp:55 Template/Products/view.ctp:30
-#: Template/Tags/view.ctp:42
+#: /Template/Files/view.ctp:55 /Template/Products/view.ctp:30
+#: /Template/Tags/view.ctp:42
 msgid "Price"
 msgstr "Prix"
 
-#: Template/Files/view.ctp:56 Template/Products/view.ctp:34
-#: Template/Tags/view.ctp:43
+#: /Template/Files/view.ctp:56 /Template/Products/view.ctp:34
+#: /Template/Tags/view.ctp:43
 msgid "Quantity Available"
 msgstr "Quantité disponible"
 
-#: Template/Layout/default.ctp:52
+#: /Template/Layout/default.ctp:49
+msgid "Your account is confirmed"
+msgstr "Votre compte est confirmé"
+
+#: /Template/Layout/default.ctp:51
+msgid "Your account is not confirmed"
+msgstr "Votre compte n'est pas confirmé"
+
+#: /Template/Layout/default.ctp:61
 msgid "logout"
 msgstr "déconnexion"
 
-#: Template/Layout/default.ctp:54
+#: /Template/Layout/default.ctp:63
 msgid "login"
 msgstr "connexion"
 
-#: Template/Layout/default.ctp:57
-msgid "About us"
-msgstr ""
+#: /Template/Layout/default.ctp:64
+msgid "sign up"
+msgstr "s'inscrire"
 
-#: Template/Layout/error.ctp:36
+#: /Template/Layout/default.ctp:71
+msgid "About us"
+msgstr "À propos de nous"
+
+#: /Template/Layout/error.ctp:36 /Template/Error/error400.ctp:36
+#: /Template/Error/error500.ctp:41
 msgid "Error"
 msgstr "Erreur"
 
-#: Template/Layout/error.ctp:44
+#: /Template/Layout/error.ctp:44
 msgid "Back"
 msgstr "Retour"
 
-#: Template/Products/add.ctp:13 Template/Products/edit.ctp:19
-#: Template/Products/index.ctp:13 Template/Products/view.ctp:16
-#: Template/Purchases/add.ctp:10 Template/Purchases/edit.ctp:16
-#: Template/Purchases/view.ctp:12 Template/Users/add.ctp:13
-#: Template/Users/edit.ctp:19 Template/Users/index.ctp:13
-#: Template/Users/view.ctp:16
+#: /Template/Products/add.ctp:13 /Template/Products/edit.ctp:19
+#: /Template/Products/index.ctp:13 /Template/Products/view.ctp:16
+#: /Template/Purchases/add.ctp:10 /Template/Purchases/edit.ctp:16
+#: /Template/Purchases/view.ctp:12 /Template/Users/add.ctp:13
+#: /Template/Users/edit.ctp:19 /Template/Users/index.ctp:13
+#: /Template/Users/view.ctp:16
 msgid "List Purchases"
 msgstr "Liste des achats"
 
-#: Template/Products/add.ctp:14 Template/Products/edit.ctp:20
-#: Template/Products/index.ctp:14 Template/Products/view.ctp:17
-#: Template/Purchases/index.ctp:10 Template/Purchases/view.ctp:13
-#: Template/Users/add.ctp:14 Template/Users/edit.ctp:20
-#: Template/Users/index.ctp:14 Template/Users/view.ctp:17
+#: /Template/Products/add.ctp:14 /Template/Products/edit.ctp:20
+#: /Template/Products/index.ctp:14 /Template/Products/view.ctp:17
+#: /Template/Purchases/index.ctp:10 /Template/Purchases/view.ctp:13
+#: /Template/Users/add.ctp:14 /Template/Users/edit.ctp:20
+#: /Template/Users/index.ctp:14 /Template/Users/view.ctp:17
 msgid "New Purchase"
 msgstr "Nouvel achat"
 
-#: Template/Products/add.ctp:15 Template/Products/edit.ctp:21
-#: Template/Products/index.ctp:15 Template/Products/view.ctp:18
-#: Template/Tags/add.ctp:10 Template/Tags/edit.ctp:16 Template/Tags/view.ctp:12
+#: /Template/Products/add.ctp:15 /Template/Products/edit.ctp:21
+#: /Template/Products/index.ctp:15 /Template/Products/view.ctp:18
+#: /Template/Tags/add.ctp:10 /Template/Tags/edit.ctp:16
+#: /Template/Tags/view.ctp:12
 msgid "List Tags"
 msgstr "Liste des étiquettes"
 
-#: Template/Products/add.ctp:16 Template/Products/edit.ctp:22
-#: Template/Products/index.ctp:16 Template/Products/view.ctp:19
-#: Template/Tags/index.ctp:10 Template/Tags/view.ctp:13
+#: /Template/Products/add.ctp:16 /Template/Products/edit.ctp:22
+#: /Template/Products/index.ctp:16 /Template/Products/view.ctp:19
+#: /Template/Tags/index.ctp:10 /Template/Tags/view.ctp:13
 msgid "New Tag"
 msgstr "Nouvelle étiquette"
 
-#: Template/Products/add.ctp:22
+#: /Template/Products/add.ctp:22
 msgid "Add Product"
 msgstr "Ajouter un produit"
 
-#: Template/Products/edit.ctp:28 Template/Products/view.ctp:10
+#: /Template/Products/edit.ctp:28 /Template/Products/view.ctp:10
 msgid "Edit Product"
 msgstr "Modifier le produit"
 
-#: Template/Products/index.ctp:20
+#: /Template/Products/index.ctp:20
 msgid "Products"
 msgstr "Produits"
 
-#: Template/Products/view.ctp:11
+#: /Template/Products/view.ctp:11
 msgid "Delete Product"
 msgstr "Supprimer un produit"
 
-#: Template/Products/view.ctp:51
+#: /Template/Products/view.ctp:51
 msgid "Related Files"
 msgstr "Fichiers connexes"
 
-#: Template/Products/view.ctp:55
+#: /Template/Products/view.ctp:55
 msgid "Image(s)"
 msgstr "Image(s)"
 
-#: Template/Products/view.ctp:78 Template/Users/view.ctp:57
+#: /Template/Products/view.ctp:81 /Template/Users/view.ctp:57
 msgid "Related Purchases"
 msgstr "Achats fait par l'utilisateur"
 
-#: Template/Products/view.ctp:82 Template/Purchases/view.ctp:28
-#: Template/Users/view.ctp:61
+#: /Template/Products/view.ctp:85 /Template/Purchases/view.ctp:28
+#: /Template/Users/view.ctp:61
 msgid "Quantity Purchased"
 msgstr "Quantité achetée"
 
-#: Template/Products/view.ctp:83 Template/Purchases/view.ctp:45
-#: Template/Users/view.ctp:62
+#: /Template/Products/view.ctp:86 /Template/Purchases/view.ctp:45
+#: /Template/Users/view.ctp:62
 msgid "Detail"
 msgstr "Détail"
 
-#: Template/Products/view.ctp:84
+#: /Template/Products/view.ctp:87
 msgid "User Id"
 msgstr "Identifiant de l'utilisateur"
 
-#: Template/Products/view.ctp:107
+#: /Template/Products/view.ctp:110
 msgid "Related Tags"
 msgstr "Étiquettes connexes"
 
-#: Template/Products/view.ctp:111 Template/Tags/view.ctp:22
+#: /Template/Products/view.ctp:114 /Template/Tags/view.ctp:22
 msgid "Title"
 msgstr "Titre"
 
-#: Template/Purchases/add.ctp:11 Template/Purchases/edit.ctp:17
-#: Template/Purchases/index.ctp:11 Template/Purchases/view.ctp:14
-#: Template/Roles/add.ctp:11 Template/Roles/edit.ctp:17
-#: Template/Roles/index.ctp:11 Template/Roles/view.ctp:14
-#: Template/Users/add.ctp:10 Template/Users/edit.ctp:16
-#: Template/Users/view.ctp:12
+#: /Template/Purchases/add.ctp:13 /Template/Purchases/edit.ctp:19
+#: /Template/Purchases/index.ctp:11 /Template/Purchases/view.ctp:14
+#: /Template/Roles/add.ctp:11 /Template/Roles/edit.ctp:17
+#: /Template/Roles/index.ctp:11 /Template/Roles/view.ctp:14
+#: /Template/Users/add.ctp:10 /Template/Users/edit.ctp:16
+#: /Template/Users/view.ctp:12
 msgid "List Users"
 msgstr "Liste des utilisateurs"
 
-#: Template/Purchases/add.ctp:12 Template/Purchases/edit.ctp:18
-#: Template/Purchases/index.ctp:12 Template/Purchases/view.ctp:15
-#: Template/Roles/add.ctp:12 Template/Roles/edit.ctp:18
-#: Template/Roles/index.ctp:12 Template/Roles/view.ctp:15
-#: Template/Users/index.ctp:10 Template/Users/view.ctp:13
+#: /Template/Purchases/add.ctp:14 /Template/Purchases/edit.ctp:20
+#: /Template/Purchases/index.ctp:12 /Template/Purchases/view.ctp:15
+#: /Template/Roles/add.ctp:12 /Template/Roles/edit.ctp:18
+#: /Template/Roles/index.ctp:12 /Template/Roles/view.ctp:15
+#: /Template/Users/index.ctp:10 /Template/Users/view.ctp:13
 msgid "New User"
 msgstr "Nouvel utilisateur"
 
-#: Template/Purchases/add.ctp:20
+#: /Template/Purchases/add.ctp:20
 msgid "Add Purchase"
 msgstr "Ajouter un achat"
 
-#: Template/Purchases/edit.ctp:26 Template/Purchases/view.ctp:10
+#: /Template/Purchases/edit.ctp:26 /Template/Purchases/view.ctp:10
 msgid "Edit Purchase"
 msgstr "Modifier l'achat"
 
-#: Template/Purchases/index.ctp:18
+#: /Template/Purchases/index.ctp:18
 msgid "Purchases"
 msgstr "Achats"
 
-#: Template/Purchases/view.ctp:11
+#: /Template/Purchases/view.ctp:11
 msgid "Delete Purchase"
 msgstr "Supprimer l'achat"
 
-#: Template/Purchases/view.ctp:24
+#: /Template/Purchases/view.ctp:24
 msgid "User"
 msgstr "Utilisateur"
 
-#: Template/Purchases/view.ctp:32
+#: /Template/Purchases/view.ctp:32
 msgid "Product"
 msgstr "Produit"
 
-#: Template/Roles/add.ctp:10 Template/Roles/edit.ctp:16
-#: Template/Roles/view.ctp:12 Template/Users/add.ctp:11
-#: Template/Users/edit.ctp:17 Template/Users/index.ctp:11
-#: Template/Users/view.ctp:14
+#: /Template/Roles/add.ctp:10 /Template/Roles/edit.ctp:16
+#: /Template/Roles/view.ctp:12 /Template/Users/add.ctp:11
+#: /Template/Users/edit.ctp:17 /Template/Users/index.ctp:11
+#: /Template/Users/view.ctp:14
 msgid "List Roles"
 msgstr "Rôles de la liste"
 
-#: Template/Roles/add.ctp:18
+#: /Template/Roles/add.ctp:18
 msgid "Add Role"
 msgstr "Ajouter un rôle"
 
-#: Template/Roles/edit.ctp:24 Template/Roles/view.ctp:10
+#: /Template/Roles/edit.ctp:24 /Template/Roles/view.ctp:10
 msgid "Edit Role"
 msgstr "Modifier le rôle"
 
-#: Template/Roles/index.ctp:10 Template/Roles/view.ctp:13
-#: Template/Users/add.ctp:12 Template/Users/edit.ctp:18
-#: Template/Users/index.ctp:12 Template/Users/view.ctp:15
+#: /Template/Roles/index.ctp:10 /Template/Roles/view.ctp:13
+#: /Template/Users/add.ctp:12 /Template/Users/edit.ctp:18
+#: /Template/Users/index.ctp:12 /Template/Users/view.ctp:15
 msgid "New Role"
 msgstr "Nouveau rôle"
 
-#: Template/Roles/index.ctp:16
+#: /Template/Roles/index.ctp:16
 msgid "Roles"
 msgstr "Rôles"
 
-#: Template/Roles/view.ctp:11
+#: /Template/Roles/view.ctp:11
 msgid "Delete Role"
 msgstr "Supprimer le rôle"
 
-#: Template/Roles/view.ctp:31
+#: /Template/Roles/view.ctp:31
 msgid "Related Users"
 msgstr "Utilisateurs apparentés"
 
-#: Template/Roles/view.ctp:35 Template/Users/view.ctp:24
+#: /Template/Roles/view.ctp:35 /Template/Users/view.ctp:24
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: Template/Roles/view.ctp:36 Template/Users/view.ctp:28
+#: /Template/Roles/view.ctp:36 /Template/Users/view.ctp:28
 msgid "Email"
 msgstr "Courriel"
 
-#: Template/Roles/view.ctp:37 Template/Users/view.ctp:32
+#: /Template/Roles/view.ctp:37 /Template/Users/view.ctp:32
 msgid "Adress"
 msgstr "Adresse"
 
-#: Template/Roles/view.ctp:38 Template/Users/view.ctp:36
+#: /Template/Roles/view.ctp:38 /Template/Users/view.ctp:36
 msgid "First Name"
 msgstr "Prénom"
 
-#: Template/Roles/view.ctp:39 Template/Users/view.ctp:40
+#: /Template/Roles/view.ctp:39 /Template/Users/view.ctp:40
 msgid "Last Name"
 msgstr "Nom"
 
-#: Template/Tags/add.ctp:18
+#: /Template/Tags/add.ctp:18
 msgid "Add Tag"
 msgstr "Ajouter une étiquette"
 
-#: Template/Tags/edit.ctp:24 Template/Tags/view.ctp:10
+#: /Template/Tags/edit.ctp:24 /Template/Tags/view.ctp:10
 msgid "Edit Tag"
 msgstr "Modifier l'étiquette"
 
-#: Template/Tags/index.ctp:16
+#: /Template/Tags/index.ctp:16
 msgid "Tags"
 msgstr "Étiquettes"
 
-#: Template/Tags/view.ctp:11
+#: /Template/Tags/view.ctp:11
 msgid "Delete Tag"
 msgstr "Supprimer l'étiquette"
 
-#: Template/Users/add.ctp:20
+#: /Template/Users/add.ctp:20
 msgid "Add User"
 msgstr "Ajouter un utilisateur"
 
-#: Template/Users/edit.ctp:26 Template/Users/view.ctp:10
+#: /Template/Users/edit.ctp:26 /Template/Users/view.ctp:10
 msgid "Edit User"
 msgstr "Modifier l'utilisateur"
 
-#: Template/Users/index.ctp:18
+#: /Template/Users/index.ctp:18
 msgid "Users"
 msgstr "Utilisateurs"
 
-#: Template/Users/view.ctp:11
+#: /Template/Users/non_confirmer.ctp:8
+msgid "Send a confirm email"
+msgstr "Envoyer un courriel de confirmation"
+
+#: /Template/Users/view.ctp:11
 msgid "Delete User"
 msgstr "Supprimer un utilisateur"
 
-#: Template/Users/view.ctp:44
+#: /Template/Users/view.ctp:44
 msgid "Role"
 msgstr "Rôle"
 
-#: Template/Users/view.ctp:63
+#: /Template/Users/view.ctp:63
 msgid "Product Id"
 msgstr "Id du produit"
+
+#: /Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
+msgstr "L'adresse demandée {0} n'a pas été trouvée sur ce serveur."
+
+#: /Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr "Une erreur interne s'est produite"
+
+#: Controller/Component/AuthComponent.php:502
+msgid "You are not authorized to access that location."
+msgstr "Vous n'êtes pas autorisé à accéder à cette location."
+
+#: Controller/Component/CsrfComponent.php:181
+#: Http/Middleware/CsrfProtectionMiddleware.php:228
+msgid "Missing CSRF token cookie"
+msgstr "Il manque le cookie CSRF"
+
+#: Controller/Component/CsrfComponent.php:185
+#: Http/Middleware/CsrfProtectionMiddleware.php:232
+msgid "CSRF token mismatch."
+msgstr "Inadéquation des jetons CSRF."
+
+#: Error/ExceptionRenderer.php:301
+msgid "Not Found"
+msgstr "Non trouvé"
+
+#: Error/ExceptionRenderer.php:303
+msgid "An Internal Error Has Occurred."
+msgstr "Une erreur interne s'est produite."
+
+#: Http/Response.php:2677
+msgid "The requested file contains `..` and will not be read."
+msgstr "Le fichier demandé contient `..` et ne sera pas lu."
+
+#: Http/Response.php:2698
+msgid "The requested file was not found"
+msgstr "Le fichier demandé n'a pas été trouvé"
+
+#: I18n/Number.php:106
+msgid "{0,number,#,###.##} KB"
+msgstr ""
+
+#: I18n/Number.php:108
+msgid "{0,number,#,###.##} MB"
+msgstr ""
+
+#: I18n/Number.php:110
+msgid "{0,number,#,###.##} GB"
+msgstr ""
+
+#: I18n/Number.php:112
+msgid "{0,number,#,###.##} TB"
+msgstr ""
+
+#: I18n/Number.php:104
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} after"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} before"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:114
+msgid "just now"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a second ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about a minute ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:153
+msgid "about an hour ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:154 I18n/RelativeTimeFormatter.php:332
+msgid "about a day ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:155 I18n/RelativeTimeFormatter.php:333
+msgid "about a week ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:156 I18n/RelativeTimeFormatter.php:334
+msgid "about a month ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:157 I18n/RelativeTimeFormatter.php:335
+msgid "about a year ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about a second"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:169
+msgid "in about a minute"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:170
+msgid "in about an hour"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:171 I18n/RelativeTimeFormatter.php:346
+msgid "in about a day"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:172 I18n/RelativeTimeFormatter.php:347
+msgid "in about a week"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:173 I18n/RelativeTimeFormatter.php:348
+msgid "in about a month"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:174 I18n/RelativeTimeFormatter.php:349
+msgid "in about a year"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:304
+msgid "today"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:370
+msgid "%s ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:371
+msgid "on %s"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:47 I18n/RelativeTimeFormatter.php:126
+#: I18n/RelativeTimeFormatter.php:316
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:51 I18n/RelativeTimeFormatter.php:129
+#: I18n/RelativeTimeFormatter.php:319
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:57 I18n/RelativeTimeFormatter.php:132
+#: I18n/RelativeTimeFormatter.php:322
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:59 I18n/RelativeTimeFormatter.php:135
+#: I18n/RelativeTimeFormatter.php:325
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:64 I18n/RelativeTimeFormatter.php:138
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:68 I18n/RelativeTimeFormatter.php:141
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:72 I18n/RelativeTimeFormatter.php:144
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ORM/RulesChecker.php:56
+msgid "This value is already in use"
+msgstr ""
+
+#: ORM/RulesChecker.php:103
+msgid "This value does not exist"
+msgstr ""
+
+#: ORM/RulesChecker.php:127
+msgid "The count does not match {0}{1}"
+msgstr ""
+
+#: Utility/Text.php:933
+msgid "and"
+msgstr ""
+
+#: Validation/Validator.php:2510 View/Form/ArrayContext.php:226
+msgid "This field is required"
+msgstr ""
+
+#: Validation/Validator.php:2532
+msgid "This field cannot be left empty"
+msgstr ""
+
+#: Validation/Validator.php:2691
+msgid "The provided value is invalid"
+msgstr ""
+
+#: View/Helper/FormHelper.php:1114
+#, fuzzy
+#| msgid "Edit"
+msgid "Edit {0}"
+msgstr "Modifier"
+
+#: View/Helper/FormHelper.php:1116
+msgid "New {0}"
+msgstr ""
+
+#: View/Helper/HtmlHelper.php:831
+msgid "Home"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:539
+msgid "January"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:540
+msgid "February"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:541
+msgid "March"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:542
+msgid "April"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:543
+msgid "May"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:544
+msgid "June"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:545
+msgid "July"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:546
+msgid "August"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:547
+msgid "September"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:548
+msgid "October"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:549
+msgid "November"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:550
+msgid "December"
+msgstr ""
 
 #~ msgid "Date"
 #~ msgstr "Date"
@@ -606,9 +920,3 @@ msgstr "Id du produit"
 
 #~ msgid "Role Id"
 #~ msgstr "Rôle Id"
-
-#~ msgid "The requested address {0} was not found on this server."
-#~ msgstr "L'adresse demandée {0} n'a pas été trouvée sur ce serveur."
-
-#~ msgid "An Internal Error Has Occurred"
-#~ msgstr "Une erreur interne s'est produite"

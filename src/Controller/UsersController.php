@@ -14,6 +14,13 @@ use Cake\Utility\Text;
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class UsersController extends AppController {
+    
+     public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['logout', 'add']);
+        $this->Auth->deny(['view', 'index']);
+        $this->Auth->allow('reSendConfirmEmail');
+    }
 
     /**
      * Index method
@@ -56,11 +63,7 @@ class UsersController extends AppController {
         }
     }
 
-    public function initialize() {
-        parent::initialize();
-        $this->Auth->allow(['logout', 'add']);
-        $this->Auth->deny(['view', 'index']);
-    }
+
 
     // In src/Controller/UsersController.php
     public function login() {
@@ -177,6 +180,11 @@ class UsersController extends AppController {
             $this->Flash->error(__('The user could not be deleted. Please, try again.'));
         }
 
+        return $this->redirect(['action' => 'index']);
+    }
+    
+    public function reSendConfirmEmail($uuid){
+        $this->sendConfirmEmail($uuid);
         return $this->redirect(['action' => 'index']);
     }
 

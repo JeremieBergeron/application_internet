@@ -12,17 +12,11 @@ use App\Controller\AppController;
  */
 class ProductsController extends AppController
 {
-    
+
      public function isAuthorized($user) {
-         
-         if($user['confirmed'] === 0){
-            return false;
-        }
-        
-        if ($user['role_id'] === 1 || $user['role_id'] === 2) {
+         if ($user['role_id'] === 1 || $user['role_id'] === 2) {
             return true;
         }
-        return false;
     }
     /**
      * Index method

@@ -12,6 +12,21 @@ use App\Controller\AppController;
  */
 class TagsController extends AppController
 {
+    
+    public function initialize() {
+        parent::initialize();
+        $this->loadComponent('Auth', [
+            'authorize' => 'Controller',
+        ]);
+        $this->Auth->deny();
+    }
+
+    public function isAuthorized($user) {
+        if ($user['role_id'] === 1 || $user['role_id'] === 2) {
+            return true;
+        }
+
+    }
     /**
      * Index method
      *

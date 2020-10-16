@@ -12,11 +12,19 @@ use App\Controller\AppController;
  */
 class RolesController extends AppController
 {
+    public function initialize() {
+        parent::initialize();
+        $this->loadComponent('Auth', [
+            'authorize' => 'Controller',
+        ]);
+        $this->Auth->deny();
+    }
+
     public function isAuthorized($user) {
         if ($user['role_id'] === 1) {
             return true;
         }
-        return false;
+
     }
     /**
      * Index method

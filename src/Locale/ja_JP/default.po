@@ -4,595 +4,912 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2020-10-05 15:02+0000\n"
-"PO-Revision-Date: 2020-10-05 13:41-0400\n"
+"POT-Creation-Date: 2020-10-16 17:27+0000\n"
+"PO-Revision-Date: 2020-10-16 13:34-0400\n"
+"Last-Translator: \n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.4.1\n"
-"Last-Translator: \n"
-"Language: ja_JP\n"
 
-#: Controller/FilesController.php:70
+#: /Controller/FilesController.php:77
 msgid "File has been uploaded and inserted successfully."
 msgstr "ファイルのアップロードと挿入に成功しました。"
 
-#: Controller/FilesController.php:74 Controller/FilesController.php:77
+#: /Controller/FilesController.php:81 /Controller/FilesController.php:84
 msgid "Unable to upload file, please try again."
 msgstr "ファイルをアップロードできません。"
 
-#: Controller/FilesController.php:80
+#: /Controller/FilesController.php:87
 msgid "Please choose a file to upload."
 msgstr "アップロードするファイルを選択してください。"
 
-#: Controller/FilesController.php:101
+#: /Controller/FilesController.php:108
 msgid "The file has been saved."
 msgstr "ファイルが保存されました。"
 
-#: Controller/FilesController.php:105
+#: /Controller/FilesController.php:112
 msgid "The file could not be saved. Please, try again."
 msgstr "ファイルを保存できませんでした。もう一度お試しください。"
 
-#: Controller/FilesController.php:122
+#: /Controller/FilesController.php:129
 msgid "The file has been deleted."
 msgstr "ファイルは削除されました。"
 
-#: Controller/FilesController.php:124
+#: /Controller/FilesController.php:131
 msgid "The file could not be deleted. Please, try again."
 msgstr "ファイルを削除できませんでした。もう一度お試しください。"
 
-#: Controller/ProductsController.php:64 Controller/ProductsController.php:90
+#: /Controller/ProductsController.php:64 /Controller/ProductsController.php:90
 msgid "The product has been saved."
 msgstr "商品が保存されました。"
 
-#: Controller/ProductsController.php:68 Controller/ProductsController.php:94
+#: /Controller/ProductsController.php:68 /Controller/ProductsController.php:94
 msgid "The product could not be saved. Please, try again."
 msgstr "商品を保存できませんでした。もう一度お試しください。"
 
-#: Controller/ProductsController.php:113
+#: /Controller/ProductsController.php:113
 msgid "The product has been deleted."
 msgstr "商品を削除しました。"
 
-#: Controller/ProductsController.php:115
+#: /Controller/ProductsController.php:115
 msgid "The product could not be deleted. Please, try again."
 msgstr "商品を削除することができませんでした。もう一度お試しください。"
 
-#: Controller/PurchasesController.php:69 Controller/PurchasesController.php:94
+#: /Controller/PurchasesController.php:86
+#: /Controller/PurchasesController.php:111
 msgid "The purchase has been saved."
 msgstr "購入したものが保存されています。"
 
-#: Controller/PurchasesController.php:73 Controller/PurchasesController.php:98
+#: /Controller/PurchasesController.php:90
+#: /Controller/PurchasesController.php:115
 msgid "The purchase could not be saved. Please, try again."
 msgstr "購入を保存できませんでした。もう一度お試しください。"
 
-#: Controller/PurchasesController.php:116
+#: /Controller/PurchasesController.php:133
 msgid "The purchase has been deleted."
 msgstr "購入したものは削除されました。"
 
-#: Controller/PurchasesController.php:118
+#: /Controller/PurchasesController.php:135
 msgid "The purchase could not be deleted. Please, try again."
-msgstr "購入したものを削除することができませんでした。もう一度お試しください。"
+msgstr ""
+"購入したものを削除することができませんでした。もう一度お試しください。"
 
-#: Controller/RolesController.php:60 Controller/RolesController.php:84
+#: /Controller/RolesController.php:68 /Controller/RolesController.php:92
 msgid "The role has been saved."
 msgstr "役割が保存されています。"
 
-#: Controller/RolesController.php:64 Controller/RolesController.php:88
+#: /Controller/RolesController.php:72 /Controller/RolesController.php:96
 msgid "The role could not be saved. Please, try again."
 msgstr "ロールを保存できませんでした。もう一度試してみてください。"
 
-#: Controller/RolesController.php:105
+#: /Controller/RolesController.php:113
 msgid "The role has been deleted."
 msgstr "役割が削除されました。"
 
-#: Controller/RolesController.php:107
+#: /Controller/RolesController.php:115
 msgid "The role could not be deleted. Please, try again."
 msgstr "役割を削除できませんでした。もう一度試してみてください。"
 
-#: Controller/TagsController.php:54 Controller/TagsController.php:79
+#: /Controller/TagsController.php:69 /Controller/TagsController.php:94
 msgid "The tag has been saved."
 msgstr "タグが保存されました。"
 
-#: Controller/TagsController.php:58 Controller/TagsController.php:83
+#: /Controller/TagsController.php:73 /Controller/TagsController.php:98
 msgid "The tag could not be saved. Please, try again."
 msgstr "タグを保存できませんでした。もう一度試してみてください。"
 
-#: Controller/TagsController.php:101
+#: /Controller/TagsController.php:116
 msgid "The tag has been deleted."
 msgstr "タグは削除されました。"
 
-#: Controller/TagsController.php:103
+#: /Controller/TagsController.php:118
 msgid "The tag could not be deleted. Please, try again."
 msgstr "タグを削除できませんでした。もう一度試してみてください。"
 
-#: Controller/UsersController.php:101 Controller/UsersController.php:126
+#: /Controller/UsersController.php:36
+#, fuzzy
+#| msgid "Confirm your email"
+msgid "Please confirme your email"
+msgstr "メールを確認する"
+
+#: /Controller/UsersController.php:94
+#, fuzzy
+#| msgid "Your email has been confirmed"
+msgid "Your account is not confirmed."
+msgstr "あなたのメールは確認されました"
+
+#: /Controller/UsersController.php:129 /Controller/UsersController.php:154
 msgid "The user has been saved."
 msgstr "ユーザーが保存されました。"
 
-#: Controller/UsersController.php:105 Controller/UsersController.php:130
+#: /Controller/UsersController.php:133 /Controller/UsersController.php:158
 msgid "The user could not be saved. Please, try again."
 msgstr "ユーザーを保存できませんでした。もう一度お試しください。"
 
-#: Controller/UsersController.php:147
+#: /Controller/UsersController.php:175
 msgid "The user has been deleted."
 msgstr "ユーザーが削除されました。"
 
-#: Controller/UsersController.php:149
+#: /Controller/UsersController.php:177
 msgid "The user could not be deleted. Please, try again."
 msgstr "ユーザーを削除できませんでした。もう一度お試しください。"
 
-#: Controller/UsersController.php:157
+#: /Controller/UsersController.php:186
 msgid "Confirm your email"
 msgstr "メールを確認する"
 
-#: Controller/UsersController.php:164
+#: /Controller/UsersController.php:193
 msgid "Thank you"
 msgstr "ありがとうございます"
 
-#: Controller/UsersController.php:164
+#: /Controller/UsersController.php:193
 msgid "Your email has been confirmed"
 msgstr "あなたのメールは確認されました"
 
-#: Controller/UsersController.php:167
+#: /Controller/UsersController.php:196
 msgid "The confirmation could not be saved. Please, try again"
 msgstr "確認の保存ができませんでした。再度お試しください。"
 
-#: Template/Emails/index.ctp:1
+#: /Template/Emails/index.ctp:1
 msgid "sent"
 msgstr "遣られた"
 
-#: Template/Files/add.ctp:9 Template/Files/edit.ctp:9
-#: Template/Files/index.ctp:9 Template/Files/index.ctp:24
-#: Template/Files/view.ctp:9 Template/Files/view.ctp:59
-#: Template/Products/add.ctp:9 Template/Products/edit.ctp:9
-#: Template/Products/index.ctp:9 Template/Products/index.ctp:30
-#: Template/Products/view.ctp:9 Template/Products/view.ctp:56
-#: Template/Products/view.ctp:87 Template/Products/view.ctp:114
-#: Template/Purchases/add.ctp:9 Template/Purchases/edit.ctp:9
-#: Template/Purchases/index.ctp:9 Template/Purchases/index.ctp:27
-#: Template/Purchases/view.ctp:9 Template/Roles/add.ctp:9
-#: Template/Roles/edit.ctp:9 Template/Roles/index.ctp:9
-#: Template/Roles/index.ctp:21 Template/Roles/view.ctp:9
-#: Template/Roles/view.ctp:42 Template/Tags/add.ctp:9 Template/Tags/edit.ctp:9
-#: Template/Tags/index.ctp:9 Template/Tags/index.ctp:23
-#: Template/Tags/view.ctp:9 Template/Tags/view.ctp:46 Template/Users/add.ctp:9
-#: Template/Users/edit.ctp:9 Template/Users/index.ctp:9
-#: Template/Users/index.ctp:30 Template/Users/view.ctp:9
-#: Template/Users/view.ctp:66
+#: /Template/Files/add.ctp:9 /Template/Files/edit.ctp:9
+#: /Template/Files/index.ctp:9 /Template/Files/index.ctp:24
+#: /Template/Files/view.ctp:9 /Template/Files/view.ctp:59
+#: /Template/Products/add.ctp:9 /Template/Products/edit.ctp:9
+#: /Template/Products/index.ctp:9 /Template/Products/index.ctp:30
+#: /Template/Products/view.ctp:9 /Template/Products/view.ctp:56
+#: /Template/Products/view.ctp:90 /Template/Products/view.ctp:117
+#: /Template/Purchases/add.ctp:9 /Template/Purchases/edit.ctp:9
+#: /Template/Purchases/index.ctp:9 /Template/Purchases/index.ctp:27
+#: /Template/Purchases/view.ctp:9 /Template/Roles/add.ctp:9
+#: /Template/Roles/edit.ctp:9 /Template/Roles/index.ctp:9
+#: /Template/Roles/index.ctp:21 /Template/Roles/view.ctp:9
+#: /Template/Roles/view.ctp:42 /Template/Tags/add.ctp:9
+#: /Template/Tags/edit.ctp:9 /Template/Tags/index.ctp:9
+#: /Template/Tags/index.ctp:23 /Template/Tags/view.ctp:9
+#: /Template/Tags/view.ctp:46 /Template/Users/add.ctp:9
+#: /Template/Users/edit.ctp:9 /Template/Users/index.ctp:9
+#: /Template/Users/index.ctp:30 /Template/Users/view.ctp:9
+#: /Template/Users/view.ctp:66
 msgid "Actions"
 msgstr "アクション"
 
-#: Template/Files/add.ctp:10 Template/Files/edit.ctp:16
-#: Template/Files/view.ctp:12 Template/Products/add.ctp:11
-#: Template/Products/edit.ctp:17 Template/Products/index.ctp:11
-#: Template/Products/view.ctp:14
+#: /Template/Files/add.ctp:10 /Template/Files/edit.ctp:16
+#: /Template/Files/view.ctp:12 /Template/Products/add.ctp:11
+#: /Template/Products/edit.ctp:17 /Template/Products/index.ctp:11
+#: /Template/Products/view.ctp:14
 msgid "List Files"
 msgstr "リストファイル"
 
-#: Template/Files/add.ctp:11 Template/Files/edit.ctp:17
-#: Template/Files/index.ctp:11 Template/Files/view.ctp:14
-#: Template/Products/add.ctp:10 Template/Products/edit.ctp:16
-#: Template/Products/view.ctp:12 Template/Purchases/add.ctp:13
-#: Template/Purchases/edit.ctp:19 Template/Purchases/index.ctp:13
-#: Template/Purchases/view.ctp:16 Template/Tags/add.ctp:11
-#: Template/Tags/edit.ctp:17 Template/Tags/index.ctp:11
-#: Template/Tags/view.ctp:14
+#: /Template/Files/add.ctp:11 /Template/Files/edit.ctp:17
+#: /Template/Files/index.ctp:11 /Template/Files/view.ctp:14
+#: /Template/Products/add.ctp:10 /Template/Products/edit.ctp:16
+#: /Template/Products/view.ctp:12 /Template/Purchases/add.ctp:11
+#: /Template/Purchases/edit.ctp:17 /Template/Purchases/index.ctp:13
+#: /Template/Purchases/view.ctp:16 /Template/Tags/add.ctp:11
+#: /Template/Tags/edit.ctp:17 /Template/Tags/index.ctp:11
+#: /Template/Tags/view.ctp:14
 msgid "List Products"
 msgstr "製品一覧"
 
-#: Template/Files/add.ctp:12 Template/Files/edit.ctp:18
-#: Template/Files/index.ctp:12 Template/Files/view.ctp:15
-#: Template/Products/index.ctp:10 Template/Products/view.ctp:13
-#: Template/Purchases/add.ctp:14 Template/Purchases/edit.ctp:20
-#: Template/Purchases/index.ctp:14 Template/Purchases/view.ctp:17
-#: Template/Tags/add.ctp:12 Template/Tags/edit.ctp:18
-#: Template/Tags/index.ctp:12 Template/Tags/view.ctp:15
+#: /Template/Files/add.ctp:12 /Template/Files/edit.ctp:18
+#: /Template/Files/index.ctp:12 /Template/Files/view.ctp:15
+#: /Template/Products/index.ctp:10 /Template/Products/view.ctp:13
+#: /Template/Purchases/add.ctp:12 /Template/Purchases/edit.ctp:18
+#: /Template/Purchases/index.ctp:14 /Template/Purchases/view.ctp:17
+#: /Template/Tags/add.ctp:12 /Template/Tags/edit.ctp:18
+#: /Template/Tags/index.ctp:12 /Template/Tags/view.ctp:15
 msgid "New Product"
 msgstr "新製品"
 
-#: Template/Files/add.ctp:18
+#: /Template/Files/add.ctp:18
 msgid "Add File"
 msgstr "ファイルの追加"
 
-#: Template/Files/add.ctp:25 Template/Files/edit.ctp:31
-#: Template/Products/add.ctp:32 Template/Products/edit.ctp:39
-#: Template/Purchases/add.ctp:27 Template/Purchases/edit.ctp:33
-#: Template/Roles/add.ctp:24 Template/Roles/edit.ctp:30
-#: Template/Tags/add.ctp:23 Template/Tags/edit.ctp:29 Template/Users/add.ctp:31
-#: Template/Users/edit.ctp:37
+#: /Template/Files/add.ctp:25 /Template/Files/edit.ctp:31
+#: /Template/Products/add.ctp:32 /Template/Products/edit.ctp:38
+#: /Template/Purchases/add.ctp:27 /Template/Purchases/edit.ctp:33
+#: /Template/Roles/add.ctp:24 /Template/Roles/edit.ctp:30
+#: /Template/Tags/add.ctp:23 /Template/Tags/edit.ctp:29
+#: /Template/Users/add.ctp:30 /Template/Users/edit.ctp:37
+#: View/Helper/FormHelper.php:2036
 msgid "Submit"
 msgstr "提出"
 
-#: Template/Files/edit.ctp:11 Template/Files/index.ctp:46
-#: Template/Files/view.ctp:73 Template/Products/edit.ctp:11
-#: Template/Products/index.ctp:55 Template/Products/view.ctp:70
-#: Template/Products/view.ctp:99 Template/Products/view.ctp:124
-#: Template/Purchases/edit.ctp:11 Template/Purchases/index.ctp:41
-#: Template/Roles/edit.ctp:11 Template/Roles/index.ctp:31
-#: Template/Roles/view.ctp:56 Template/Tags/edit.ctp:11
-#: Template/Tags/index.ctp:35 Template/Tags/view.ctp:60
-#: Template/Users/edit.ctp:11 Template/Users/index.ctp:47
-#: Template/Users/view.ctp:78
+#: /Template/Files/edit.ctp:11 /Template/Files/index.ctp:46
+#: /Template/Files/view.ctp:73 /Template/Products/edit.ctp:11
+#: /Template/Products/index.ctp:55 /Template/Products/view.ctp:73
+#: /Template/Products/view.ctp:102 /Template/Products/view.ctp:127
+#: /Template/Purchases/edit.ctp:11 /Template/Purchases/index.ctp:41
+#: /Template/Roles/edit.ctp:11 /Template/Roles/index.ctp:31
+#: /Template/Roles/view.ctp:56 /Template/Tags/edit.ctp:11
+#: /Template/Tags/index.ctp:35 /Template/Tags/view.ctp:60
+#: /Template/Users/edit.ctp:11 /Template/Users/index.ctp:47
+#: /Template/Users/view.ctp:78
 msgid "Delete"
 msgstr "削除"
 
-#: Template/Files/edit.ctp:13 Template/Files/index.ctp:46
-#: Template/Files/view.ctp:11 Template/Files/view.ctp:73
-#: Template/Products/edit.ctp:13 Template/Products/index.ctp:55
-#: Template/Products/view.ctp:11 Template/Products/view.ctp:70
-#: Template/Products/view.ctp:99 Template/Products/view.ctp:124
-#: Template/Purchases/edit.ctp:13 Template/Purchases/index.ctp:41
-#: Template/Purchases/view.ctp:11 Template/Roles/edit.ctp:13
-#: Template/Roles/index.ctp:31 Template/Roles/view.ctp:11
-#: Template/Roles/view.ctp:56 Template/Tags/edit.ctp:13
-#: Template/Tags/index.ctp:35 Template/Tags/view.ctp:11
-#: Template/Tags/view.ctp:60 Template/Users/edit.ctp:13
-#: Template/Users/index.ctp:47 Template/Users/view.ctp:11
-#: Template/Users/view.ctp:78
+#: /Template/Files/edit.ctp:13 /Template/Files/index.ctp:46
+#: /Template/Files/view.ctp:11 /Template/Files/view.ctp:73
+#: /Template/Products/edit.ctp:13 /Template/Products/index.ctp:55
+#: /Template/Products/view.ctp:11 /Template/Products/view.ctp:73
+#: /Template/Products/view.ctp:102 /Template/Products/view.ctp:127
+#: /Template/Purchases/edit.ctp:13 /Template/Purchases/index.ctp:41
+#: /Template/Purchases/view.ctp:11 /Template/Roles/edit.ctp:13
+#: /Template/Roles/index.ctp:31 /Template/Roles/view.ctp:11
+#: /Template/Roles/view.ctp:56 /Template/Tags/edit.ctp:13
+#: /Template/Tags/index.ctp:35 /Template/Tags/view.ctp:11
+#: /Template/Tags/view.ctp:60 /Template/Users/edit.ctp:13
+#: /Template/Users/index.ctp:47 /Template/Users/view.ctp:11
+#: /Template/Users/view.ctp:78
 msgid "Are you sure you want to delete # {0}?"
 msgstr "本当に # {0} を削除しますか？"
 
-#: Template/Files/edit.ctp:24 Template/Files/view.ctp:10
+#: /Template/Files/edit.ctp:24 /Template/Files/view.ctp:10
 msgid "Edit File"
 msgstr "ファイル編集"
 
-#: Template/Files/index.ctp:10 Template/Files/view.ctp:13
-#: Template/Products/add.ctp:12 Template/Products/edit.ctp:18
-#: Template/Products/index.ctp:12 Template/Products/view.ctp:15
+#: /Template/Files/index.ctp:10 /Template/Files/view.ctp:13
+#: /Template/Products/add.ctp:12 /Template/Products/edit.ctp:18
+#: /Template/Products/index.ctp:12 /Template/Products/view.ctp:15
 msgid "New File"
 msgstr "新規ファイル"
 
-#: Template/Files/index.ctp:16
+#: /Template/Files/index.ctp:16
 msgid "Files"
 msgstr "ファイル"
 
-#: Template/Files/index.ctp:44 Template/Files/view.ctp:71
-#: Template/Products/index.ctp:53 Template/Products/view.ctp:68
-#: Template/Products/view.ctp:97 Template/Products/view.ctp:122
-#: Template/Purchases/index.ctp:39 Template/Roles/index.ctp:29
-#: Template/Roles/view.ctp:54 Template/Tags/index.ctp:33
-#: Template/Tags/view.ctp:58 Template/Users/index.ctp:45
-#: Template/Users/view.ctp:76
+#: /Template/Files/index.ctp:44 /Template/Files/view.ctp:71
+#: /Template/Products/index.ctp:53 /Template/Products/view.ctp:71
+#: /Template/Products/view.ctp:100 /Template/Products/view.ctp:125
+#: /Template/Purchases/index.ctp:39 /Template/Roles/index.ctp:29
+#: /Template/Roles/view.ctp:54 /Template/Tags/index.ctp:33
+#: /Template/Tags/view.ctp:58 /Template/Users/index.ctp:45
+#: /Template/Users/view.ctp:76 View/Helper/PaginatorHelper.php:1273
 msgid "View"
 msgstr "ビュー"
 
-#: Template/Files/index.ctp:45 Template/Files/view.ctp:72
-#: Template/Products/index.ctp:54 Template/Products/view.ctp:69
-#: Template/Products/view.ctp:98 Template/Products/view.ctp:123
-#: Template/Purchases/index.ctp:40 Template/Roles/index.ctp:30
-#: Template/Roles/view.ctp:55 Template/Tags/index.ctp:34
-#: Template/Tags/view.ctp:59 Template/Users/index.ctp:46
-#: Template/Users/view.ctp:77
+#: /Template/Files/index.ctp:45 /Template/Files/view.ctp:72
+#: /Template/Products/index.ctp:54 /Template/Products/view.ctp:72
+#: /Template/Products/view.ctp:101 /Template/Products/view.ctp:126
+#: /Template/Purchases/index.ctp:40 /Template/Roles/index.ctp:30
+#: /Template/Roles/view.ctp:55 /Template/Tags/index.ctp:34
+#: /Template/Tags/view.ctp:59 /Template/Users/index.ctp:46
+#: /Template/Users/view.ctp:77
 msgid "Edit"
 msgstr "編集"
 
-#: Template/Files/index.ctp:54 Template/Products/index.ctp:63
-#: Template/Purchases/index.ctp:49 Template/Roles/index.ctp:39
-#: Template/Tags/index.ctp:43 Template/Users/index.ctp:55
+#: /Template/Files/index.ctp:54 /Template/Products/index.ctp:63
+#: /Template/Purchases/index.ctp:49 /Template/Roles/index.ctp:39
+#: /Template/Tags/index.ctp:43 /Template/Users/index.ctp:55
 msgid "first"
 msgstr "第一"
 
-#: Template/Files/index.ctp:55 Template/Products/index.ctp:64
-#: Template/Purchases/index.ctp:50 Template/Roles/index.ctp:40
-#: Template/Tags/index.ctp:44 Template/Users/index.ctp:56
+#: /Template/Files/index.ctp:55 /Template/Products/index.ctp:64
+#: /Template/Purchases/index.ctp:50 /Template/Roles/index.ctp:40
+#: /Template/Tags/index.ctp:44 /Template/Users/index.ctp:56
 msgid "previous"
 msgstr "前"
 
-#: Template/Files/index.ctp:57 Template/Products/index.ctp:66
-#: Template/Purchases/index.ctp:52 Template/Roles/index.ctp:42
-#: Template/Tags/index.ctp:46 Template/Users/index.ctp:58
+#: /Template/Files/index.ctp:57 /Template/Products/index.ctp:66
+#: /Template/Purchases/index.ctp:52 /Template/Roles/index.ctp:42
+#: /Template/Tags/index.ctp:46 /Template/Users/index.ctp:58
 msgid "next"
 msgstr "次"
 
-#: Template/Files/index.ctp:58 Template/Products/index.ctp:67
-#: Template/Purchases/index.ctp:53 Template/Roles/index.ctp:43
-#: Template/Tags/index.ctp:47 Template/Users/index.ctp:59
+#: /Template/Files/index.ctp:58 /Template/Products/index.ctp:67
+#: /Template/Purchases/index.ctp:53 /Template/Roles/index.ctp:43
+#: /Template/Tags/index.ctp:47 /Template/Users/index.ctp:59
 msgid "last"
 msgstr "已むに已まれぬ"
 
-#: Template/Files/index.ctp:60 Template/Products/index.ctp:69
-#: Template/Purchases/index.ctp:55 Template/Roles/index.ctp:45
-#: Template/Tags/index.ctp:49 Template/Users/index.ctp:61
+#: /Template/Files/index.ctp:60 /Template/Products/index.ctp:69
+#: /Template/Purchases/index.ctp:55 /Template/Roles/index.ctp:45
+#: /Template/Tags/index.ctp:49 /Template/Users/index.ctp:61
 msgid ""
 "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
 "total"
 msgstr ""
-"ページ{{{page}}の{{{pages}}}で、{{count}}のうち{{{current}}のレコードを表示し"
-"ます。"
+"ページ{{{page}}の{{{pages}}}で、{{count}}のうち{{{current}}のレコードを表示"
+"します。"
 
-#: Template/Files/view.ctp:11
+#: /Template/Files/view.ctp:11
 msgid "Delete File"
 msgstr "ファイルの削除"
 
-#: Template/Files/view.ctp:35 Template/Files/view.ctp:57
-#: Template/Products/view.ctp:38 Template/Products/view.ctp:85
-#: Template/Products/view.ctp:112 Template/Purchases/view.ctp:36
-#: Template/Roles/view.ctp:40 Template/Tags/view.ctp:26
-#: Template/Tags/view.ctp:44 Template/Users/view.ctp:48
-#: Template/Users/view.ctp:64
+#: /Template/Files/view.ctp:35 /Template/Files/view.ctp:57
+#: /Template/Products/view.ctp:38 /Template/Products/view.ctp:88
+#: /Template/Products/view.ctp:115 /Template/Purchases/view.ctp:36
+#: /Template/Roles/view.ctp:40 /Template/Tags/view.ctp:26
+#: /Template/Tags/view.ctp:44 /Template/Users/view.ctp:48
+#: /Template/Users/view.ctp:64
 msgid "Created"
 msgstr "作成された"
 
-#: Template/Files/view.ctp:39 Template/Files/view.ctp:58
-#: Template/Products/view.ctp:42 Template/Products/view.ctp:86
-#: Template/Products/view.ctp:113 Template/Purchases/view.ctp:40
-#: Template/Roles/view.ctp:41 Template/Tags/view.ctp:30
-#: Template/Tags/view.ctp:45 Template/Users/view.ctp:52
-#: Template/Users/view.ctp:65
+#: /Template/Files/view.ctp:39 /Template/Files/view.ctp:58
+#: /Template/Products/view.ctp:42 /Template/Products/view.ctp:89
+#: /Template/Products/view.ctp:116 /Template/Purchases/view.ctp:40
+#: /Template/Roles/view.ctp:41 /Template/Tags/view.ctp:30
+#: /Template/Tags/view.ctp:45 /Template/Users/view.ctp:52
+#: /Template/Users/view.ctp:65
 msgid "Modified"
 msgstr "改造"
 
-#: Template/Files/view.ctp:43
+#: /Template/Files/view.ctp:43
 msgid "Status"
 msgstr "ステータス"
 
-#: Template/Files/view.ctp:44
+#: /Template/Files/view.ctp:44
 msgid "Yes"
 msgstr "噫"
 
-#: Template/Files/view.ctp:44
+#: /Template/Files/view.ctp:44
 msgid "No"
 msgstr "否"
 
-#: Template/Files/view.ctp:48 Template/Tags/view.ctp:35
+#: /Template/Files/view.ctp:48 /Template/Tags/view.ctp:35
 msgid "Related Products"
 msgstr "関連製品"
 
-#: Template/Files/view.ctp:52 Template/Tags/view.ctp:39
+#: /Template/Files/view.ctp:52 /Template/Tags/view.ctp:39
 msgid "Id"
 msgstr "いでん"
 
-#: Template/Files/view.ctp:53 Template/Products/view.ctp:26
-#: Template/Roles/view.ctp:22 Template/Tags/view.ctp:40
+#: /Template/Files/view.ctp:53 /Template/Products/view.ctp:26
+#: /Template/Roles/view.ctp:22 /Template/Tags/view.ctp:40
 msgid "Name"
 msgstr "名前"
 
-#: Template/Files/view.ctp:54 Template/Products/view.ctp:47
-#: Template/Roles/view.ctp:27 Template/Tags/view.ctp:41
+#: /Template/Files/view.ctp:54 /Template/Products/view.ctp:47
+#: /Template/Roles/view.ctp:27 /Template/Tags/view.ctp:41
 msgid "Description"
 msgstr "説明"
 
-#: Template/Files/view.ctp:55 Template/Products/view.ctp:30
-#: Template/Tags/view.ctp:42
+#: /Template/Files/view.ctp:55 /Template/Products/view.ctp:30
+#: /Template/Tags/view.ctp:42
 msgid "Price"
 msgstr "価格"
 
-#: Template/Files/view.ctp:56 Template/Products/view.ctp:34
-#: Template/Tags/view.ctp:43
+#: /Template/Files/view.ctp:56 /Template/Products/view.ctp:34
+#: /Template/Tags/view.ctp:43
 msgid "Quantity Available"
 msgstr "利用可能な数量"
 
-#: Template/Layout/default.ctp:52
+#: /Template/Layout/default.ctp:49
+#, fuzzy
+#| msgid "Your email has been confirmed"
+msgid "Your account is confirmed"
+msgstr "あなたのメールは確認されました"
+
+#: /Template/Layout/default.ctp:51
+#, fuzzy
+#| msgid "Your email has been confirmed"
+msgid "Your account is not confirmed"
+msgstr "あなたのメールは確認されました"
+
+#: /Template/Layout/default.ctp:61
 msgid "logout"
 msgstr "ログアウト"
 
-#: Template/Layout/default.ctp:54
+#: /Template/Layout/default.ctp:63
 msgid "login"
 msgstr "ログイン"
 
-#: Template/Layout/default.ctp:57
+#: /Template/Layout/default.ctp:64
+msgid "sign up"
+msgstr "サインアップ"
+
+#: /Template/Layout/default.ctp:71
 msgid "About us"
 msgstr "私たちについて"
 
-#: Template/Layout/error.ctp:36
+#: /Template/Layout/error.ctp:36 /Template/Error/error400.ctp:36
+#: /Template/Error/error500.ctp:41
 msgid "Error"
 msgstr "エラー"
 
-#: Template/Layout/error.ctp:44
+#: /Template/Layout/error.ctp:44
 msgid "Back"
 msgstr "戻る"
 
-#: Template/Products/add.ctp:13 Template/Products/edit.ctp:19
-#: Template/Products/index.ctp:13 Template/Products/view.ctp:16
-#: Template/Purchases/add.ctp:10 Template/Purchases/edit.ctp:16
-#: Template/Purchases/view.ctp:12 Template/Users/add.ctp:13
-#: Template/Users/edit.ctp:19 Template/Users/index.ctp:13
-#: Template/Users/view.ctp:16
+#: /Template/Products/add.ctp:13 /Template/Products/edit.ctp:19
+#: /Template/Products/index.ctp:13 /Template/Products/view.ctp:16
+#: /Template/Purchases/add.ctp:10 /Template/Purchases/edit.ctp:16
+#: /Template/Purchases/view.ctp:12 /Template/Users/add.ctp:13
+#: /Template/Users/edit.ctp:19 /Template/Users/index.ctp:13
+#: /Template/Users/view.ctp:16
 msgid "List Purchases"
 msgstr "買取一覧"
 
-#: Template/Products/add.ctp:14 Template/Products/edit.ctp:20
-#: Template/Products/index.ctp:14 Template/Products/view.ctp:17
-#: Template/Purchases/index.ctp:10 Template/Purchases/view.ctp:13
-#: Template/Users/add.ctp:14 Template/Users/edit.ctp:20
-#: Template/Users/index.ctp:14 Template/Users/view.ctp:17
+#: /Template/Products/add.ctp:14 /Template/Products/edit.ctp:20
+#: /Template/Products/index.ctp:14 /Template/Products/view.ctp:17
+#: /Template/Purchases/index.ctp:10 /Template/Purchases/view.ctp:13
+#: /Template/Users/add.ctp:14 /Template/Users/edit.ctp:20
+#: /Template/Users/index.ctp:14 /Template/Users/view.ctp:17
 msgid "New Purchase"
 msgstr "新規購入"
 
-#: Template/Products/add.ctp:15 Template/Products/edit.ctp:21
-#: Template/Products/index.ctp:15 Template/Products/view.ctp:18
-#: Template/Tags/add.ctp:10 Template/Tags/edit.ctp:16 Template/Tags/view.ctp:12
+#: /Template/Products/add.ctp:15 /Template/Products/edit.ctp:21
+#: /Template/Products/index.ctp:15 /Template/Products/view.ctp:18
+#: /Template/Tags/add.ctp:10 /Template/Tags/edit.ctp:16
+#: /Template/Tags/view.ctp:12
 msgid "List Tags"
 msgstr "リストタグ"
 
-#: Template/Products/add.ctp:16 Template/Products/edit.ctp:22
-#: Template/Products/index.ctp:16 Template/Products/view.ctp:19
-#: Template/Tags/index.ctp:10 Template/Tags/view.ctp:13
+#: /Template/Products/add.ctp:16 /Template/Products/edit.ctp:22
+#: /Template/Products/index.ctp:16 /Template/Products/view.ctp:19
+#: /Template/Tags/index.ctp:10 /Template/Tags/view.ctp:13
 msgid "New Tag"
 msgstr "新しいタグ"
 
-#: Template/Products/add.ctp:22
+#: /Template/Products/add.ctp:22
 msgid "Add Product"
 msgstr "製品の追加"
 
-#: Template/Products/edit.ctp:28 Template/Products/view.ctp:10
+#: /Template/Products/edit.ctp:28 /Template/Products/view.ctp:10
 msgid "Edit Product"
 msgstr "製品の編集"
 
-#: Template/Products/index.ctp:20
+#: /Template/Products/index.ctp:20
 msgid "Products"
 msgstr "製品情報"
 
-#: Template/Products/view.ctp:11
+#: /Template/Products/view.ctp:11
 msgid "Delete Product"
 msgstr "製品の削除"
 
-#: Template/Products/view.ctp:51
+#: /Template/Products/view.ctp:51
 msgid "Related Files"
 msgstr "関連ファイル"
 
-#: Template/Products/view.ctp:55
+#: /Template/Products/view.ctp:55
 msgid "Image(s)"
 msgstr "画像"
 
-#: Template/Products/view.ctp:78 Template/Users/view.ctp:57
+#: /Template/Products/view.ctp:81 /Template/Users/view.ctp:57
 msgid "Related Purchases"
 msgstr "関連商品の購入"
 
-#: Template/Products/view.ctp:82 Template/Purchases/view.ctp:28
-#: Template/Users/view.ctp:61
+#: /Template/Products/view.ctp:85 /Template/Purchases/view.ctp:28
+#: /Template/Users/view.ctp:61
 msgid "Quantity Purchased"
 msgstr "購入数量"
 
-#: Template/Products/view.ctp:83 Template/Purchases/view.ctp:45
-#: Template/Users/view.ctp:62
+#: /Template/Products/view.ctp:86 /Template/Purchases/view.ctp:45
+#: /Template/Users/view.ctp:62
 msgid "Detail"
 msgstr "詳細"
 
-#: Template/Products/view.ctp:84
+#: /Template/Products/view.ctp:87
 msgid "User Id"
 msgstr "ユーザーID"
 
-#: Template/Products/view.ctp:107
+#: /Template/Products/view.ctp:110
 msgid "Related Tags"
 msgstr "関連タグ"
 
-#: Template/Products/view.ctp:111 Template/Tags/view.ctp:22
+#: /Template/Products/view.ctp:114 /Template/Tags/view.ctp:22
 msgid "Title"
 msgstr "タイトル"
 
-#: Template/Purchases/add.ctp:11 Template/Purchases/edit.ctp:17
-#: Template/Purchases/index.ctp:11 Template/Purchases/view.ctp:14
-#: Template/Roles/add.ctp:11 Template/Roles/edit.ctp:17
-#: Template/Roles/index.ctp:11 Template/Roles/view.ctp:14
-#: Template/Users/add.ctp:10 Template/Users/edit.ctp:16
-#: Template/Users/view.ctp:12
+#: /Template/Purchases/add.ctp:13 /Template/Purchases/edit.ctp:19
+#: /Template/Purchases/index.ctp:11 /Template/Purchases/view.ctp:14
+#: /Template/Roles/add.ctp:11 /Template/Roles/edit.ctp:17
+#: /Template/Roles/index.ctp:11 /Template/Roles/view.ctp:14
+#: /Template/Users/add.ctp:10 /Template/Users/edit.ctp:16
+#: /Template/Users/view.ctp:12
 msgid "List Users"
 msgstr "ユーザー一覧"
 
-#: Template/Purchases/add.ctp:12 Template/Purchases/edit.ctp:18
-#: Template/Purchases/index.ctp:12 Template/Purchases/view.ctp:15
-#: Template/Roles/add.ctp:12 Template/Roles/edit.ctp:18
-#: Template/Roles/index.ctp:12 Template/Roles/view.ctp:15
-#: Template/Users/index.ctp:10 Template/Users/view.ctp:13
+#: /Template/Purchases/add.ctp:14 /Template/Purchases/edit.ctp:20
+#: /Template/Purchases/index.ctp:12 /Template/Purchases/view.ctp:15
+#: /Template/Roles/add.ctp:12 /Template/Roles/edit.ctp:18
+#: /Template/Roles/index.ctp:12 /Template/Roles/view.ctp:15
+#: /Template/Users/index.ctp:10 /Template/Users/view.ctp:13
 msgid "New User"
 msgstr "新規ユーザー"
 
-#: Template/Purchases/add.ctp:20
+#: /Template/Purchases/add.ctp:20
 msgid "Add Purchase"
 msgstr "追加購入"
 
-#: Template/Purchases/edit.ctp:26 Template/Purchases/view.ctp:10
+#: /Template/Purchases/edit.ctp:26 /Template/Purchases/view.ctp:10
 msgid "Edit Purchase"
 msgstr "エディット購入"
 
-#: Template/Purchases/index.ctp:18
+#: /Template/Purchases/index.ctp:18
 msgid "Purchases"
 msgstr "購入実績"
 
-#: Template/Purchases/view.ctp:11
+#: /Template/Purchases/view.ctp:11
 msgid "Delete Purchase"
 msgstr "削除 購入"
 
-#: Template/Purchases/view.ctp:24
+#: /Template/Purchases/view.ctp:24
 msgid "User"
 msgstr "ユーザー"
 
-#: Template/Purchases/view.ctp:32
+#: /Template/Purchases/view.ctp:32
 msgid "Product"
 msgstr "製品"
 
-#: Template/Roles/add.ctp:10 Template/Roles/edit.ctp:16
-#: Template/Roles/view.ctp:12 Template/Users/add.ctp:11
-#: Template/Users/edit.ctp:17 Template/Users/index.ctp:11
-#: Template/Users/view.ctp:14
+#: /Template/Roles/add.ctp:10 /Template/Roles/edit.ctp:16
+#: /Template/Roles/view.ctp:12 /Template/Users/add.ctp:11
+#: /Template/Users/edit.ctp:17 /Template/Users/index.ctp:11
+#: /Template/Users/view.ctp:14
 msgid "List Roles"
 msgstr "役割一覧"
 
-#: Template/Roles/add.ctp:18
+#: /Template/Roles/add.ctp:18
 msgid "Add Role"
 msgstr "役割の追加"
 
-#: Template/Roles/edit.ctp:24 Template/Roles/view.ctp:10
+#: /Template/Roles/edit.ctp:24 /Template/Roles/view.ctp:10
 msgid "Edit Role"
 msgstr "役割の編集"
 
-#: Template/Roles/index.ctp:10 Template/Roles/view.ctp:13
-#: Template/Users/add.ctp:12 Template/Users/edit.ctp:18
-#: Template/Users/index.ctp:12 Template/Users/view.ctp:15
+#: /Template/Roles/index.ctp:10 /Template/Roles/view.ctp:13
+#: /Template/Users/add.ctp:12 /Template/Users/edit.ctp:18
+#: /Template/Users/index.ctp:12 /Template/Users/view.ctp:15
 msgid "New Role"
 msgstr "新しい役割"
 
-#: Template/Roles/index.ctp:16
+#: /Template/Roles/index.ctp:16
 msgid "Roles"
 msgstr "役割"
 
-#: Template/Roles/view.ctp:11
+#: /Template/Roles/view.ctp:11
 msgid "Delete Role"
 msgstr "役割の削除"
 
-#: Template/Roles/view.ctp:31
+#: /Template/Roles/view.ctp:31
 msgid "Related Users"
 msgstr "関連ユーザー"
 
-#: Template/Roles/view.ctp:35 Template/Users/view.ctp:24
+#: /Template/Roles/view.ctp:35 /Template/Users/view.ctp:24
 msgid "Username"
 msgstr "ユーザー名"
 
-#: Template/Roles/view.ctp:36 Template/Users/view.ctp:28
+#: /Template/Roles/view.ctp:36 /Template/Users/view.ctp:28
 msgid "Email"
 msgstr "電子メール"
 
-#: Template/Roles/view.ctp:37 Template/Users/view.ctp:32
+#: /Template/Roles/view.ctp:37 /Template/Users/view.ctp:32
 msgid "Adress"
 msgstr "住所"
 
-#: Template/Roles/view.ctp:38 Template/Users/view.ctp:36
+#: /Template/Roles/view.ctp:38 /Template/Users/view.ctp:36
 msgid "First Name"
 msgstr "ファーストネーム"
 
-#: Template/Roles/view.ctp:39 Template/Users/view.ctp:40
+#: /Template/Roles/view.ctp:39 /Template/Users/view.ctp:40
 msgid "Last Name"
 msgstr "苗字"
 
-#: Template/Tags/add.ctp:18
+#: /Template/Tags/add.ctp:18
 msgid "Add Tag"
 msgstr "タグの追加"
 
-#: Template/Tags/edit.ctp:24 Template/Tags/view.ctp:10
+#: /Template/Tags/edit.ctp:24 /Template/Tags/view.ctp:10
 msgid "Edit Tag"
 msgstr "タグを編集する"
 
-#: Template/Tags/index.ctp:16
+#: /Template/Tags/index.ctp:16
 msgid "Tags"
 msgstr "タグ"
 
-#: Template/Tags/view.ctp:11
+#: /Template/Tags/view.ctp:11
 msgid "Delete Tag"
 msgstr "タグの削除"
 
-#: Template/Users/add.ctp:20
+#: /Template/Users/add.ctp:20
 msgid "Add User"
 msgstr "ユーザーの追加"
 
-#: Template/Users/edit.ctp:26 Template/Users/view.ctp:10
+#: /Template/Users/edit.ctp:26 /Template/Users/view.ctp:10
 msgid "Edit User"
 msgstr "ユーザーを編集する"
 
-#: Template/Users/index.ctp:18
+#: /Template/Users/index.ctp:18
 msgid "Users"
 msgstr "利用者"
 
-#: Template/Users/view.ctp:11
+#: /Template/Users/non_confirmer.ctp:8
+#, fuzzy
+#| msgid "Confirm your email"
+msgid "Send a confirm email"
+msgstr "メールを確認する"
+
+#: /Template/Users/view.ctp:11
 msgid "Delete User"
 msgstr "ユーザーの削除"
 
-#: Template/Users/view.ctp:44
+#: /Template/Users/view.ctp:44
 msgid "Role"
 msgstr "役割"
 
-#: Template/Users/view.ctp:63
+#: /Template/Users/view.ctp:63
 msgid "Product Id"
 msgstr "製品ID"
+
+#: /Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
+msgstr "要求されたアドレス{0}は、このサーバーでは見つかりませんでした。"
+
+#: /Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr "内部エラーが発生しました"
+
+#: Controller/Component/AuthComponent.php:502
+msgid "You are not authorized to access that location."
+msgstr "あなたはその場所へのアクセスを許可されていません。"
+
+#: Controller/Component/CsrfComponent.php:181
+#: Http/Middleware/CsrfProtectionMiddleware.php:228
+msgid "Missing CSRF token cookie"
+msgstr "CSRF トークンクッキーの欠落"
+
+#: Controller/Component/CsrfComponent.php:185
+#: Http/Middleware/CsrfProtectionMiddleware.php:232
+msgid "CSRF token mismatch."
+msgstr "CSRF トークンの不一致。"
+
+#: Error/ExceptionRenderer.php:301
+msgid "Not Found"
+msgstr "見つかりません"
+
+#: Error/ExceptionRenderer.php:303
+msgid "An Internal Error Has Occurred."
+msgstr "内部エラーが発生しました。"
+
+#: Http/Response.php:2677
+msgid "The requested file contains `..` and will not be read."
+msgstr "要求されたファイルには `..` が含まれており、読み込まれません。"
+
+#: Http/Response.php:2698
+msgid "The requested file was not found"
+msgstr "要求されたファイルが見つかりませんでした"
+
+#: I18n/Number.php:106
+msgid "{0,number,#,###.##} KB"
+msgstr ""
+
+#: I18n/Number.php:108
+msgid "{0,number,#,###.##} MB"
+msgstr ""
+
+#: I18n/Number.php:110
+msgid "{0,number,#,###.##} GB"
+msgstr ""
+
+#: I18n/Number.php:112
+msgid "{0,number,#,###.##} TB"
+msgstr ""
+
+#: I18n/Number.php:104
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] ""
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} after"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} before"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:114
+msgid "just now"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a second ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about a minute ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:153
+msgid "about an hour ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:154 I18n/RelativeTimeFormatter.php:332
+msgid "about a day ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:155 I18n/RelativeTimeFormatter.php:333
+msgid "about a week ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:156 I18n/RelativeTimeFormatter.php:334
+msgid "about a month ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:157 I18n/RelativeTimeFormatter.php:335
+msgid "about a year ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about a second"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:169
+msgid "in about a minute"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:170
+msgid "in about an hour"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:171 I18n/RelativeTimeFormatter.php:346
+msgid "in about a day"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:172 I18n/RelativeTimeFormatter.php:347
+msgid "in about a week"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:173 I18n/RelativeTimeFormatter.php:348
+msgid "in about a month"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:174 I18n/RelativeTimeFormatter.php:349
+msgid "in about a year"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:304
+msgid "today"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:370
+msgid "%s ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:371
+msgid "on %s"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:47 I18n/RelativeTimeFormatter.php:126
+#: I18n/RelativeTimeFormatter.php:316
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] ""
+
+#: I18n/RelativeTimeFormatter.php:51 I18n/RelativeTimeFormatter.php:129
+#: I18n/RelativeTimeFormatter.php:319
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] ""
+
+#: I18n/RelativeTimeFormatter.php:57 I18n/RelativeTimeFormatter.php:132
+#: I18n/RelativeTimeFormatter.php:322
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] ""
+
+#: I18n/RelativeTimeFormatter.php:59 I18n/RelativeTimeFormatter.php:135
+#: I18n/RelativeTimeFormatter.php:325
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] ""
+
+#: I18n/RelativeTimeFormatter.php:64 I18n/RelativeTimeFormatter.php:138
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] ""
+
+#: I18n/RelativeTimeFormatter.php:68 I18n/RelativeTimeFormatter.php:141
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] ""
+
+#: I18n/RelativeTimeFormatter.php:72 I18n/RelativeTimeFormatter.php:144
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] ""
+
+#: ORM/RulesChecker.php:56
+msgid "This value is already in use"
+msgstr ""
+
+#: ORM/RulesChecker.php:103
+msgid "This value does not exist"
+msgstr ""
+
+#: ORM/RulesChecker.php:127
+msgid "The count does not match {0}{1}"
+msgstr ""
+
+#: Utility/Text.php:933
+msgid "and"
+msgstr ""
+
+#: Validation/Validator.php:2510 View/Form/ArrayContext.php:226
+msgid "This field is required"
+msgstr ""
+
+#: Validation/Validator.php:2532
+msgid "This field cannot be left empty"
+msgstr ""
+
+#: Validation/Validator.php:2691
+msgid "The provided value is invalid"
+msgstr ""
+
+#: View/Helper/FormHelper.php:1114
+#, fuzzy
+#| msgid "Edit"
+msgid "Edit {0}"
+msgstr "編集"
+
+#: View/Helper/FormHelper.php:1116
+msgid "New {0}"
+msgstr ""
+
+#: View/Helper/HtmlHelper.php:831
+msgid "Home"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:539
+msgid "January"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:540
+msgid "February"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:541
+msgid "March"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:542
+msgid "April"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:543
+msgid "May"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:544
+msgid "June"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:545
+msgid "July"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:546
+msgid "August"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:547
+msgid "September"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:548
+msgid "October"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:549
+msgid "November"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:550
+msgid "December"
+msgstr ""

@@ -14,8 +14,8 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
+ * @property \App\Model\Entity\Product $product
  * @property \App\Model\Entity\User $user
- * @property \App\Model\Entity\Product[] $products
  */
 class Purchase extends Entity
 {
@@ -35,7 +35,7 @@ class Purchase extends Entity
         'user_id' => true,
         'created' => true,
         'modified' => true,
+        'product' => true,
         'user' => true,
-        'products' => true,
     ];
 }

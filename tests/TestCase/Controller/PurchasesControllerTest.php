@@ -21,9 +21,8 @@ class PurchasesControllerTest extends TestCase
      */
     public $fixtures = [
         'app.Purchases',
-        'app.Users',
         'app.Products',
-        'app.ProductsPurchases',
+        'app.Users',
     ];
 
     /**

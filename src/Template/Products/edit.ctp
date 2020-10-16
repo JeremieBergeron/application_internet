@@ -32,7 +32,6 @@
             echo $this->Form->control('price');
             echo $this->Form->control('quantity_available');
             echo $this->Form->control('files._ids', ['options' => $files]);
-            echo $this->Form->control('purchases._ids', ['options' => $purchases]);
             echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>

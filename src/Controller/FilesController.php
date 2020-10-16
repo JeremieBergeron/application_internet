@@ -12,12 +12,19 @@ use App\Controller\AppController;
  */
 class FilesController extends AppController
 {
+    public function initialize() {
+        parent::initialize();
+        $this->loadComponent('Auth', [
+            'authorize' => 'Controller',
+        ]);
+        $this->Auth->deny();
+    }
+
     public function isAuthorized($user) {
-        if ($user['role_id'] === 3) {
-            return false;
+        if ($user['role_id'] === 1 || $user['role_id'] === 2) {
+            return true;
         }
-        
-        return true;
+
     }
 
     /**

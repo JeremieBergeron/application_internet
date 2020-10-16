@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Controller\AppController;
@@ -10,32 +11,46 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\Purchase[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class PurchasesController extends AppController
-{
-    
-    public function isAuthorized($user) {
+class PurchasesController extends AppController {
 
-        /*if($user['confirmed'] == false){
-            return false;
-        }*/
-        
+    public function initialize() {
+        parent::initialize();
+        $this->loadComponent('Auth', [
+            'authorize' => 'Controller',
+        ]);
+        $this->Auth->deny('view');
+    }
+
+    public function isAuthorized($user) {
         if ($user['role_id'] === 1 || $user['role_id'] === 2) {
             return true;
         }
-         $id = $this->request->getParam('pass.0');
-        $purchases = $this->Purchases->findById($id)->first();
+        if ($user['confirmed']) {
 
-        return $purchases->user_id === $user['id'];
+            $action = $this->request->getParam('action');
+
+            if (in_array($action, ['add'])) {
+                return true;
+            }
+
+            $id = $this->request->getParam('pass.0');
+            $purchases = $this->Purchases->findById($id)->first();
+
+            return $purchases->user_id === $user['id'];
+        } else {
+
+            return false;
+        }
     }
+
     /**
      * Index method
      *
      * @return \Cake\Http\Response|null
      */
-    public function index()
-    {
+    public function index() {
         $this->paginate = [
-            'contain' => ['Users' , 'Products'],
+            'contain' => ['Users', 'Products'],
         ];
         $purchases = $this->paginate($this->Purchases);
 
@@ -49,8 +64,7 @@ class PurchasesController extends AppController
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
-    {
+    public function view($id = null) {
         $purchase = $this->Purchases->get($id, [
             'contain' => ['Users', 'Products'],
         ]);
@@ -63,8 +77,7 @@ class PurchasesController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
+    public function add() {
         $purchase = $this->Purchases->newEntity();
         if ($this->request->is('post')) {
             $purchase = $this->Purchases->patchEntity($purchase, $this->request->getData());
@@ -124,4 +137,5 @@ class PurchasesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
 }

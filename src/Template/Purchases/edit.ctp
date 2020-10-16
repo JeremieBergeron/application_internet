@@ -14,10 +14,10 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Purchases'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Products'), ['controller' => 'Products', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Product'), ['controller' => 'Products', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="purchases form large-9 medium-8 columns content">
@@ -27,7 +27,7 @@
         <?php
             echo $this->Form->control('quantity_purchased');
             echo $this->Form->control('detail');
-            echo $this->Form->control('product_id');
+            echo $this->Form->control('product_id', ['options' => $products]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

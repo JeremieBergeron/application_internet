@@ -30,7 +30,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Product') ?></th>
-            <td><?= $purchase->has('product') ? $this->Html->link($purchase->product->name, ['controller' => 'Users', 'action' => 'view', $purchase->product->id]) : '' ?></td>
+            <td><?= $purchase->has('product') ? $this->Html->link($purchase->product->name, ['controller' => 'Products', 'action' => 'view', $purchase->product->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
