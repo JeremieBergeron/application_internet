@@ -9,6 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Products Model
  *
+ * @property &\Cake\ORM\Association\BelongsTo $Subcategories
  * @property \App\Model\Table\PurchasesTable&\Cake\ORM\Association\HasMany $Purchases
  * @property \App\Model\Table\FilesTable&\Cake\ORM\Association\BelongsToMany $Files
  * @property \App\Model\Table\TagsTable&\Cake\ORM\Association\BelongsToMany $Tags
@@ -42,10 +43,12 @@ class ProductsTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->belongsTo('Subcategories', [
+            'foreignKey' => 'subcategory_id',
+            'joinType' => 'INNER',
+        ]);
         $this->hasMany('Purchases', [
             'foreignKey' => 'product_id',
-            'dependent' => true,
-            'cascadeCallbacks' => true,
         ]);
         $this->belongsToMany('Files', [
             'foreignKey' => 'product_id',
@@ -92,5 +95,19 @@ class ProductsTable extends Table
             ->notEmptyString('quantity_available');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->existsIn(['subcategory_id'], 'Subcategories'));
+
+        return $rules;
     }
 }

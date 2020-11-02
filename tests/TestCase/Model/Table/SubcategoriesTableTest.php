@@ -1,21 +1,21 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\ProductsTable;
+use App\Model\Table\SubcategoriesTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\ProductsTable Test Case
+ * App\Model\Table\SubcategoriesTable Test Case
  */
-class ProductsTableTest extends TestCase
+class SubcategoriesTableTest extends TestCase
 {
     /**
      * Test subject
      *
-     * @var \App\Model\Table\ProductsTable
+     * @var \App\Model\Table\SubcategoriesTable
      */
-    public $Products;
+    public $Subcategories;
 
     /**
      * Fixtures
@@ -23,10 +23,9 @@ class ProductsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
+        'app.Subcategories',
+        'app.Categories',
         'app.Products',
-        'app.Purchases',
-        'app.Files',
-        'app.Tags',
     ];
 
     /**
@@ -37,8 +36,8 @@ class ProductsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Products') ? [] : ['className' => ProductsTable::class];
-        $this->Products = TableRegistry::getTableLocator()->get('Products', $config);
+        $config = TableRegistry::getTableLocator()->exists('Subcategories') ? [] : ['className' => SubcategoriesTable::class];
+        $this->Subcategories = TableRegistry::getTableLocator()->get('Subcategories', $config);
     }
 
     /**
@@ -48,7 +47,7 @@ class ProductsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Products);
+        unset($this->Subcategories);
 
         parent::tearDown();
     }
@@ -69,6 +68,16 @@ class ProductsTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     */
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
