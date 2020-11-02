@@ -26,7 +26,7 @@ class ProductsController extends AppController {
      */
     public function index() {
         $this->paginate = [
-            'contain' => ['Files'],
+            'contain' => ['Files', 'Subcategories'],
         ];
         $products = $this->paginate($this->Products);
 
@@ -42,7 +42,7 @@ class ProductsController extends AppController {
      */
     public function view($id = null) {
         $product = $this->Products->get($id, [
-            'contain' => ['Files', 'Purchases' => ['Users'], 'Tags'],
+            'contain' => ['Files', 'Purchases' => ['Users'], 'Tags', 'Subcategories'],
         ]);
 
         $this->set('product', $product);
@@ -94,7 +94,10 @@ class ProductsController extends AppController {
         }
         $files = $this->Products->Files->find('list', ['limit' => 200]);
         $tags = $this->Products->Tags->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'files', 'tags'));
+         $this->loadModel('Categories');
+        $categories = $this->Categories->find('list', ['limit' => 200]);
+        $subcategories = $this->Products->Subcategories->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'files', 'tags', 'categories', 'subcategories'));
     }
 
     /**

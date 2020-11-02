@@ -39,8 +39,8 @@
             <td><?= $this->Number->format($product->quantity_available) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Subcategory Id') ?></th>
-            <td><?= $this->Number->format($product->subcategory_id) ?></td>
+            <th scope="row"><?= __('Subcategory') ?></th>
+            <td><?= $product->has('subcategory') ? $this->Html->link($product->subcategory->name, ['controller' => 'subcategories', 'action' => 'view', $product->subcategory->id]) : ''?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>

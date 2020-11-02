@@ -1,4 +1,13 @@
 <?php
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Subcategories",
+    "action" => "getByCategory",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Products/add_edit', ['block' => 'scriptBottom']);
+?>
+<?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product $product
@@ -32,7 +41,8 @@
         echo $this->Form->control('description');
         echo $this->Form->control('price');
         echo $this->Form->control('quantity_available');
-        echo $this->Form->control('subcategory_id');
+        echo $this->Form->control('category_id', ['options' => $categories]);
+        echo $this->Form->control('subcategory_id', ['options' => [__('Please select a categorie first')]]);
         echo $this->Form->control('files._ids', ['options' => $files]);
         echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>
