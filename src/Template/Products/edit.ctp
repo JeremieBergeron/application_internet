@@ -8,6 +8,15 @@ echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedList
 echo $this->Html->script('Products/add_edit', ['block' => 'scriptBottom']);
 ?>
 <?php
+$urlToCarsAutocompletedemoJson = $this->Url->build([
+    "controller" => "Countries",
+    "action" => "findCountries",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToCarsAutocompletedemoJson . '";', ['block' => true]);
+echo $this->Html->script('Products/CountryAutocomplete', ['block' => 'scriptBottom']);
+?>
+<?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product $product
@@ -43,6 +52,13 @@ echo $this->Html->script('Products/add_edit', ['block' => 'scriptBottom']);
         echo $this->Form->control('quantity_available');
         echo $this->Form->control('category_id', ['options' => $categories]);
         echo $this->Form->control('subcategory_id', ['options' => [__('Please select a categorie first')]]);
+        echo $this->Form->control('country_id', ['label' => __('Country') . ' (' . __('Autocomplete demo') . ')', 'type' => 'hidden']);
+       ?>
+        <div class="input text">
+            <label for="autocomplete"><?= __("Country") ?></label>
+            <input id="autocomplete" type="text">
+        </div>
+        <?php
         echo $this->Form->control('files._ids', ['options' => $files]);
         echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>

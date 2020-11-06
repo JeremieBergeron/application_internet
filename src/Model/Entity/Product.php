@@ -8,6 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property int $subcategory_id
+ * @property int|null $country_id
  * @property string $name
  * @property string|null $description
  * @property float $price
@@ -15,6 +16,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
+ * @property \App\Model\Entity\Subcategory $subcategory
  * @property \App\Model\Entity\Purchase[] $purchases
  * @property \App\Model\Entity\File[] $files
  * @property \App\Model\Entity\Tag[] $tags
@@ -32,12 +34,14 @@ class Product extends Entity
      */
     protected $_accessible = [
         'subcategory_id' => true,
+        'country_id' => true,
         'name' => true,
         'description' => true,
         'price' => true,
         'quantity_available' => true,
         'created' => true,
         'modified' => true,
+        'subcategory' => true,
         'purchases' => true,
         'files' => true,
         'tags' => true,

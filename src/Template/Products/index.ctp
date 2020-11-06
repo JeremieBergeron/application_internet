@@ -21,11 +21,11 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('price') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('quantity_available') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('subcategory_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('subcategory') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('country') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -34,11 +34,12 @@
         <tbody>
             <?php foreach ($products as $product): ?>
                 <tr>
-                    <td><?= $this->Number->format($product->id) ?></td>
                     <td><?= h($product->name) ?></td>
                     <td><?= $this->Number->format($product->price) ?></td>
                     <td><?= $this->Number->format($product->quantity_available) ?></td>
                     <td><?= $product->has('subcategory') ? $this->Html->link($product->subcategory->name, ['controller' => 'subcategories', 'action' => 'view', $product->subcategory->id]) : ''?></td>
+                    <td><?= $product->has('country') ? $this->Html->link($product->country->name, ['controller' => 'countries', 'action' => 'view', $product->country->id]) : ''?></td>
+                    <td><?= $this->Number->format($product->quantity_available) ?></td>
                     <td><?php
                         if (isset($product->files[0])) {
                             echo $this->Html->image($product->files[0]->path . $product->files[0]->name, [

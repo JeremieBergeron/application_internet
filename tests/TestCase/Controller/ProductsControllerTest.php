@@ -21,12 +21,23 @@ class ProductsControllerTest extends TestCase
      */
     public $fixtures = [
         'app.Products',
+        'app.Subcategories',
         'app.Purchases',
         'app.Files',
         'app.Tags',
         'app.FilesProducts',
         'app.ProductsTags',
     ];
+
+    /**
+     * Test isAuthorized method
+     *
+     * @return void
+     */
+    public function testIsAuthorized()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 
     /**
      * Test index method

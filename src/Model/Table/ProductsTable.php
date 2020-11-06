@@ -9,7 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Products Model
  *
- * @property &\Cake\ORM\Association\BelongsTo $Subcategories
+ * @property \App\Model\Table\SubcategoriesTable&\Cake\ORM\Association\BelongsTo $Subcategories
+ * @property &\Cake\ORM\Association\BelongsTo $Countries
  * @property \App\Model\Table\PurchasesTable&\Cake\ORM\Association\HasMany $Purchases
  * @property \App\Model\Table\FilesTable&\Cake\ORM\Association\BelongsToMany $Files
  * @property \App\Model\Table\TagsTable&\Cake\ORM\Association\BelongsToMany $Tags
@@ -46,6 +47,9 @@ class ProductsTable extends Table
         $this->belongsTo('Subcategories', [
             'foreignKey' => 'subcategory_id',
             'joinType' => 'INNER',
+        ]);
+        $this->belongsTo('Countries', [
+            'foreignKey' => 'country_id',
         ]);
         $this->hasMany('Purchases', [
             'foreignKey' => 'product_id',
@@ -107,6 +111,7 @@ class ProductsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['subcategory_id'], 'Subcategories'));
+        $rules->add($rules->existsIn(['country_id'], 'Countries'));
 
         return $rules;
     }

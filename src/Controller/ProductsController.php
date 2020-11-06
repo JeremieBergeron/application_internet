@@ -26,7 +26,7 @@ class ProductsController extends AppController {
      */
     public function index() {
         $this->paginate = [
-            'contain' => ['Files', 'Subcategories'],
+            'contain' => ['Files', 'Subcategories', 'Countries'],
         ];
         $products = $this->paginate($this->Products);
 
@@ -42,7 +42,7 @@ class ProductsController extends AppController {
      */
     public function view($id = null) {
         $product = $this->Products->get($id, [
-            'contain' => ['Files', 'Purchases' => ['Users'], 'Tags', 'Subcategories'],
+            'contain' => ['Files', 'Purchases' => ['Users'], 'Tags', 'Subcategories', 'Countries'],
         ]);
 
         $this->set('product', $product);
@@ -69,7 +69,8 @@ class ProductsController extends AppController {
         $this->loadModel('Categories');
         $categories = $this->Categories->find('list', ['limit' => 200]);
         $subcategories = $this->Products->Subcategories->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'files', 'tags', 'categories', 'subcategories'));
+        $countries = $this->Products->Countries->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'files', 'tags', 'categories', 'subcategories', 'countries'));
     }
 
     /**
@@ -81,10 +82,12 @@ class ProductsController extends AppController {
      */
     public function edit($id = null) {
         $product = $this->Products->get($id, [
-            'contain' => ['Files', 'Tags'],
+            'contain' => ['Files', 'Tags', 'Subcategories', 'Countries'],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
+            debug($product);
+            die();
             if ($this->Products->save($product)) {
                 $this->Flash->success(__('The product has been saved.'));
 
@@ -94,10 +97,11 @@ class ProductsController extends AppController {
         }
         $files = $this->Products->Files->find('list', ['limit' => 200]);
         $tags = $this->Products->Tags->find('list', ['limit' => 200]);
-         $this->loadModel('Categories');
+        $this->loadModel('Categories');
         $categories = $this->Categories->find('list', ['limit' => 200]);
         $subcategories = $this->Products->Subcategories->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'files', 'tags', 'categories', 'subcategories'));
+        $countries = $this->Products->Countries->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'files', 'tags', 'categories', 'subcategories', 'countries'));
     }
 
     /**

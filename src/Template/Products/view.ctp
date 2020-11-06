@@ -27,10 +27,6 @@
             <td><?= h($product->name) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($product->id) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Price') ?></th>
             <td><?= $this->Number->format($product->price) ?></td>
         </tr>
@@ -41,6 +37,10 @@
         <tr>
             <th scope="row"><?= __('Subcategory') ?></th>
             <td><?= $product->has('subcategory') ? $this->Html->link($product->subcategory->name, ['controller' => 'subcategories', 'action' => 'view', $product->subcategory->id]) : ''?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Country') ?></th>
+            <td><?= $product->has('country') ? $this->Html->link($product->country->name, ['controller' => 'countries', 'action' => 'view', $product->country->id]) : ''?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
