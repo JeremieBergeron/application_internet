@@ -24,6 +24,7 @@
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('price') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('quantity_available') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('category') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('subcategory') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('country') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
@@ -37,6 +38,7 @@
                     <td><?= h($product->name) ?></td>
                     <td><?= $this->Number->format($product->price) ?></td>
                     <td><?= $this->Number->format($product->quantity_available) ?></td>
+                    <td><?= $product->has('category') ? $this->Html->link($product->category->name, ['controller' => 'categories', 'action' => 'view', $product->category->id]) : ''?></td>
                     <td><?= $product->has('subcategory') ? $this->Html->link($product->subcategory->name, ['controller' => 'subcategories', 'action' => 'view', $product->subcategory->id]) : ''?></td>
                     <td><?= $product->has('country') ? $this->Html->link($product->country->name, ['controller' => 'countries', 'action' => 'view', $product->country->id]) : ''?></td>
                     <td><?= $this->Number->format($product->quantity_available) ?></td>

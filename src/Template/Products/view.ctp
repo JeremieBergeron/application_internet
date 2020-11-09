@@ -34,13 +34,18 @@
             <th scope="row"><?= __('Quantity Available') ?></th>
             <td><?= $this->Number->format($product->quantity_available) ?></td>
         </tr>
+
+        <tr>
+            <th scope="row"><?= __('Category') ?></th>
+            <td><?= $product->has('category') ? $this->Html->link($product->category->name, ['controller' => 'categories', 'action' => 'view', $product->category->id]) : '' ?></td>
+        </tr>
         <tr>
             <th scope="row"><?= __('Subcategory') ?></th>
-            <td><?= $product->has('subcategory') ? $this->Html->link($product->subcategory->name, ['controller' => 'subcategories', 'action' => 'view', $product->subcategory->id]) : ''?></td>
+            <td><?= $product->has('subcategory') ? $this->Html->link($product->subcategory->name, ['controller' => 'subcategories', 'action' => 'view', $product->subcategory->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Country') ?></th>
-            <td><?= $product->has('country') ? $this->Html->link($product->country->name, ['controller' => 'countries', 'action' => 'view', $product->country->id]) : ''?></td>
+            <td><?= $product->has('country') ? $this->Html->link($product->country->name, ['controller' => 'countries', 'action' => 'view', $product->country->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
@@ -126,7 +131,7 @@
                     <tr>
                         <td><?= h($purchases->quantity_purchased) ?></td>
                         <td><?= h($purchases->detail) ?></td>
-                         <td><?= $purchases->has('user') ? $this->Html->link($purchases->user->username, ['controller' => 'Users', 'action' => 'view', $purchases->user->id]) : '' ?></td>
+                        <td><?= $purchases->has('user') ? $this->Html->link($purchases->user->username, ['controller' => 'Users', 'action' => 'view', $purchases->user->id]) : '' ?></td>
                         <td><?= h($purchases->created) ?></td>
                         <td><?= h($purchases->modified) ?></td>
                         <td class="actions">

@@ -22,6 +22,12 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
+
+Router::prefix('api', function ($routes) {
+    $routes->setExtensions(['json', 'xml']);
+    $routes->resources('KrajRegions');
+});
+
 Router::extensions(['json', 'xml']);
 
 /*

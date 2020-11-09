@@ -26,7 +26,7 @@ class ProductsController extends AppController {
      */
     public function index() {
         $this->paginate = [
-            'contain' => ['Files', 'Subcategories', 'Countries'],
+            'contain' => ['Files', 'Subcategories', 'Countries', 'Categories'],
         ];
         $products = $this->paginate($this->Products);
 
@@ -42,7 +42,7 @@ class ProductsController extends AppController {
      */
     public function view($id = null) {
         $product = $this->Products->get($id, [
-            'contain' => ['Files', 'Purchases' => ['Users'], 'Tags', 'Subcategories', 'Countries'],
+            'contain' => ['Files', 'Purchases' => ['Users'], 'Tags', 'Subcategories', 'Countries', 'Categories'],
         ]);
 
         $this->set('product', $product);

@@ -48,6 +48,12 @@ class ProductsTable extends Table
             'foreignKey' => 'subcategory_id',
             'joinType' => 'INNER',
         ]);
+        
+        $this->belongsTo('Categories', [
+            'foreignKey' => 'category_id',
+            'joinType' => 'INNER',
+        ]);
+        
         $this->belongsTo('Countries', [
             'foreignKey' => 'country_id',
         ]);
@@ -112,7 +118,7 @@ class ProductsTable extends Table
     {
         $rules->add($rules->existsIn(['subcategory_id'], 'Subcategories'));
         $rules->add($rules->existsIn(['country_id'], 'Countries'));
-
+        $rules->add($rules->existsIn(['category_id'], 'Categories'));
         return $rules;
     }
 }

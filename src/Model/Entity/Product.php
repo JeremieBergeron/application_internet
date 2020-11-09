@@ -33,6 +33,7 @@ class Product extends Entity
      * @var array
      */
     protected $_accessible = [
+        'category_id' => true,
         'subcategory_id' => true,
         'country_id' => true,
         'name' => true,
