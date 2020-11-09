@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 06 nov. 2020 à 19:39
+-- Généré le : lun. 09 nov. 2020 à 17:05
 -- Version du serveur :  8.0.18
 -- Version de PHP : 7.3.11
 
@@ -353,15 +353,6 @@ CREATE TABLE `files_products` (
   `file_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Déchargement des données de la table `files_products`
---
-
-INSERT INTO `files_products` (`id`, `product_id`, `file_id`) VALUES
-(16, 16, 3),
-(17, 17, 7),
-(18, 18, 8);
-
 -- --------------------------------------------------------
 
 --
@@ -409,8 +400,9 @@ INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) 
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `subcategory_id` int(11) NOT NULL,
-  `country_id` int(11) DEFAULT NULL,
+  `country_id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `price` float NOT NULL,
@@ -418,19 +410,6 @@ CREATE TABLE `products` (
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `products`
---
-
-INSERT INTO `products` (`id`, `subcategory_id`, `country_id`, `name`, `description`, `price`, `quantity_available`, `created`, `modified`) VALUES
-(16, 53, NULL, 'PS4', '', 400, 100, '2020-10-03 14:40:12', '2020-11-06 19:25:46'),
-(17, 51, NULL, 'Xbox One', 'Console de jeu vidéo', 400, 20, '2020-10-16 15:17:28', '2020-11-06 19:26:57'),
-(18, 76, NULL, 'Écouteur', '', 100, 10, '2020-10-16 17:10:01', '2020-11-02 19:22:01'),
-(19, 52, NULL, 'Test', '', 100, 1, '2020-11-02 18:14:40', '2020-11-02 19:21:32'),
-(20, 52, NULL, 'test', '', 100, 1, '2020-11-02 19:19:36', '2020-11-02 19:19:36'),
-(21, 48, NULL, 'test', '', 20, 1, '2020-11-06 18:46:22', '2020-11-06 18:46:22'),
-(22, 48, NULL, 'test', '', 10, 8, '2020-11-06 19:19:06', '2020-11-06 19:19:06');
 
 -- --------------------------------------------------------
 
@@ -442,18 +421,6 @@ CREATE TABLE `products_tags` (
   `product_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `products_tags`
---
-
-INSERT INTO `products_tags` (`product_id`, `tag_id`) VALUES
-(16, 1),
-(17, 1),
-(16, 2),
-(17, 3),
-(18, 4),
-(18, 5);
 
 -- --------------------------------------------------------
 
@@ -470,17 +437,6 @@ CREATE TABLE `purchases` (
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `purchases`
---
-
-INSERT INTO `purchases` (`id`, `quantity_purchased`, `detail`, `product_id`, `user_id`, `created`, `modified`) VALUES
-(57, 1, '', 16, 1, '2020-10-03 14:40:38', '2020-10-03 14:51:22'),
-(58, 1, '', 16, 2, '2020-10-03 14:41:44', '2020-10-03 14:41:44'),
-(60, 1, '', 18, 1, '2020-10-16 17:10:35', '2020-10-16 17:10:35'),
-(61, 3, '', 17, 5, '2020-10-16 17:10:57', '2020-10-16 17:10:57'),
-(62, 1, '', 16, 5, '2020-10-16 17:11:43', '2020-10-16 17:11:43');
 
 -- --------------------------------------------------------
 
@@ -656,6 +612,7 @@ ALTER TABLE `i18n`
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `subcategory_id` (`subcategory_id`),
+  ADD KEY `category_id` (`category_id`) USING BTREE,
   ADD KEY `country_id` (`country_id`);
 
 --
@@ -780,7 +737,8 @@ ALTER TABLE `files_products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`subcategory_id`) REFERENCES `subcategories` (`id`),
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`);
+  ADD CONSTRAINT `products_ibfk_3` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`),
+  ADD CONSTRAINT `products_ibfk_4` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`);
 
 --
 -- Contraintes pour la table `products_tags`
