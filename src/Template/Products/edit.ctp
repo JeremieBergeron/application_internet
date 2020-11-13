@@ -51,7 +51,7 @@ echo $this->Html->script('Products/CountryAutocomplete', ['block' => 'scriptBott
         echo $this->Form->control('price');
         echo $this->Form->control('quantity_available');
         echo $this->Form->control('category_id', ['options' => $categories]);
-        echo $this->Form->control('subcategory_id', ['options' => [__('Please select a categorie first')]]);
+        echo $this->Form->control('subcategory_id', ['options' => $subcategories]);
         echo $this->Form->control('country_id', ['label' => '(country_id)', 'type' => 'hidden']);
        ?>
         <div class="input text">

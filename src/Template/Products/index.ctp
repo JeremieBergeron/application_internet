@@ -41,7 +41,6 @@
                     <td><?= $product->has('category') ? $this->Html->link($product->category->name, ['controller' => 'categories', 'action' => 'view', $product->category->id]) : ''?></td>
                     <td><?= $product->has('subcategory') ? $this->Html->link($product->subcategory->name, ['controller' => 'subcategories', 'action' => 'view', $product->subcategory->id]) : ''?></td>
                     <td><?= $product->has('country') ? $this->Html->link($product->country->name, ['controller' => 'countries', 'action' => 'view', $product->country->id]) : ''?></td>
-                    <td><?= $this->Number->format($product->quantity_available) ?></td>
                     <td><?php
                         if (isset($product->files[0])) {
                             echo $this->Html->image($product->files[0]->path . $product->files[0]->name, [

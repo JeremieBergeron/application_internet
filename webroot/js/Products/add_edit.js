@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // The path to action from CakePHP is in urlToLinkedListFilter 
-    $('#category-id').on('change', function () {
+    $('#category-id').change(function () {
         var categoryId = $(this).val();
         if (categoryId) {
             $.ajax({
@@ -20,7 +20,7 @@ $(document).ready(function () {
         } else {
             $('#subcategory-id').html('<option value="">Select Category first</option>');
         }
-    });
+    }).change();
 });
 
 

@@ -6,7 +6,7 @@
         minLength: 1
         ,
         select: function (event, ui){
-            $("#country-id").val(ui.item.values );
+            $("#country-id").val(ui.item.value );
             $("#autocomplete").val(ui.item.label);
             return false;
         }

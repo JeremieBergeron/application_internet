@@ -86,8 +86,7 @@ class ProductsController extends AppController {
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
-            debug($product);
-            die();
+
             if ($this->Products->save($product)) {
                 $this->Flash->success(__('The product has been saved.'));
 

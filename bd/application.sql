@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : lun. 09 nov. 2020 à 17:05
+-- Généré le : ven. 13 nov. 2020 à 18:35
 -- Version du serveur :  8.0.18
 -- Version de PHP : 7.3.11
 
@@ -353,6 +353,13 @@ CREATE TABLE `files_products` (
   `file_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Déchargement des données de la table `files_products`
+--
+
+INSERT INTO `files_products` (`id`, `product_id`, `file_id`) VALUES
+(19, 24, 8);
+
 -- --------------------------------------------------------
 
 --
@@ -411,6 +418,13 @@ CREATE TABLE `products` (
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Déchargement des données de la table `products`
+--
+
+INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `country_id`, `name`, `description`, `price`, `quantity_available`, `created`, `modified`) VALUES
+(24, 6, 43, 10, 'Headset', '', 100, 20, '2020-11-13 18:34:44', '2020-11-13 18:34:44');
+
 -- --------------------------------------------------------
 
 --
@@ -421,6 +435,13 @@ CREATE TABLE `products_tags` (
   `product_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `products_tags`
+--
+
+INSERT INTO `products_tags` (`product_id`, `tag_id`) VALUES
+(24, 4);
 
 -- --------------------------------------------------------
 
@@ -677,7 +698,7 @@ ALTER TABLE `files`
 -- AUTO_INCREMENT pour la table `files_products`
 --
 ALTER TABLE `files_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT pour la table `i18n`
@@ -689,7 +710,7 @@ ALTER TABLE `i18n`
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT pour la table `purchases`
