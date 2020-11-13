@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 13 nov. 2020 à 18:35
+-- Généré le : ven. 13 nov. 2020 à 19:02
 -- Version du serveur :  8.0.18
 -- Version de PHP : 7.3.11
 
@@ -423,7 +423,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `country_id`, `name`, `description`, `price`, `quantity_available`, `created`, `modified`) VALUES
-(24, 6, 43, 10, 'Headset', '', 100, 20, '2020-11-13 18:34:44', '2020-11-13 18:34:44');
+(24, 6, 65, 10, 'Headset', '', 100, 20, '2020-11-13 18:34:44', '2020-11-13 18:39:11');
 
 -- --------------------------------------------------------
 
