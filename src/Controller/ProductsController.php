@@ -12,6 +12,11 @@ use App\Controller\AppController;
  * @method \App\Model\Entity\Product[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class ProductsController extends AppController {
+    
+    public function initialize(): void {
+        parent::initialize();
+        $this->viewBuilder()->setLayout('cakephp_default');
+    }
 
     public function isAuthorized($user) {
         if ($user['role_id'] === 1 || $user['role_id'] === 2) {

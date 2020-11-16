@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 13 nov. 2020 à 19:02
+-- Généré le : lun. 16 nov. 2020 à 19:50
 -- Version du serveur :  8.0.18
 -- Version de PHP : 7.3.11
 
@@ -395,9 +395,7 @@ INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) 
 (13, 'ja_JP', 'Tags', 2, 'title', 'ソニー'),
 (14, 'ja_JP', 'Tags', 3, 'title', 'マイクロソフト'),
 (15, 'fr_CA', 'Tags', 4, 'title', 'Écouteur'),
-(16, 'ja_JP', 'Tags', 4, 'title', 'ヘッドセット'),
-(17, 'fr_CA', 'Tags', 5, 'title', 'Logitech'),
-(18, 'ja_JP', 'Tags', 5, 'title', 'ロジクール');
+(16, 'ja_JP', 'Tags', 4, 'title', 'ヘッドセット');
 
 -- --------------------------------------------------------
 
@@ -423,7 +421,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `country_id`, `name`, `description`, `price`, `quantity_available`, `created`, `modified`) VALUES
-(24, 6, 65, 10, 'Headset', '', 100, 20, '2020-11-13 18:34:44', '2020-11-13 18:39:11');
+(24, 6, 65, 10, 'Headset', '', 100, 20, '2020-11-13 18:34:44', '2020-11-13 18:39:11'),
+(25, 3, 54, 5, 'test', '', 1, 100, '2020-11-13 19:07:24', '2020-11-13 19:07:24');
 
 -- --------------------------------------------------------
 
@@ -556,7 +555,7 @@ INSERT INTO `tags` (`id`, `title`, `created`, `modified`) VALUES
 (2, 'Sony', '2020-09-28 17:38:27', '2020-10-05 17:59:35'),
 (3, 'Microsoft', '2020-09-28 17:38:35', '2020-10-05 18:00:00'),
 (4, 'Headset', '2020-10-16 17:05:32', '2020-10-16 17:06:30'),
-(5, 'Logitech', '2020-10-16 17:08:55', '2020-10-16 17:09:28');
+(7, 'testl', '2020-11-13 21:10:21', '2020-11-13 21:27:26');
 
 -- --------------------------------------------------------
 
@@ -710,7 +709,7 @@ ALTER TABLE `i18n`
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT pour la table `purchases`
@@ -734,7 +733,7 @@ ALTER TABLE `subcategories`
 -- AUTO_INCREMENT pour la table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `users`

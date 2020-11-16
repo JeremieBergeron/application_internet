@@ -21,7 +21,7 @@ class TagsController extends AppController
         $this->Auth->deny();
     }
 
-    public function isAuthorized($user) {
+   /* public function isAuthorized($user) {
         if ($user['role_id'] === 1 || $user['role_id'] === 2) {
             return true;
         }
@@ -34,8 +34,8 @@ class TagsController extends AppController
      */
     public function index()
     {
-        $tags = $this->paginate($this->Tags);
-
+        $this->viewBuilder()->setLayout('tagsSpa');
+        $tags = $this->Tags->find('all');
         $this->set(compact('tags'));
     }
 
@@ -46,7 +46,7 @@ class TagsController extends AppController
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    /*public function view($id = null)
     {
         $tag = $this->Tags->get($id, [
             'contain' => ['Products'],
@@ -60,7 +60,7 @@ class TagsController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+   /* public function add()
     {
         $tag = $this->Tags->newEntity();
         if ($this->request->is('post')) {
@@ -74,7 +74,7 @@ class TagsController extends AppController
         }
         $products = $this->Tags->Products->find('list', ['limit' => 200]);
         $this->set(compact('tag', 'products'));
-    }
+    }*/
 
     /**
      * Edit method
@@ -83,7 +83,7 @@ class TagsController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($id = null)
+   /* public function edit($id = null)
     {
         $tag = $this->Tags->get($id, [
             'contain' => ['Products'],
@@ -99,7 +99,7 @@ class TagsController extends AppController
         }
         $products = $this->Tags->Products->find('list', ['limit' => 200]);
         $this->set(compact('tag', 'products'));
-    }
+    }*/
 
     /**
      * Delete method
@@ -108,7 +108,7 @@ class TagsController extends AppController
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    /*public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $tag = $this->Tags->get($id);
@@ -119,5 +119,5 @@ class TagsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
-    }
+    }*/
 }

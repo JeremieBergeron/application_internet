@@ -8,7 +8,7 @@ $(document).ready(function () {
                 data: 'category_id=' + categoryId,
                 success: function (subcategories) {
                     $select = $('#subcategory-id');
-                    $select.find('option').remove();
+                    $select.find('options').remove();
                     $.each(subcategories, function (key, value)
                     {
                         $.each(value, function (childKey, childValue) {

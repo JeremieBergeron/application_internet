@@ -25,10 +25,17 @@ use Cake\Routing\Route\DashedRoute;
 
 Router::prefix('api', function ($routes) {
     $routes->setExtensions(['json', 'xml']);
-    $routes->resources('KrajRegions');
+    $routes->resources('Tags');
+});
+
+Router::prefix('admin', function (RouteBuilder $routes) {
+
+    $routes->fallbacks(DashedRoute::class);
 });
 
 Router::extensions(['json', 'xml']);
+Router::extensions(['pdf']);
+
 
 /*
  * The default class to use for all routes
