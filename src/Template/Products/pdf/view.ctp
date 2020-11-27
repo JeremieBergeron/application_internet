@@ -60,8 +60,8 @@
                             <?php
                             echo $this->Html->image($files->path . $files->name, [
                                 "alt" => $files->name,
-                                "width" => "300px",
-                                "height" => "150px",
+                                "width" => "100px",
+                                "height" => "50px",
                             ]);
                             ?>
                         </td>

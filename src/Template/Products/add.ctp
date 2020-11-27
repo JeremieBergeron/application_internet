@@ -1,4 +1,8 @@
 <?php
+echo $this->Html->script([
+    'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js'
+        ], ['block' => 'scriptLibraries']
+);
 $urlToLinkedListFilter = $this->Url->build([
     "controller" => "Subcategories",
     "action" => "getByCategory",
@@ -34,7 +38,7 @@ echo $this->Html->script('Products/CountryAutocomplete', ['block' => 'scriptBott
         <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="products form large-9 medium-8 columns content">
+<div class="obecCities form large-9 medium-8 columns content" ng-app="linkedlists" ng-controller="categoriesController">
     <?= $this->Form->create($product) ?>
     <fieldset>
         <legend><?= __('Add Product') ?></legend>
@@ -43,7 +47,19 @@ echo $this->Html->script('Products/CountryAutocomplete', ['block' => 'scriptBott
         echo $this->Form->control('description');
         echo $this->Form->control('price');
         echo $this->Form->control('quantity_available');
-        echo $this->Form->control('category_id', ['options' => $categories]);
+        ?>
+        <div>
+            <?= __('Categorie') ?> : 
+            <select 
+                name="category_id"
+                id="category-id" 
+                ng-model="category" 
+                ng-options="category.name for category in categories track by category.id"
+                >
+                <option value=''>Select</option>
+            </select>
+        </div>
+        <?php
         echo $this->Form->control('subcategory_id', ['options' => [__('Please select a categorie first')]]);
         echo $this->Form->control('country_id', ['label' => __('Country') . ' (' . __('Autocomplete demo') . ')', 'type' => 'hidden']);
         ?>

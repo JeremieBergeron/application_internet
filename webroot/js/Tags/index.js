@@ -11,7 +11,7 @@ function getTags() {
                     tagTable.empty();
                     $.each(data.tags, function (key, value)
                     {
-                        var editDeleteButtons = '</td><td>' +
+                        var editDeleteButtons = '<td>' +
                                 '<a href="javascript:void(0);" class="btn btn-warning" rowID="' +
                                     value.id + 
                                     '" data-type="edit" data-toggle="modal" data-target="#modalTagAddEdit">' + 
@@ -22,7 +22,7 @@ function getTags() {
                                     value.id + 
                                     '\') : false;">delete</a>' +
                                 '</td></tr>';
-                        tagTable.append('<tr><td>' + value.id + '</td><td>' + value.title + '</td><td>' + editDeleteButtons);
+                        tagTable.append('<tr><td>' + value.id + '</td><td>' + value.title + '</td>' + editDeleteButtons);
  
                     });
 
