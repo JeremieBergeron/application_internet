@@ -4,8 +4,8 @@ echo $this->Html->script([
         ], ['block' => 'scriptLibraries']
 );
 $urlToLinkedListFilter = $this->Url->build([
-    "controller" => "Subcategories",
-    "action" => "getByCategory",
+    "controller" => "Categories",
+    "action" => "getCategories",
     "_ext" => "json"
         ]);
 echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
@@ -56,11 +56,24 @@ echo $this->Html->script('Products/CountryAutocomplete', ['block' => 'scriptBott
                 ng-model="category" 
                 ng-options="category.name for category in categories track by category.id"
                 >
-                <option value=''>Select</option>
+                <option value=''>Select a category</option>
             </select>
         </div>
-        <?php
-        echo $this->Form->control('subcategory_id', ['options' => [__('Please select a categorie first')]]);
+       
+         <div>
+            <?= __('Subcategories') ?> : 
+            <!-- pre ng-show='krajRegions'>{{ krajRegions | json }}></pre-->
+            <select
+                name="subcategory_id"
+                id="subcategory-id" 
+                ng-disabled="!category" 
+                ng-model="subcategory"
+                ng-options="subcategory.name for subcategory in category.subcategories track by subcategory.id"
+                >
+                <option value=''>Select a subcategory</option>
+            </select>
+        </div>
+         <?php
         echo $this->Form->control('country_id', ['label' => __('Country') . ' (' . __('Autocomplete demo') . ')', 'type' => 'hidden']);
         ?>
         <div class="input text">

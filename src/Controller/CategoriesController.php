@@ -23,6 +23,15 @@ class CategoriesController extends AppController
 
         $this->set(compact('categories'));
     }
+    
+        public function getCategories() {
+        $categories = $this->Categories->find('all',
+                ['contain' => ['Subcategories']]);
+        $this->set([
+            'categories' => $categories,
+            '_serialize' => ['categories']
+        ]);
+    }
 
     /**
      * View method
