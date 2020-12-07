@@ -39,7 +39,7 @@ class UsersController extends AppController {
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
         if (in_array($action, ['index'])) {
-            if (!$user['confirmed']) {
+            if (!$user['active']) {
                 $this->Flash->success(__('Please confirme your email'));
                 return parent::isAuthorized($user);
             }

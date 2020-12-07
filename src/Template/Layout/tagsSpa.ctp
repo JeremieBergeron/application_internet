@@ -63,7 +63,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         ?>
                         <li class="nav-item text-nowrap">
                             <?php
-                            if (!$loguser['confirmed']) {
+                            if (!$loguser['active']) {
                                 echo $this->Html->link(__('Please confirm'), ['controller' => 'Users', 'action' => 'confirm', $loguser['uuid']]);
                             } else {
                                 echo $this->Html->link(__('Email confirmed :-)'), ['controller' => 'Users', 'action' => 'view', $loguser['id']]);

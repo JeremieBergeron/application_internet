@@ -2,8 +2,8 @@ var app = angular.module('app', []);
 
 app.controller('TagCRUDCtrl', ['$scope', 'TagCRUDService', function ($scope, TagCRUDService) {
 
-        $scope.updateTag = function () {
-            TagCRUDService.updateTag($scope.tag.id, $scope.tag.title)
+        $scope.updateTag = function (id, title) {
+            TagCRUDService.updateTag(id, title)
                     .then(function success(response) {
                         $scope.message = 'Tag data updated!';
                         $scope.errorMessage = '';
@@ -16,9 +16,8 @@ app.controller('TagCRUDCtrl', ['$scope', 'TagCRUDService', function ($scope, Tag
                             });
         }
 
-        $scope.getTag = function () {
-            var id = $scope.tag.id;
-            TagCRUDService.getTag($scope.tag.id)
+        $scope.getTag = function (id) {
+            TagCRUDService.getTag(id)
                     .then(function success(response) {
                         $scope.tag = response.data.tag;
                         $scope.tag.id = id;
@@ -35,9 +34,9 @@ app.controller('TagCRUDCtrl', ['$scope', 'TagCRUDService', function ($scope, Tag
                             });
         }
 
-        $scope.addTag = function () {
-            if ($scope.tag != null && $scope.tag.title) {
-                TagCRUDService.addTag($scope.tag.title)
+        $scope.addTag = function (title) {
+            if ($scope.tag != null && title) {
+                TagCRUDService.addTag(title)
                         .then(function success(response) {
                             $scope.message = 'Tag added!';
                             $scope.errorMessage = '';
@@ -53,8 +52,8 @@ app.controller('TagCRUDCtrl', ['$scope', 'TagCRUDService', function ($scope, Tag
             }
         }
 
-        $scope.deleteTag = function () {
-            TagCRUDService.deleteTag($scope.tag.id)
+        $scope.deleteTag = function (id) {
+            TagCRUDService.deleteTag(id)
                     .then(function success(response) {
                         $scope.message = 'Tag deleted!';
                         $scope.tag = null;

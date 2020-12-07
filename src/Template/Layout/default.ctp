@@ -57,7 +57,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li> <?php
                         $loguser = $this->request->session()->read('Auth.User');
                         if ($loguser) {
-                            if ($loguser['confirmed']) {
+                            if ($loguser['active']) {
                                 echo "<span>" . (__('Your account is confirmed')) . "</span>";
                             } else {
                                 echo "<span>" . $this->Html->link(__('Your account is not confirmed'), ['controller' => 'Users', 'action' => 'reSendConfirmEmail', $loguser['uuid']]) . "</span>";
