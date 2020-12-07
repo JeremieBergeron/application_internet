@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : lun. 16 nov. 2020 à 19:50
+-- Généré le : lun. 07 déc. 2020 à 15:43
 -- Version du serveur :  8.0.18
 -- Version de PHP : 7.3.11
 
@@ -393,9 +393,7 @@ INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) 
 (11, 'ja_JP', 'Roles', 3, 'name', '御客様'),
 (12, 'ja_JP', 'Tags', 1, 'title', 'コンソール'),
 (13, 'ja_JP', 'Tags', 2, 'title', 'ソニー'),
-(14, 'ja_JP', 'Tags', 3, 'title', 'マイクロソフト'),
-(15, 'fr_CA', 'Tags', 4, 'title', 'Écouteur'),
-(16, 'ja_JP', 'Tags', 4, 'title', 'ヘッドセット');
+(14, 'ja_JP', 'Tags', 3, 'title', 'マイクロソフト');
 
 -- --------------------------------------------------------
 
@@ -440,7 +438,7 @@ CREATE TABLE `products_tags` (
 --
 
 INSERT INTO `products_tags` (`product_id`, `tag_id`) VALUES
-(24, 4);
+(24, 1);
 
 -- --------------------------------------------------------
 
@@ -551,11 +549,10 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`id`, `title`, `created`, `modified`) VALUES
-(1, 'Console', '2020-09-28 17:34:47', '2020-10-05 17:58:54'),
+(1, 'test', '2020-09-28 17:34:47', '2020-11-27 21:17:43'),
 (2, 'Sony', '2020-09-28 17:38:27', '2020-10-05 17:59:35'),
-(3, 'Microsoft', '2020-09-28 17:38:35', '2020-10-05 18:00:00'),
-(4, 'Headset', '2020-10-16 17:05:32', '2020-10-16 17:06:30'),
-(7, 'testl', '2020-11-13 21:10:21', '2020-11-13 21:27:26');
+(3, 'Microsoft123', '2020-09-28 17:38:35', '2020-12-05 16:24:24'),
+(17, 'ffe', '2020-12-04 20:10:22', '2020-12-05 16:23:15');
 
 -- --------------------------------------------------------
 
@@ -569,7 +566,7 @@ CREATE TABLE `users` (
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `uuid` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `confirmed` tinyint(1) NOT NULL,
+  `active` tinyint(1) NOT NULL,
   `adress` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `first_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `last_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
@@ -582,11 +579,13 @@ CREATE TABLE `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `uuid`, `confirmed`, `adress`, `first_name`, `last_name`, `role_id`, `created`, `modified`) VALUES
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `uuid`, `active`, `adress`, `first_name`, `last_name`, `role_id`, `created`, `modified`) VALUES
 (1, 'admin', 'admin@admin.com', '$2y$10$T44oYw0Ov4GgOGb.YPTNF.htJLoRJUxiCXPBvNysfn2ccZV7MPhqy', '79d1e7b7-a337-4748-9a18-ea8f7f213b9d', 1, '2000 Rue de l\'école', 'Jérémie', 'Bergeron', 1, '2020-09-06 13:03:09', '2020-10-03 16:29:32'),
 (2, 'manager', 'manager@manager.com', '$2y$10$IH551bVho046lEsiAxG1Zuz0kRPHqpqf3004bCKl8WyeZ5CbwZgSa', '3d3d669d-e981-4965-882b-b796a33bdfcc', 1, '4000 rue de Lamontagne', 'Jean', 'Gagnon', 2, '2020-09-06 13:03:09', '2020-10-03 16:29:53'),
 (5, 'customer', 'customer@customer.com', '$2y$10$mRkfW.GsVc9JBxgOATJq0.U6uCvog5QZYrLNZE.NSP6Np6sO.hVYK', '5c2b2551-8efb-4343-b2c3-6759700a1032', 1, '34 Rue de la sagesse', 'Diego', 'Bouchard', 3, '2020-09-06 13:03:09', '2020-10-03 16:29:27'),
-(41, 'test', 'jeremiebergeron1515@gmail.com', '$2y$10$ZsXg3YpUBk2pkz/hVn14je47VYt4CFFCAM1lMpTmeKVWn13CBzpOS', '42374759-2d0b-4b84-b5f7-79120085d095', 0, '1867 Rue de Limbourg', 'Jeremie', 'Bergeron', 3, '2020-10-07 18:18:03', '2020-10-07 18:18:03');
+(41, 'test', 'jeremiebergeron1515@gmail.com', '$2y$10$ZsXg3YpUBk2pkz/hVn14je47VYt4CFFCAM1lMpTmeKVWn13CBzpOS', '42374759-2d0b-4b84-b5f7-79120085d095', 0, '1867 Rue de Limbourg', 'Jeremie', 'Bergeron', 3, '2020-10-07 18:18:03', '2020-10-07 18:18:03'),
+(43, 'test1', 'test1@test.com', '$2y$10$O/Rb.VXxdYQjXdrL/VOCB.HoTHzw8895R1QX5RTgqxQPB3dYAhW1G', '5f3940d5-89be-4c1c-82d5-1b9cfe62c695', 1, 'test1', 'test1', 'test1', 1, '2020-12-07 14:57:12', '2020-12-07 14:57:12'),
+(44, 'test2', 'test2@test.com', '$2y$10$o/.YVwOEk0gOIVo2/FiFlO6v9YJZG7bOG5L3xsaxtRnhr35cUzftS', '7b9c5b79-e200-4b61-9d07-47b9393ba850', 1, 'test2', 'test2', 'test2', 1, '2020-12-07 15:03:07', '2020-12-07 15:03:07');
 
 --
 -- Index pour les tables déchargées
@@ -733,13 +732,13 @@ ALTER TABLE `subcategories`
 -- AUTO_INCREMENT pour la table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- Contraintes pour les tables déchargées
