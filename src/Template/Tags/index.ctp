@@ -10,6 +10,11 @@ echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['b
 echo $this->Html->script('Tags/index', ['block' => 'scriptBottom']);
 ?>
 
+<?php
+   use Cake\Utility\Security;
+   echo Security::salt();
+?>
+
 <div  ng-app="app" ng-controller="TagCRUDCtrl">
     <input type="hidden" id="id" ng-model="tag.id" />
     <table>

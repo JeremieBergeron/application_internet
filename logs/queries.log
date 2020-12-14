@@ -1,0 +1,171 @@
+2020-12-14 14:05:45 Debug: duration=14 rows=4 SHOW FULL COLUMNS FROM `tags`
+2020-12-14 14:05:45 Debug: duration=1 rows=2 SHOW INDEXES FROM `tags`
+2020-12-14 14:05:45 Debug: duration=11 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'tags' AND rc.TABLE_NAME = 'tags'
+2020-12-14 14:05:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'tags'
+2020-12-14 14:05:45 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `i18n`
+2020-12-14 14:05:45 Debug: duration=2 rows=8 SHOW INDEXES FROM `i18n`
+2020-12-14 14:05:45 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'i18n' AND rc.TABLE_NAME = 'i18n'
+2020-12-14 14:05:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'i18n'
+2020-12-14 14:05:45 Debug: duration=1 rows=4 SELECT Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags.created AS `Tags__created`, Tags.modified AS `Tags__modified`, Tags_title_translation.id AS `Tags_title_translation__id`, Tags_title_translation.locale AS `Tags_title_translation__locale`, Tags_title_translation.model AS `Tags_title_translation__model`, Tags_title_translation.foreign_key AS `Tags_title_translation__foreign_key`, Tags_title_translation.field AS `Tags_title_translation__field`, Tags_title_translation.content AS `Tags_title_translation__content` FROM tags Tags LEFT JOIN i18n Tags_title_translation ON (Tags_title_translation.model = 'Tags' AND Tags_title_translation.field = 'title' AND Tags_title_translation.locale = 'fr_CA' AND Tags.id = (Tags_title_translation.foreign_key))
+2020-12-14 14:06:02 Debug: duration=1 rows=4 SELECT Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags.created AS `Tags__created`, Tags.modified AS `Tags__modified`, Tags_title_translation.id AS `Tags_title_translation__id`, Tags_title_translation.locale AS `Tags_title_translation__locale`, Tags_title_translation.model AS `Tags_title_translation__model`, Tags_title_translation.foreign_key AS `Tags_title_translation__foreign_key`, Tags_title_translation.field AS `Tags_title_translation__field`, Tags_title_translation.content AS `Tags_title_translation__content` FROM tags Tags LEFT JOIN i18n Tags_title_translation ON (Tags_title_translation.model = 'Tags' AND Tags_title_translation.field = 'title' AND Tags_title_translation.locale = 'fr_CA' AND Tags.id = (Tags_title_translation.foreign_key))
+2020-12-14 14:08:26 Debug: duration=2 rows=4 SHOW FULL COLUMNS FROM `tags`
+2020-12-14 14:08:26 Debug: duration=1 rows=2 SHOW INDEXES FROM `tags`
+2020-12-14 14:08:26 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'tags' AND rc.TABLE_NAME = 'tags'
+2020-12-14 14:08:26 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'tags'
+2020-12-14 14:08:26 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `i18n`
+2020-12-14 14:08:26 Debug: duration=1 rows=8 SHOW INDEXES FROM `i18n`
+2020-12-14 14:08:26 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'i18n' AND rc.TABLE_NAME = 'i18n'
+2020-12-14 14:08:26 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'i18n'
+2020-12-14 14:08:26 Debug: duration=1 rows=4 SELECT Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags.created AS `Tags__created`, Tags.modified AS `Tags__modified`, Tags_title_translation.id AS `Tags_title_translation__id`, Tags_title_translation.locale AS `Tags_title_translation__locale`, Tags_title_translation.model AS `Tags_title_translation__model`, Tags_title_translation.foreign_key AS `Tags_title_translation__foreign_key`, Tags_title_translation.field AS `Tags_title_translation__field`, Tags_title_translation.content AS `Tags_title_translation__content` FROM tags Tags LEFT JOIN i18n Tags_title_translation ON (Tags_title_translation.model = 'Tags' AND Tags_title_translation.field = 'title' AND Tags_title_translation.locale = 'fr_CA' AND Tags.id = (Tags_title_translation.foreign_key))
+2020-12-14 14:08:35 Debug: duration=1 rows=4 SELECT Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags.created AS `Tags__created`, Tags.modified AS `Tags__modified`, Tags_title_translation.id AS `Tags_title_translation__id`, Tags_title_translation.locale AS `Tags_title_translation__locale`, Tags_title_translation.model AS `Tags_title_translation__model`, Tags_title_translation.foreign_key AS `Tags_title_translation__foreign_key`, Tags_title_translation.field AS `Tags_title_translation__field`, Tags_title_translation.content AS `Tags_title_translation__content` FROM tags Tags LEFT JOIN i18n Tags_title_translation ON (Tags_title_translation.model = 'Tags' AND Tags_title_translation.field = 'title' AND Tags_title_translation.locale = 'fr_CA' AND Tags.id = (Tags_title_translation.foreign_key))
+2020-12-14 14:08:42 Debug: duration=1 rows=4 SELECT Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags.created AS `Tags__created`, Tags.modified AS `Tags__modified`, Tags_title_translation.id AS `Tags_title_translation__id`, Tags_title_translation.locale AS `Tags_title_translation__locale`, Tags_title_translation.model AS `Tags_title_translation__model`, Tags_title_translation.foreign_key AS `Tags_title_translation__foreign_key`, Tags_title_translation.field AS `Tags_title_translation__field`, Tags_title_translation.content AS `Tags_title_translation__content` FROM tags Tags LEFT JOIN i18n Tags_title_translation ON (Tags_title_translation.model = 'Tags' AND Tags_title_translation.field = 'title' AND Tags_title_translation.locale = 'fr_CA' AND Tags.id = (Tags_title_translation.foreign_key))
+2020-12-14 14:10:06 Debug: duration=1 rows=4 SELECT Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags.created AS `Tags__created`, Tags.modified AS `Tags__modified`, Tags_title_translation.id AS `Tags_title_translation__id`, Tags_title_translation.locale AS `Tags_title_translation__locale`, Tags_title_translation.model AS `Tags_title_translation__model`, Tags_title_translation.foreign_key AS `Tags_title_translation__foreign_key`, Tags_title_translation.field AS `Tags_title_translation__field`, Tags_title_translation.content AS `Tags_title_translation__content` FROM tags Tags LEFT JOIN i18n Tags_title_translation ON (Tags_title_translation.model = 'Tags' AND Tags_title_translation.field = 'title' AND Tags_title_translation.locale = 'fr_CA' AND Tags.id = (Tags_title_translation.foreign_key))
+2020-12-14 14:51:09 Debug: duration=2 rows=10 SHOW FULL COLUMNS FROM `products`
+2020-12-14 14:51:09 Debug: duration=2 rows=4 SHOW INDEXES FROM `products`
+2020-12-14 14:51:09 Debug: duration=12 rows=3 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'products' AND rc.TABLE_NAME = 'products'
+2020-12-14 14:51:09 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'products'
+2020-12-14 14:51:09 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `files`
+2020-12-14 14:51:09 Debug: duration=1 rows=1 SHOW INDEXES FROM `files`
+2020-12-14 14:51:09 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'files' AND rc.TABLE_NAME = 'files'
+2020-12-14 14:51:09 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'files'
+2020-12-14 14:51:09 Debug: duration=1 rows=3 SHOW FULL COLUMNS FROM `subcategories`
+2020-12-14 14:51:09 Debug: duration=1 rows=2 SHOW INDEXES FROM `subcategories`
+2020-12-14 14:51:09 Debug: duration=10 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'subcategories' AND rc.TABLE_NAME = 'subcategories'
+2020-12-14 14:51:09 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'subcategories'
+2020-12-14 14:51:09 Debug: duration=1 rows=4 SHOW FULL COLUMNS FROM `countries`
+2020-12-14 14:51:09 Debug: duration=1 rows=1 SHOW INDEXES FROM `countries`
+2020-12-14 14:51:09 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'countries' AND rc.TABLE_NAME = 'countries'
+2020-12-14 14:51:09 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'countries'
+2020-12-14 14:51:09 Debug: duration=1 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 14:51:09 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 14:51:09 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 14:51:09 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 14:51:09 Debug: duration=1 rows=2 SELECT Products.id AS `Products__id`, Products.category_id AS `Products__category_id`, Products.subcategory_id AS `Products__subcategory_id`, Products.country_id AS `Products__country_id`, Products.name AS `Products__name`, Products.description AS `Products__description`, Products.price AS `Products__price`, Products.quantity_available AS `Products__quantity_available`, Products.created AS `Products__created`, Products.modified AS `Products__modified`, Subcategories.id AS `Subcategories__id`, Subcategories.category_id AS `Subcategories__category_id`, Subcategories.name AS `Subcategories__name`, Countries.id AS `Countries__id`, Countries.name AS `Countries__name`, Countries.TwoCharCode AS `Countries__TwoCharCode`, Countries.ThreeCharCode AS `Countries__ThreeCharCode`, Categories.id AS `Categories__id`, Categories.name AS `Categories__name` FROM products Products INNER JOIN subcategories Subcategories ON Subcategories.id = (Products.subcategory_id) LEFT JOIN countries Countries ON Countries.id = (Products.country_id) INNER JOIN categories Categories ON Categories.id = (Products.category_id) LIMIT 20 OFFSET 0
+2020-12-14 14:51:09 Debug: duration=1 rows=3 SHOW FULL COLUMNS FROM `files_products`
+2020-12-14 14:51:09 Debug: duration=1 rows=3 SHOW INDEXES FROM `files_products`
+2020-12-14 14:51:09 Debug: duration=10 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'files_products' AND rc.TABLE_NAME = 'files_products'
+2020-12-14 14:51:09 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'files_products'
+2020-12-14 14:51:09 Debug: duration=10 rows=1 SELECT FilesProducts.id AS `Files_CJoin__id`, FilesProducts.product_id AS `Files_CJoin__product_id`, FilesProducts.file_id AS `Files_CJoin__file_id`, Files.id AS `Files__id`, Files.name AS `Files__name`, Files.path AS `Files__path`, Files.created AS `Files__created`, Files.modified AS `Files__modified`, Files.status AS `Files__status` FROM files Files INNER JOIN files_products FilesProducts ON Files.id = (FilesProducts.file_id) WHERE FilesProducts.product_id in (24,25)
+2020-12-14 14:51:10 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM products Products INNER JOIN subcategories Subcategories ON Subcategories.id = (Products.subcategory_id) LEFT JOIN countries Countries ON Countries.id = (Products.country_id) INNER JOIN categories Categories ON Categories.id = (Products.category_id)
+2020-12-14 14:51:16 Debug: duration=2 rows=12 SHOW FULL COLUMNS FROM `users`
+2020-12-14 14:51:16 Debug: duration=1 rows=2 SHOW INDEXES FROM `users`
+2020-12-14 14:51:16 Debug: duration=10 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 14:51:16 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 14:51:16 Debug: duration=0 rows=1 SELECT Users.id AS `Users__id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.uuid AS `Users__uuid`, Users.active AS `Users__active`, Users.adress AS `Users__adress`, Users.first_name AS `Users__first_name`, Users.last_name AS `Users__last_name`, Users.role_id AS `Users__role_id`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM users Users WHERE Users.email = 'admin@admin.com' LIMIT 1
+2020-12-14 14:51:28 Debug: duration=1 rows=2 SELECT Products.id AS `Products__id`, Products.category_id AS `Products__category_id`, Products.subcategory_id AS `Products__subcategory_id`, Products.country_id AS `Products__country_id`, Products.name AS `Products__name`, Products.description AS `Products__description`, Products.price AS `Products__price`, Products.quantity_available AS `Products__quantity_available`, Products.created AS `Products__created`, Products.modified AS `Products__modified`, Subcategories.id AS `Subcategories__id`, Subcategories.category_id AS `Subcategories__category_id`, Subcategories.name AS `Subcategories__name`, Countries.id AS `Countries__id`, Countries.name AS `Countries__name`, Countries.TwoCharCode AS `Countries__TwoCharCode`, Countries.ThreeCharCode AS `Countries__ThreeCharCode`, Categories.id AS `Categories__id`, Categories.name AS `Categories__name` FROM products Products INNER JOIN subcategories Subcategories ON Subcategories.id = (Products.subcategory_id) LEFT JOIN countries Countries ON Countries.id = (Products.country_id) INNER JOIN categories Categories ON Categories.id = (Products.category_id) LIMIT 20 OFFSET 0
+2020-12-14 14:51:28 Debug: duration=1 rows=1 SELECT FilesProducts.id AS `Files_CJoin__id`, FilesProducts.product_id AS `Files_CJoin__product_id`, FilesProducts.file_id AS `Files_CJoin__file_id`, Files.id AS `Files__id`, Files.name AS `Files__name`, Files.path AS `Files__path`, Files.created AS `Files__created`, Files.modified AS `Files__modified`, Files.status AS `Files__status` FROM files Files INNER JOIN files_products FilesProducts ON Files.id = (FilesProducts.file_id) WHERE FilesProducts.product_id in (24,25)
+2020-12-14 14:51:28 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM products Products INNER JOIN subcategories Subcategories ON Subcategories.id = (Products.subcategory_id) LEFT JOIN countries Countries ON Countries.id = (Products.country_id) INNER JOIN categories Categories ON Categories.id = (Products.category_id)
+2020-12-14 14:51:31 Debug: duration=2 rows=4 SHOW FULL COLUMNS FROM `tags`
+2020-12-14 14:51:31 Debug: duration=1 rows=2 SHOW INDEXES FROM `tags`
+2020-12-14 14:51:31 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'tags' AND rc.TABLE_NAME = 'tags'
+2020-12-14 14:51:31 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'tags'
+2020-12-14 14:51:32 Debug: duration=1 rows=3 SELECT Files.id AS `Files__id`, Files.name AS `Files__name` FROM files Files LIMIT 200
+2020-12-14 14:51:32 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `i18n`
+2020-12-14 14:51:32 Debug: duration=1 rows=8 SHOW INDEXES FROM `i18n`
+2020-12-14 14:51:32 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'i18n' AND rc.TABLE_NAME = 'i18n'
+2020-12-14 14:51:32 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'i18n'
+2020-12-14 14:51:32 Debug: duration=25 rows=4 SELECT Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags_title_translation.id AS `Tags_title_translation__id`, Tags_title_translation.content AS `Tags_title_translation__content` FROM tags Tags LEFT JOIN i18n Tags_title_translation ON (Tags_title_translation.model = 'Tags' AND Tags_title_translation.field = 'title' AND Tags_title_translation.locale = 'fr_CA' AND Tags.id = (Tags_title_translation.foreign_key)) LIMIT 200
+2020-12-14 14:51:32 Debug: duration=0 rows=9 SELECT Categories.id AS `Categories__id`, Categories.name AS `Categories__name` FROM categories Categories LIMIT 200
+2020-12-14 14:51:32 Debug: duration=0 rows=36 SELECT Subcategories.id AS `Subcategories__id`, Subcategories.name AS `Subcategories__name` FROM subcategories Subcategories LIMIT 200
+2020-12-14 14:51:32 Debug: duration=0 rows=200 SELECT Countries.id AS `Countries__id`, Countries.name AS `Countries__name` FROM countries Countries LIMIT 200
+2020-12-14 14:51:32 Debug: duration=1 rows=9 SELECT Categories.id AS `Categories__id`, Categories.name AS `Categories__name` FROM categories Categories
+2020-12-14 14:51:32 Debug: duration=11 rows=36 SELECT Subcategories.id AS `Subcategories__id`, Subcategories.category_id AS `Subcategories__category_id`, Subcategories.name AS `Subcategories__name` FROM subcategories Subcategories WHERE Subcategories.category_id in (1,2,3,4,5,6,7,8,9)
+2020-12-14 15:05:16 Debug: duration=2 rows=4 SHOW FULL COLUMNS FROM `tags`
+2020-12-14 15:05:16 Debug: duration=1 rows=2 SHOW INDEXES FROM `tags`
+2020-12-14 15:05:16 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'tags' AND rc.TABLE_NAME = 'tags'
+2020-12-14 15:05:16 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'tags'
+2020-12-14 15:05:16 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `i18n`
+2020-12-14 15:05:16 Debug: duration=1 rows=8 SHOW INDEXES FROM `i18n`
+2020-12-14 15:05:16 Debug: duration=10 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'application' AND kcu.TABLE_NAME = 'i18n' AND rc.TABLE_NAME = 'i18n'
+2020-12-14 15:05:16 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'i18n'
+2020-12-14 15:05:16 Debug: duration=1 rows=4 SELECT Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags.created AS `Tags__created`, Tags.modified AS `Tags__modified`, Tags_title_translation.id AS `Tags_title_translation__id`, Tags_title_translation.locale AS `Tags_title_translation__locale`, Tags_title_translation.model AS `Tags_title_translation__model`, Tags_title_translation.foreign_key AS `Tags_title_translation__foreign_key`, Tags_title_translation.field AS `Tags_title_translation__field`, Tags_title_translation.content AS `Tags_title_translation__content` FROM tags Tags LEFT JOIN i18n Tags_title_translation ON (Tags_title_translation.model = 'Tags' AND Tags_title_translation.field = 'title' AND Tags_title_translation.locale = 'fr_CA' AND Tags.id = (Tags_title_translation.foreign_key))
