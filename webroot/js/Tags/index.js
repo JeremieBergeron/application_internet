@@ -1,7 +1,21 @@
+var onloadCallback = function () {
+    widgetId1 = grecaptcha.render('example1', {
+        'sitekey': '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+        'theme': 'light'
+    });
+};
+
+
 var app = angular.module('app', []);
+var urlToRestApiUsers = urlToRestApi.substring(0, urlToRestApi.lastIndexOf('/') + 1) + 'users';
 
 app.controller('TagCRUDCtrl', ['$scope', 'TagCRUDService', function ($scope, TagCRUDService) {
 
+        $scope.editModal = function(){
+            $scope.addEditTitle = "Modifier le tag";
+            $scope.editButton = true;
+            $scope.addButton = false;
+        }
         $scope.updateTag = function (id, title) {
             TagCRUDService.updateTag(id, title)
                     .then(function success(response) {
@@ -17,6 +31,7 @@ app.controller('TagCRUDCtrl', ['$scope', 'TagCRUDService', function ($scope, Tag
         }
 
         $scope.getTag = function (id) {
+            $scope.editModal();
             TagCRUDService.getTag(id)
                     .then(function success(response) {
                         $scope.tag = response.data.tag;
@@ -34,6 +49,11 @@ app.controller('TagCRUDCtrl', ['$scope', 'TagCRUDService', function ($scope, Tag
                             });
         }
 
+         $scope.addModal = function(){
+            $scope.addEditTitle = "Ajouter un tag";
+            $scope.editButton = false;
+            $scope.addButton = true;
+        }
         $scope.addTag = function (title) {
             if ($scope.tag != null && title) {
                 TagCRUDService.addTag(title)
@@ -47,7 +67,7 @@ app.controller('TagCRUDCtrl', ['$scope', 'TagCRUDService', function ($scope, Tag
                                     $scope.message = '';
                                 });
             } else {
-                $scope.errorMessage = 'Please enter a name!';
+                $scope.errorMessage = 'Please enter a title!';
                 $scope.message = '';
             }
         }
@@ -80,6 +100,47 @@ app.controller('TagCRUDCtrl', ['$scope', 'TagCRUDService', function ($scope, Tag
                             });
         }
 
+        $scope.login = function () {
+            if (grecaptcha.getResponse(widgetId1) == '') {
+                $scope.captcha_status = 'Please verify captha.';
+                return;
+            }
+            if ($scope.user != null && $scope.user.username) {
+                TagCRUDService.login($scope.user)
+                        .then(function success(response) {
+                            $scope.message = $scope.user.username + ' en session!';
+                            $scope.errorMessage = '';
+                            localStorage.setItem('token', response.data.data.token);
+                            localStorage.setItem('user_id', response.data.data.id);
+                        },
+                                function error(response) {
+                                    $scope.errorMessage = 'Nom d\'utilisateur ou mot de passe invalide...';
+                                    $scope.message = '';
+                                });
+            } else {
+                $scope.errorMessage = 'Entrez un nom d\'utilisateur s.v.p.';
+                $scope.message = '';
+            }
+
+        }
+        $scope.logout = function () {
+            localStorage.setItem('token', "no token");
+            localStorage.setItem('user', "no user");
+            $scope.message = '';
+            $scope.errorMessage = 'Utilisateur déconnecté!';
+        }
+        $scope.changePassword = function () {
+            TagCRUDService.changePassword($scope.user.password)
+                    .then(function success(response) {
+                        $scope.message = 'Mot de passe mis à jour!';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Mot de passe inchangé!';
+                                $scope.message = '';
+                            });
+        }
+
     }]);
 
 app.service('TagCRUDService', ['$http', function ($http) {
@@ -89,7 +150,8 @@ app.service('TagCRUDService', ['$http', function ($http) {
                 method: 'GET',
                 url: urlToRestApi + '/' + tagId,
                 headers: {'X-Requested-With': 'XMLHttpRequest',
-                    'Accept': 'application/json'}
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
             });
         }
 
@@ -99,7 +161,9 @@ app.service('TagCRUDService', ['$http', function ($http) {
                 url: urlToRestApi,
                 data: {title: title},
                 headers: {'X-Requested-With': 'XMLHttpRequest',
-                    'Accept': 'application/json'}
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }
             });
         }
 
@@ -108,7 +172,9 @@ app.service('TagCRUDService', ['$http', function ($http) {
                 method: 'DELETE',
                 url: urlToRestApi + '/' + id,
                 headers: {'X-Requested-With': 'XMLHttpRequest',
-                    'Accept': 'application/json'}
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }
             })
         }
 
@@ -118,7 +184,9 @@ app.service('TagCRUDService', ['$http', function ($http) {
                 url: urlToRestApi + '/' + id,
                 data: {title: title},
                 headers: {'X-Requested-With': 'XMLHttpRequest',
-                    'Accept': 'application/json'}
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }
             })
         }
 
@@ -129,6 +197,27 @@ app.service('TagCRUDService', ['$http', function ($http) {
                 headers: {'X-Requested-With': 'XMLHttpRequest',
                     'Accept': 'application/json'}
             });
+        }
+
+        this.login = function login(user) {
+            return $http({
+                method: 'POST',
+                url: urlToRestApiUsers + '/token',
+                data: {username: user.username, password: user.password},
+                headers: {'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'}
+            });
+        }
+        this.changePassword = function changePassword(password) {
+            return $http({
+                method: 'PATCH',
+                url: urlToRestApiUsers + '/' + localStorage.getItem("user_id"),
+                data: {password: password},
+                headers: {'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }
+            })
         }
 
     }]);

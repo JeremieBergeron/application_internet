@@ -18,6 +18,7 @@ class FilesController extends AppController
             'authorize' => 'Controller',
         ]);
         $this->Auth->deny();
+        $this->Auth->allow('add');
     }
 
     public function isAuthorized($user) {
@@ -60,16 +61,16 @@ class FilesController extends AppController
      */
     public function add() {
         $file = $this->Files->newEntity();
-        if ($this->request->is('post')) {
+        if ($this->request->is('post') or $this->request->is('ajax')) {
             $filerequest = $this->request->getData();
            //debug($filerequest);
            //debug($this->request->getData()['name']);
            //die();
-            if (!empty($filerequest['name']['name'])) {
-                $fileName = $filerequest['name']['name'];
+            if (!empty($filerequest['file']['name'])) {
+                $fileName = $filerequest['file']['name'];
                 $uploadPath = 'files/add/';
                 $uploadFile = $uploadPath . $fileName;
-                if (move_uploaded_file($filerequest['name']['tmp_name'], 'img/' . $uploadFile)) {
+                if (move_uploaded_file($filerequest['file']['tmp_name'], 'img/' . $uploadFile)) {
                     $file = $this->Files->newEntity();
                     $file->name = $fileName;
                     $file->path = $uploadPath;

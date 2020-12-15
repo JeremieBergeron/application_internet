@@ -1,0 +1,12 @@
+{
+  "message": "Saved",
+  "data": {
+    "id": 45,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQ1LCJleHAiOjE2MDg1NzU5NTh9.7myseEnt8K4b2kh04pJ6HSSH3iWTo072a7W92tFBMC0"
+  }
+}
+
+
+username: testJwt
+password: testJwt
+email: testJwt@testJwt.com

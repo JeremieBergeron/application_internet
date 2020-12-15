@@ -33,6 +33,16 @@
         <ol> affichage d'un document pdf (6.3)		
             <li>Fonctionne bien, mais le css et les images ne s'affichent pas. </li>
         </ol>
+        <ol> Démarrage de session et du changement de mot de passe : (7+8)		
+            <li>Pour se connecter ou changer son mot de passe, il faut remplir un captcha. On utilise celui de google parce que c'est extrêmement plus simple que d'en développer un. </li>
+        </ol>
+        <ol> Procédure pour tester le fonctionnement de l'interface AngularJS des listes liées et du modèle "CRUD" monopage (7)		
+            <li>Il suffit d'aller dans la vue add du product pour tester le tout.</li>
+            <li>Il suffit d'aller dans la vue monopage tags et se connecter. Par la suite, il suffit d'ajouter/modifier/supprimer un tag.</li>
+        </ol>
+         <ol> Fonctionnement du cliquer-glisser pour ajouter une image à l'application (9)	
+            <li>Dans la vue File, il suffit de glisser un fichier et il sera ajouter. Par contre, il ajoute tout type de fichier et non simplement les images.</li>
+        </ol>
     </ol>
 
 <li>Base de données : <a href="http://www.databaseanswers.org/data_models/hardware_sales/index.htm">Customers and Hardware Store</a></li>

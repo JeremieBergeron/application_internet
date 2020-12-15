@@ -19,6 +19,7 @@ class TagsController extends AppController
             'authorize' => 'Controller',
         ]);
         $this->Auth->deny();
+        
     }
 
    /* public function isAuthorized($user) {
